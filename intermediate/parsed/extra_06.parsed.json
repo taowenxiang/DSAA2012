@@ -1,0 +1,57 @@
+{
+  "case_id": "extra_06",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\extra_06.txt",
+  "characters": [
+    "Bird"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "on a branch"
+    ],
+    "object_hints": [
+      "branch"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Bird> sits on a branch.",
+      "active_characters": [
+        "Bird"
+      ],
+      "subject_characters": [],
+      "action": "Bird sits on a branch.",
+      "setting_hint": "on a branch"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "It looks around.",
+      "active_characters": [
+        "Bird"
+      ],
+      "subject_characters": [
+        "Bird"
+      ],
+      "action": "Bird looks around.",
+      "setting_hint": "same story world"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "It flies away.",
+      "active_characters": [
+        "Bird"
+      ],
+      "subject_characters": [
+        "Bird"
+      ],
+      "action": "Bird flies away.",
+      "setting_hint": "same story world"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

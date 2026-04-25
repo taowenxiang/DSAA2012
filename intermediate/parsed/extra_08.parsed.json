@@ -1,0 +1,55 @@
+{
+  "case_id": "extra_08",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\extra_08.txt",
+  "characters": [
+    "Man"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "at a station",
+      "on board"
+    ],
+    "object_hints": [
+      "station",
+      "train"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Man> waits at a station.",
+      "active_characters": [
+        "Man"
+      ],
+      "subject_characters": [],
+      "action": "Man waits at a station.",
+      "setting_hint": "at a station"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "A train arrives.",
+      "active_characters": [],
+      "subject_characters": [],
+      "action": "A train arrives.",
+      "setting_hint": "same story world"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "He gets on board.",
+      "active_characters": [
+        "Man"
+      ],
+      "subject_characters": [
+        "Man"
+      ],
+      "action": "Man gets on board.",
+      "setting_hint": "on board"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

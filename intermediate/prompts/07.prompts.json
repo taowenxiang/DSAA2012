@@ -1,0 +1,69 @@
+{
+  "case_id": "07",
+  "prompt_version": "member-a-v1",
+  "characters": [
+    "Nina",
+    "Leo"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "in the snow",
+      "in a crowd",
+      "at each other"
+    ],
+    "object_hints": [
+      "snow",
+      "crowd"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ],
+  "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+  "panel_prompts": [
+    {
+      "panel_id": "scene_1",
+      "scene_id": 1,
+      "source_text": "<Nina> stands in the snow.",
+      "active_characters": [
+        "Nina"
+      ],
+      "resolved_action": "Nina stands in the snow",
+      "setting_hint": "in the snow",
+      "prompt": "A consistent story panel illustration of Nina. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 1: Nina stands in the snow. Setting: in the snow. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 1
+    },
+    {
+      "panel_id": "scene_2",
+      "scene_id": 2,
+      "source_text": "She meets <Leo> in a crowd.",
+      "active_characters": [
+        "Nina",
+        "Leo"
+      ],
+      "resolved_action": "Nina meets Leo in a crowd",
+      "setting_hint": "in a crowd",
+      "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 2: Nina meets Leo in a crowd. Setting: in a crowd. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 2
+    },
+    {
+      "panel_id": "scene_3",
+      "scene_id": 3,
+      "source_text": "They look at each other quietly.",
+      "active_characters": [
+        "Nina",
+        "Leo"
+      ],
+      "resolved_action": "Nina and Leo look at each other quietly",
+      "setting_hint": "at each other",
+      "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 3: Nina and Leo look at each other quietly. Setting: at each other. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 3
+    }
+  ]
+}

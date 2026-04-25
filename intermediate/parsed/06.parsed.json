@@ -1,0 +1,67 @@
+{
+  "case_id": "06",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\06.txt",
+  "characters": [
+    "Jack",
+    "Sara"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "in a park",
+      "in a cafe",
+      "at an exhibition"
+    ],
+    "object_hints": [
+      "park",
+      "cafe",
+      "exhibition"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Jack> and <Sara> sit in a park and talk.",
+      "active_characters": [
+        "Jack",
+        "Sara"
+      ],
+      "subject_characters": [],
+      "action": "Jack and Sara sit in a park and talk.",
+      "setting_hint": "in a park"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "They continue talking in a cafe.",
+      "active_characters": [
+        "Jack",
+        "Sara"
+      ],
+      "subject_characters": [
+        "Jack",
+        "Sara"
+      ],
+      "action": "Jack and Sara continue talking in a cafe.",
+      "setting_hint": "in a cafe"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "They look at an exhibition together.",
+      "active_characters": [
+        "Jack",
+        "Sara"
+      ],
+      "subject_characters": [
+        "Jack",
+        "Sara"
+      ],
+      "action": "Jack and Sara look at an exhibition together.",
+      "setting_hint": "at an exhibition"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

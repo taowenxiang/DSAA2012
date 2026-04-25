@@ -1,0 +1,59 @@
+{
+  "case_id": "08",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\08.txt",
+  "characters": [
+    "Tom"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "down a street",
+      "through traffic"
+    ],
+    "object_hints": [
+      "street",
+      "friend"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Tom> runs down a street.",
+      "active_characters": [
+        "Tom"
+      ],
+      "subject_characters": [],
+      "action": "Tom runs down a street.",
+      "setting_hint": "down a street"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "He moves through traffic.",
+      "active_characters": [
+        "Tom"
+      ],
+      "subject_characters": [
+        "Tom"
+      ],
+      "action": "Tom moves through traffic.",
+      "setting_hint": "through traffic"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "He meets his friend and keeps going.",
+      "active_characters": [
+        "Tom"
+      ],
+      "subject_characters": [
+        "Tom"
+      ],
+      "action": "Tom meets his friend and keeps going.",
+      "setting_hint": "same story world"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "14",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\14.txt",
+  "characters": [
+    "Girl"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "in the rain",
+      "under a roof for cover"
+    ],
+    "object_hints": [
+      "rain",
+      "roof for cover",
+      "rain slow"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Girl> runs in the rain.",
+      "active_characters": [
+        "Girl"
+      ],
+      "subject_characters": [],
+      "action": "Girl runs in the rain.",
+      "setting_hint": "in the rain"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "She stands under a roof for cover.",
+      "active_characters": [
+        "Girl"
+      ],
+      "subject_characters": [
+        "Girl"
+      ],
+      "action": "Girl stands under a roof for cover.",
+      "setting_hint": "under a roof for cover"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "She watches the rain slow down.",
+      "active_characters": [
+        "Girl"
+      ],
+      "subject_characters": [
+        "Girl"
+      ],
+      "action": "Girl watches the rain slow down.",
+      "setting_hint": "same story world"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

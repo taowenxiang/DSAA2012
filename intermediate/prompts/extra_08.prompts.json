@@ -1,0 +1,63 @@
+{
+  "case_id": "extra_08",
+  "prompt_version": "member-a-v1",
+  "characters": [
+    "Man"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "at a station",
+      "on board"
+    ],
+    "object_hints": [
+      "station",
+      "train"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ],
+  "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+  "panel_prompts": [
+    {
+      "panel_id": "scene_1",
+      "scene_id": 1,
+      "source_text": "<Man> waits at a station.",
+      "active_characters": [
+        "Man"
+      ],
+      "resolved_action": "Man waits at a station",
+      "setting_hint": "at a station",
+      "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 1: Man waits at a station. Setting: at a station. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 1
+    },
+    {
+      "panel_id": "scene_2",
+      "scene_id": 2,
+      "source_text": "A train arrives.",
+      "active_characters": [],
+      "resolved_action": "A train arrives",
+      "setting_hint": "same story world",
+      "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 2: A train arrives. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 2
+    },
+    {
+      "panel_id": "scene_3",
+      "scene_id": 3,
+      "source_text": "He gets on board.",
+      "active_characters": [
+        "Man"
+      ],
+      "resolved_action": "Man gets on board",
+      "setting_hint": "on board",
+      "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 3: Man gets on board. Setting: on board. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 3
+    }
+  ]
+}

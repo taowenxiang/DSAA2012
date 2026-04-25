@@ -1,0 +1,60 @@
+{
+  "case_id": "09",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\09.txt",
+  "characters": [
+    "Ben"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "along a road",
+      "at the scenery"
+    ],
+    "object_hints": [
+      "road",
+      "scenery",
+      "break"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Ben> drives along a road.",
+      "active_characters": [
+        "Ben"
+      ],
+      "subject_characters": [],
+      "action": "Ben drives along a road.",
+      "setting_hint": "along a road"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "He looks at the scenery outside.",
+      "active_characters": [
+        "Ben"
+      ],
+      "subject_characters": [
+        "Ben"
+      ],
+      "action": "Ben looks at the scenery outside.",
+      "setting_hint": "at the scenery"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "He stops to take a break.",
+      "active_characters": [
+        "Ben"
+      ],
+      "subject_characters": [
+        "Ben"
+      ],
+      "action": "Ben stops to take a break.",
+      "setting_hint": "same story world"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

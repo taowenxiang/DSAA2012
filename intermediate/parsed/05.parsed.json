@@ -1,0 +1,57 @@
+{
+  "case_id": "05",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\05.txt",
+  "characters": [
+    "Emma"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "on a bridge",
+      "at night",
+      "at the view"
+    ],
+    "object_hints": [
+      "bridge",
+      "city lights",
+      "view"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Emma> stands on a bridge and looks down.",
+      "active_characters": [
+        "Emma"
+      ],
+      "subject_characters": [],
+      "action": "Emma stands on a bridge and looks down.",
+      "setting_hint": "on a bridge"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "The city lights come on at night.",
+      "active_characters": [],
+      "subject_characters": [],
+      "action": "The city lights come on at night.",
+      "setting_hint": "at night"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "She smiles at the view.",
+      "active_characters": [
+        "Emma"
+      ],
+      "subject_characters": [
+        "Emma"
+      ],
+      "action": "Emma smiles at the view.",
+      "setting_hint": "at the view"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

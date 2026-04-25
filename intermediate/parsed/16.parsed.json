@@ -1,0 +1,59 @@
+{
+  "case_id": "16",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\16.txt",
+  "characters": [
+    "Chef"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "in the kitchen"
+    ],
+    "object_hints": [
+      "kitchen",
+      "taste of the",
+      "finished dish"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Chef> cuts vegetables in the kitchen.",
+      "active_characters": [
+        "Chef"
+      ],
+      "subject_characters": [],
+      "action": "Chef cuts vegetables in the kitchen.",
+      "setting_hint": "in the kitchen"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "He checks the taste of the food.",
+      "active_characters": [
+        "Chef"
+      ],
+      "subject_characters": [
+        "Chef"
+      ],
+      "action": "Chef checks the taste of the food.",
+      "setting_hint": "same story world"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "He serves the finished dish.",
+      "active_characters": [
+        "Chef"
+      ],
+      "subject_characters": [
+        "Chef"
+      ],
+      "action": "Chef serves the finished dish.",
+      "setting_hint": "same story world"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

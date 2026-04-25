@@ -1,0 +1,61 @@
+{
+  "case_id": "02",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\02.txt",
+  "characters": [
+    "Ryan"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "toward a bus",
+      "at the door",
+      "by the window"
+    ],
+    "object_hints": [
+      "bus",
+      "door",
+      "window"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Ryan> walks quickly toward a bus.",
+      "active_characters": [
+        "Ryan"
+      ],
+      "subject_characters": [],
+      "action": "Ryan walks quickly toward a bus.",
+      "setting_hint": "toward a bus"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "He pauses at the door and looks ahead.",
+      "active_characters": [
+        "Ryan"
+      ],
+      "subject_characters": [
+        "Ryan"
+      ],
+      "action": "Ryan pauses at the door and looks ahead.",
+      "setting_hint": "at the door"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "He gets inside and sits by the window.",
+      "active_characters": [
+        "Ryan"
+      ],
+      "subject_characters": [
+        "Ryan"
+      ],
+      "action": "Ryan gets inside and sits by the window.",
+      "setting_hint": "by the window"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "case_id": "01",
+  "prompt_version": "member-a-v1",
+  "characters": [
+    "Lily"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "in the kitchen",
+      "beside her"
+    ],
+    "object_hints": [
+      "kitchen",
+      "window",
+      "book beside her"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ],
+  "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+  "panel_prompts": [
+    {
+      "panel_id": "scene_1",
+      "scene_id": 1,
+      "source_text": "<Lily> makes breakfast in the kitchen.",
+      "active_characters": [
+        "Lily"
+      ],
+      "resolved_action": "Lily makes breakfast in the kitchen",
+      "setting_hint": "in the kitchen",
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 1: Lily makes breakfast in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 1
+    },
+    {
+      "panel_id": "scene_2",
+      "scene_id": 2,
+      "source_text": "She looks out the window quietly.",
+      "active_characters": [
+        "Lily"
+      ],
+      "resolved_action": "Lily looks out the window quietly",
+      "setting_hint": "same story world",
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 2: Lily looks out the window quietly. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 2
+    },
+    {
+      "panel_id": "scene_3",
+      "scene_id": 3,
+      "source_text": "She sits down to eat with a book beside her.",
+      "active_characters": [
+        "Lily"
+      ],
+      "resolved_action": "Lily sits down to eat with a book beside her",
+      "setting_hint": "beside her",
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 3: Lily sits down to eat with a book beside her. Setting: beside her. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 3
+    }
+  ]
+}

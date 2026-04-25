@@ -1,0 +1,65 @@
+{
+  "case_id": "11",
+  "prompt_version": "member-a-v1",
+  "characters": [
+    "Olivia"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "in a classroom"
+    ],
+    "object_hints": [
+      "classroom",
+      "window",
+      "bag"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ],
+  "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+  "panel_prompts": [
+    {
+      "panel_id": "scene_1",
+      "scene_id": 1,
+      "source_text": "<Olivia> writes in a classroom.",
+      "active_characters": [
+        "Olivia"
+      ],
+      "resolved_action": "Olivia writes in a classroom",
+      "setting_hint": "in a classroom",
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 1: Olivia writes in a classroom. Setting: in a classroom. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 1
+    },
+    {
+      "panel_id": "scene_2",
+      "scene_id": 2,
+      "source_text": "She looks out the window.",
+      "active_characters": [
+        "Olivia"
+      ],
+      "resolved_action": "Olivia looks out the window",
+      "setting_hint": "same story world",
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 2: Olivia looks out the window. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 2
+    },
+    {
+      "panel_id": "scene_3",
+      "scene_id": 3,
+      "source_text": "She packs her bag and leaves.",
+      "active_characters": [
+        "Olivia"
+      ],
+      "resolved_action": "Olivia packs her bag and leaves",
+      "setting_hint": "same story world",
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 3: Olivia packs her bag and leaves. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 3
+    }
+  ]
+}

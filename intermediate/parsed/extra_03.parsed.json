@@ -1,0 +1,58 @@
+{
+  "case_id": "extra_03",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\extra_03.txt",
+  "characters": [
+    "Dog"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "across a field"
+    ],
+    "object_hints": [
+      "field",
+      "ball"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Dog> runs across a field.",
+      "active_characters": [
+        "Dog"
+      ],
+      "subject_characters": [],
+      "action": "Dog runs across a field.",
+      "setting_hint": "across a field"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "It chases a ball.",
+      "active_characters": [
+        "Dog"
+      ],
+      "subject_characters": [
+        "Dog"
+      ],
+      "action": "Dog chases a ball.",
+      "setting_hint": "same story world"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "It returns happily.",
+      "active_characters": [
+        "Dog"
+      ],
+      "subject_characters": [
+        "Dog"
+      ],
+      "action": "Dog returns happily.",
+      "setting_hint": "same story world"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}

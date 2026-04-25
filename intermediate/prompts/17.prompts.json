@@ -1,0 +1,64 @@
+{
+  "case_id": "17",
+  "prompt_version": "member-a-v1",
+  "characters": [
+    "Artist"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "in front of a canvas"
+    ],
+    "object_hints": [
+      "canvas",
+      "moment"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ],
+  "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+  "panel_prompts": [
+    {
+      "panel_id": "scene_1",
+      "scene_id": 1,
+      "source_text": "<Artist> paints in front of a canvas.",
+      "active_characters": [
+        "Artist"
+      ],
+      "resolved_action": "Artist paints in front of a canvas",
+      "setting_hint": "in front of a canvas",
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 1: Artist paints in front of a canvas. Setting: in front of a canvas. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 1
+    },
+    {
+      "panel_id": "scene_2",
+      "scene_id": 2,
+      "source_text": "He stops and thinks for a moment.",
+      "active_characters": [
+        "Artist"
+      ],
+      "resolved_action": "Artist stops and thinks for a moment",
+      "setting_hint": "same story world",
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 2: Artist stops and thinks for a moment. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 2
+    },
+    {
+      "panel_id": "scene_3",
+      "scene_id": 3,
+      "source_text": "He continues painting.",
+      "active_characters": [
+        "Artist"
+      ],
+      "resolved_action": "Artist continues painting",
+      "setting_hint": "same story world",
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 3: Artist continues painting. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "seed_offset": 3
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "case_id": "01",
+  "source_path": "Students_test set_A and B\\Students_test set_A and B\\TaskA\\01.txt",
+  "characters": [
+    "Lily"
+  ],
+  "global_context": {
+    "setting_hints": [
+      "in the kitchen",
+      "beside her"
+    ],
+    "object_hints": [
+      "kitchen",
+      "window",
+      "book beside her"
+    ],
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition"
+  },
+  "panels": [
+    {
+      "scene_id": 1,
+      "raw_text": "<Lily> makes breakfast in the kitchen.",
+      "active_characters": [
+        "Lily"
+      ],
+      "subject_characters": [],
+      "action": "Lily makes breakfast in the kitchen.",
+      "setting_hint": "in the kitchen"
+    },
+    {
+      "scene_id": 2,
+      "raw_text": "She looks out the window quietly.",
+      "active_characters": [
+        "Lily"
+      ],
+      "subject_characters": [
+        "Lily"
+      ],
+      "action": "Lily looks out the window quietly.",
+      "setting_hint": "same story world"
+    },
+    {
+      "scene_id": 3,
+      "raw_text": "She sits down to eat with a book beside her.",
+      "active_characters": [
+        "Lily"
+      ],
+      "subject_characters": [
+        "Lily"
+      ],
+      "action": "Lily sits down to eat with a book beside her.",
+      "setting_hint": "beside her"
+    }
+  ],
+  "continuity_notes": [
+    "Use the same visual identity for each recurring character.",
+    "Keep clothing, colors, lighting, and illustration style consistent across panels.",
+    "Do not introduce extra named characters unless the scene text requires them."
+  ]
+}
