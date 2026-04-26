@@ -33,32 +33,41 @@ The root-level directories below are the main working copy:
 - `outputs/intermediate/parsed/`: parsed story JSON for `16` cases
 - `outputs/intermediate/prompts/`: prompt JSON for `16` cases
 - `outputs/intermediate/generation_manifest.json`: full candidate manifest
+- `outputs/intermediate/selection_results.json`: final per-scene selection results
 - `outputs/candidates/`: generated candidate image files
+- `outputs/final/`: packaged final images ready for submission review
 - `outputs/logs/`: batch logs and summaries
 
-## What Is Not Done Yet
+### Member C
 
-### Member C / Downstream Selection
+- `scripts/rerank_candidates.py` now reads the integrated manifest and candidate image paths.
+- `scripts/package_outputs.py` packages the selected final images.
+- `scripts/run_story_pipeline.py` runs the pipeline from parsing to final packaging.
+- Current selection status: `16` cases and `48` final panel images were selected and packaged successfully.
 
-- A robust `rerank_candidates.py` still needs to be aligned with the new manifest/candidate layout.
-- Candidate selection should read from `outputs/intermediate/generation_manifest.json` and/or `outputs/candidates/`.
-- The current root `scripts/rerank_candidates.py` is an early prototype and does not yet match the integrated pipeline cleanly.
+## What Is Still Left
 
-### Final Packaging
+### Submission Alignment
 
-- `package_outputs.py` has not been implemented yet.
-- Final selected images still need to be renamed/copied into the official submission format.
+- The exact official submission naming/layout still needs to be double-checked against the course spec.
+- If the teacher requires a flatter directory structure or different filenames, `scripts/package_outputs.py` should be adjusted.
 
 ### Reproducibility and Environment
 
-- A final `requirements.txt` or environment file is still missing.
+- `requirements.txt` is now present, but version pinning may still be needed on the final machine.
 - The README still contains placeholder team information and an idealized structure.
 - If you want the project to be portable across machines, the model path in `configs/member_b_generation_config*.json` will need to be adjusted from the current local/HPC path.
+
+### Report and Polish
+
+- Fill in the final team information in `README.md`.
+- Add report screenshots, qualitative examples, and method discussion.
+- Optionally upgrade reranking later with CLIP if the final runtime environment includes the required dependencies.
 
 ## Recommended Next Steps
 
 1. Keep the root-level `configs/`, `data/`, `docs/`, `outputs/`, and `scripts/` folders as the only working structure.
-2. Update or rewrite `scripts/rerank_candidates.py` so it consumes the integrated manifest and candidate image paths.
-3. Implement `scripts/package_outputs.py` for final submission formatting.
-4. Add a reproducible environment file and clean README.
+2. Confirm the teacher's final submission directory and filename rules.
+3. Adjust `scripts/package_outputs.py` if the official format differs from the current `outputs/final/{case_id}/scene_{scene_id}.png` layout.
+4. Fill in team metadata and polish the report.
 5. Adjust the generation config model path if the project needs to run on another machine.

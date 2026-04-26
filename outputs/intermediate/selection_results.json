@@ -1,0 +1,2141 @@
+{
+  "selection_version": "member-c-v1",
+  "manifest_path": "outputs/intermediate/generation_manifest.json",
+  "backend": "bytes",
+  "weights": {
+    "quality": 0.55,
+    "continuity": 0.45
+  },
+  "case_count": 16,
+  "panel_count": 48,
+  "cases": [
+    {
+      "case_id": "01",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 2,
+          "selected_seed": 2114,
+          "selected_path": "outputs/candidates/01/scene_1/candidate_2.png",
+          "scores": {
+            "quality": 0.998752,
+            "continuity": 0.0,
+            "total": 0.549313
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 2113,
+              "output_path": "outputs/candidates/01/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998573,
+                "continuity": 0.0,
+                "total": 0.549215
+              },
+              "feature_metadata": {
+                "file_size_bytes": 359064,
+                "byte_entropy": 7.98244
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 2114,
+              "output_path": "outputs/candidates/01/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998752,
+                "continuity": 0.0,
+                "total": 0.549313
+              },
+              "feature_metadata": {
+                "file_size_bytes": 348315,
+                "byte_entropy": 7.984637
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 2,
+          "selected_seed": 2214,
+          "selected_path": "outputs/candidates/01/scene_2/candidate_2.png",
+          "scores": {
+            "quality": 0.99888,
+            "continuity": 0.999864,
+            "total": 0.999323
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 2213,
+              "output_path": "outputs/candidates/01/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.99882,
+                "continuity": 0.999832,
+                "total": 0.999275
+              },
+              "feature_metadata": {
+                "file_size_bytes": 301492,
+                "byte_entropy": 7.985475
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 2214,
+              "output_path": "outputs/candidates/01/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.99888,
+                "continuity": 0.999864,
+                "total": 0.999323
+              },
+              "feature_metadata": {
+                "file_size_bytes": 309403,
+                "byte_entropy": 7.986218
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 2,
+          "selected_seed": 2314,
+          "selected_path": "outputs/candidates/01/scene_3/candidate_2.png",
+          "scores": {
+            "quality": 0.998961,
+            "continuity": 0.999813,
+            "total": 0.999344
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 2313,
+              "output_path": "outputs/candidates/01/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998304,
+                "continuity": 0.999853,
+                "total": 0.999001
+              },
+              "feature_metadata": {
+                "file_size_bytes": 359129,
+                "byte_entropy": 7.979125
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 2314,
+              "output_path": "outputs/candidates/01/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998961,
+                "continuity": 0.999813,
+                "total": 0.999344
+              },
+              "feature_metadata": {
+                "file_size_bytes": 410132,
+                "byte_entropy": 7.987209
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/01/scene_1/candidate_2.png",
+        "outputs/candidates/01/scene_2/candidate_2.png",
+        "outputs/candidates/01/scene_3/candidate_2.png"
+      ]
+    },
+    {
+      "case_id": "02",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 1,
+          "selected_seed": 3113,
+          "selected_path": "outputs/candidates/02/scene_1/candidate_1.png",
+          "scores": {
+            "quality": 0.998847,
+            "continuity": 0.0,
+            "total": 0.549366
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 3113,
+              "output_path": "outputs/candidates/02/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998847,
+                "continuity": 0.0,
+                "total": 0.549366
+              },
+              "feature_metadata": {
+                "file_size_bytes": 368484,
+                "byte_entropy": 7.985812
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 3114,
+              "output_path": "outputs/candidates/02/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998466,
+                "continuity": 0.0,
+                "total": 0.549157
+              },
+              "feature_metadata": {
+                "file_size_bytes": 370484,
+                "byte_entropy": 7.981126
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 3213,
+          "selected_path": "outputs/candidates/02/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.999216,
+            "continuity": 0.999773,
+            "total": 0.999467
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 3213,
+              "output_path": "outputs/candidates/02/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.999216,
+                "continuity": 0.999773,
+                "total": 0.999467
+              },
+              "feature_metadata": {
+                "file_size_bytes": 289059,
+                "byte_entropy": 7.990351
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 3214,
+              "output_path": "outputs/candidates/02/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.999079,
+                "continuity": 0.999822,
+                "total": 0.999414
+              },
+              "feature_metadata": {
+                "file_size_bytes": 291886,
+                "byte_entropy": 7.988669
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 3313,
+          "selected_path": "outputs/candidates/02/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.999201,
+            "continuity": 0.999777,
+            "total": 0.99946
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 3313,
+              "output_path": "outputs/candidates/02/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.999201,
+                "continuity": 0.999777,
+                "total": 0.99946
+              },
+              "feature_metadata": {
+                "file_size_bytes": 299722,
+                "byte_entropy": 7.99017
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 3314,
+              "output_path": "outputs/candidates/02/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.999,
+                "continuity": 0.999822,
+                "total": 0.99937
+              },
+              "feature_metadata": {
+                "file_size_bytes": 329147,
+                "byte_entropy": 7.987694
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/02/scene_1/candidate_1.png",
+        "outputs/candidates/02/scene_2/candidate_1.png",
+        "outputs/candidates/02/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "04",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 2,
+          "selected_seed": 4114,
+          "selected_path": "outputs/candidates/04/scene_1/candidate_2.png",
+          "scores": {
+            "quality": 0.998833,
+            "continuity": 0.0,
+            "total": 0.549358
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 4113,
+              "output_path": "outputs/candidates/04/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998439,
+                "continuity": 0.0,
+                "total": 0.549141
+              },
+              "feature_metadata": {
+                "file_size_bytes": 353902,
+                "byte_entropy": 7.980783
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 4114,
+              "output_path": "outputs/candidates/04/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998833,
+                "continuity": 0.0,
+                "total": 0.549358
+              },
+              "feature_metadata": {
+                "file_size_bytes": 355211,
+                "byte_entropy": 7.985637
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 4213,
+          "selected_path": "outputs/candidates/04/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.999144,
+            "continuity": 0.999667,
+            "total": 0.999379
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 4213,
+              "output_path": "outputs/candidates/04/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.999144,
+                "continuity": 0.999667,
+                "total": 0.999379
+              },
+              "feature_metadata": {
+                "file_size_bytes": 359263,
+                "byte_entropy": 7.989462
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 4214,
+              "output_path": "outputs/candidates/04/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.999025,
+                "continuity": 0.999733,
+                "total": 0.999344
+              },
+              "feature_metadata": {
+                "file_size_bytes": 353982,
+                "byte_entropy": 7.988003
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 2,
+          "selected_seed": 4314,
+          "selected_path": "outputs/candidates/04/scene_3/candidate_2.png",
+          "scores": {
+            "quality": 0.99865,
+            "continuity": 0.999718,
+            "total": 0.999131
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 4313,
+              "output_path": "outputs/candidates/04/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998357,
+                "continuity": 0.999767,
+                "total": 0.998991
+              },
+              "feature_metadata": {
+                "file_size_bytes": 374832,
+                "byte_entropy": 7.979779
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 4314,
+              "output_path": "outputs/candidates/04/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.99865,
+                "continuity": 0.999718,
+                "total": 0.999131
+              },
+              "feature_metadata": {
+                "file_size_bytes": 370862,
+                "byte_entropy": 7.98338
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/04/scene_1/candidate_2.png",
+        "outputs/candidates/04/scene_2/candidate_1.png",
+        "outputs/candidates/04/scene_3/candidate_2.png"
+      ]
+    },
+    {
+      "case_id": "05",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 2,
+          "selected_seed": 5114,
+          "selected_path": "outputs/candidates/05/scene_1/candidate_2.png",
+          "scores": {
+            "quality": 0.998609,
+            "continuity": 0.0,
+            "total": 0.549235
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 5113,
+              "output_path": "outputs/candidates/05/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998432,
+                "continuity": 0.0,
+                "total": 0.549138
+              },
+              "feature_metadata": {
+                "file_size_bytes": 386308,
+                "byte_entropy": 7.980705
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 5114,
+              "output_path": "outputs/candidates/05/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998609,
+                "continuity": 0.0,
+                "total": 0.549235
+              },
+              "feature_metadata": {
+                "file_size_bytes": 331886,
+                "byte_entropy": 7.982881
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 5213,
+          "selected_path": "outputs/candidates/05/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.998834,
+            "continuity": 0.999741,
+            "total": 0.999242
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 5213,
+              "output_path": "outputs/candidates/05/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.998834,
+                "continuity": 0.999741,
+                "total": 0.999242
+              },
+              "feature_metadata": {
+                "file_size_bytes": 350367,
+                "byte_entropy": 7.985646
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 5214,
+              "output_path": "outputs/candidates/05/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.998659,
+                "continuity": 0.999823,
+                "total": 0.999183
+              },
+              "feature_metadata": {
+                "file_size_bytes": 360969,
+                "byte_entropy": 7.983491
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 5313,
+          "selected_path": "outputs/candidates/05/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.999211,
+            "continuity": 0.999694,
+            "total": 0.999429
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 5313,
+              "output_path": "outputs/candidates/05/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.999211,
+                "continuity": 0.999694,
+                "total": 0.999429
+              },
+              "feature_metadata": {
+                "file_size_bytes": 329990,
+                "byte_entropy": 7.990292
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 5314,
+              "output_path": "outputs/candidates/05/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998588,
+                "continuity": 0.99982,
+                "total": 0.999142
+              },
+              "feature_metadata": {
+                "file_size_bytes": 341146,
+                "byte_entropy": 7.982618
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/05/scene_1/candidate_2.png",
+        "outputs/candidates/05/scene_2/candidate_1.png",
+        "outputs/candidates/05/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "06",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 2,
+          "selected_seed": 6114,
+          "selected_path": "outputs/candidates/06/scene_1/candidate_2.png",
+          "scores": {
+            "quality": 0.998873,
+            "continuity": 0.0,
+            "total": 0.54938
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 6113,
+              "output_path": "outputs/candidates/06/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998085,
+                "continuity": 0.0,
+                "total": 0.548947
+              },
+              "feature_metadata": {
+                "file_size_bytes": 381703,
+                "byte_entropy": 7.976431
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 6114,
+              "output_path": "outputs/candidates/06/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998873,
+                "continuity": 0.0,
+                "total": 0.54938
+              },
+              "feature_metadata": {
+                "file_size_bytes": 384689,
+                "byte_entropy": 7.986127
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 2,
+          "selected_seed": 6214,
+          "selected_path": "outputs/candidates/06/scene_2/candidate_2.png",
+          "scores": {
+            "quality": 0.997868,
+            "continuity": 0.999794,
+            "total": 0.998735
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 6213,
+              "output_path": "outputs/candidates/06/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.997793,
+                "continuity": 0.999704,
+                "total": 0.998653
+              },
+              "feature_metadata": {
+                "file_size_bytes": 381318,
+                "byte_entropy": 7.972841
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 6214,
+              "output_path": "outputs/candidates/06/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.997868,
+                "continuity": 0.999794,
+                "total": 0.998735
+              },
+              "feature_metadata": {
+                "file_size_bytes": 379739,
+                "byte_entropy": 7.973764
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 2,
+          "selected_seed": 6314,
+          "selected_path": "outputs/candidates/06/scene_3/candidate_2.png",
+          "scores": {
+            "quality": 0.998357,
+            "continuity": 0.999827,
+            "total": 0.999019
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 6313,
+              "output_path": "outputs/candidates/06/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.997825,
+                "continuity": 0.999789,
+                "total": 0.998709
+              },
+              "feature_metadata": {
+                "file_size_bytes": 379703,
+                "byte_entropy": 7.973227
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 6314,
+              "output_path": "outputs/candidates/06/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998357,
+                "continuity": 0.999827,
+                "total": 0.999019
+              },
+              "feature_metadata": {
+                "file_size_bytes": 390999,
+                "byte_entropy": 7.979776
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/06/scene_1/candidate_2.png",
+        "outputs/candidates/06/scene_2/candidate_2.png",
+        "outputs/candidates/06/scene_3/candidate_2.png"
+      ]
+    },
+    {
+      "case_id": "07",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 1,
+          "selected_seed": 7113,
+          "selected_path": "outputs/candidates/07/scene_1/candidate_1.png",
+          "scores": {
+            "quality": 0.998259,
+            "continuity": 0.0,
+            "total": 0.549042
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 7113,
+              "output_path": "outputs/candidates/07/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998259,
+                "continuity": 0.0,
+                "total": 0.549042
+              },
+              "feature_metadata": {
+                "file_size_bytes": 367905,
+                "byte_entropy": 7.978571
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 7114,
+              "output_path": "outputs/candidates/07/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998095,
+                "continuity": 0.0,
+                "total": 0.548952
+              },
+              "feature_metadata": {
+                "file_size_bytes": 380655,
+                "byte_entropy": 7.976555
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 2,
+          "selected_seed": 7214,
+          "selected_path": "outputs/candidates/07/scene_2/candidate_2.png",
+          "scores": {
+            "quality": 0.998509,
+            "continuity": 0.99981,
+            "total": 0.999094
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 7213,
+              "output_path": "outputs/candidates/07/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.998328,
+                "continuity": 0.999846,
+                "total": 0.999011
+              },
+              "feature_metadata": {
+                "file_size_bytes": 409812,
+                "byte_entropy": 7.97942
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 7214,
+              "output_path": "outputs/candidates/07/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.998509,
+                "continuity": 0.99981,
+                "total": 0.999094
+              },
+              "feature_metadata": {
+                "file_size_bytes": 383151,
+                "byte_entropy": 7.981648
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 2,
+          "selected_seed": 7314,
+          "selected_path": "outputs/candidates/07/scene_3/candidate_2.png",
+          "scores": {
+            "quality": 0.998528,
+            "continuity": 0.999845,
+            "total": 0.99912
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 7313,
+              "output_path": "outputs/candidates/07/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.99842,
+                "continuity": 0.999831,
+                "total": 0.999055
+              },
+              "feature_metadata": {
+                "file_size_bytes": 401687,
+                "byte_entropy": 7.980556
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 7314,
+              "output_path": "outputs/candidates/07/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998528,
+                "continuity": 0.999845,
+                "total": 0.99912
+              },
+              "feature_metadata": {
+                "file_size_bytes": 398657,
+                "byte_entropy": 7.981881
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/07/scene_1/candidate_1.png",
+        "outputs/candidates/07/scene_2/candidate_2.png",
+        "outputs/candidates/07/scene_3/candidate_2.png"
+      ]
+    },
+    {
+      "case_id": "08",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 1,
+          "selected_seed": 8113,
+          "selected_path": "outputs/candidates/08/scene_1/candidate_1.png",
+          "scores": {
+            "quality": 0.999122,
+            "continuity": 0.0,
+            "total": 0.549517
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 8113,
+              "output_path": "outputs/candidates/08/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.999122,
+                "continuity": 0.0,
+                "total": 0.549517
+              },
+              "feature_metadata": {
+                "file_size_bytes": 369243,
+                "byte_entropy": 7.989199
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 8114,
+              "output_path": "outputs/candidates/08/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998856,
+                "continuity": 0.0,
+                "total": 0.549371
+              },
+              "feature_metadata": {
+                "file_size_bytes": 345392,
+                "byte_entropy": 7.985919
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 8213,
+          "selected_path": "outputs/candidates/08/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.998743,
+            "continuity": 0.999909,
+            "total": 0.999268
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 8213,
+              "output_path": "outputs/candidates/08/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.998743,
+                "continuity": 0.999909,
+                "total": 0.999268
+              },
+              "feature_metadata": {
+                "file_size_bytes": 365492,
+                "byte_entropy": 7.98453
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 8214,
+              "output_path": "outputs/candidates/08/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.998692,
+                "continuity": 0.999844,
+                "total": 0.99921
+              },
+              "feature_metadata": {
+                "file_size_bytes": 352413,
+                "byte_entropy": 7.983899
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 8313,
+          "selected_path": "outputs/candidates/08/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.998867,
+            "continuity": 0.999788,
+            "total": 0.999281
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 8313,
+              "output_path": "outputs/candidates/08/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998867,
+                "continuity": 0.999788,
+                "total": 0.999281
+              },
+              "feature_metadata": {
+                "file_size_bytes": 395263,
+                "byte_entropy": 7.986054
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 8314,
+              "output_path": "outputs/candidates/08/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998693,
+                "continuity": 0.999905,
+                "total": 0.999238
+              },
+              "feature_metadata": {
+                "file_size_bytes": 446479,
+                "byte_entropy": 7.983913
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/08/scene_1/candidate_1.png",
+        "outputs/candidates/08/scene_2/candidate_1.png",
+        "outputs/candidates/08/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "09",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 2,
+          "selected_seed": 9114,
+          "selected_path": "outputs/candidates/09/scene_1/candidate_2.png",
+          "scores": {
+            "quality": 0.998843,
+            "continuity": 0.0,
+            "total": 0.549364
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 9113,
+              "output_path": "outputs/candidates/09/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998341,
+                "continuity": 0.0,
+                "total": 0.549087
+              },
+              "feature_metadata": {
+                "file_size_bytes": 354776,
+                "byte_entropy": 7.979576
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 9114,
+              "output_path": "outputs/candidates/09/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998843,
+                "continuity": 0.0,
+                "total": 0.549364
+              },
+              "feature_metadata": {
+                "file_size_bytes": 368980,
+                "byte_entropy": 7.985762
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 9213,
+          "selected_path": "outputs/candidates/09/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.999157,
+            "continuity": 0.999835,
+            "total": 0.999462
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 9213,
+              "output_path": "outputs/candidates/09/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.999157,
+                "continuity": 0.999835,
+                "total": 0.999462
+              },
+              "feature_metadata": {
+                "file_size_bytes": 332628,
+                "byte_entropy": 7.989624
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 9214,
+              "output_path": "outputs/candidates/09/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.999003,
+                "continuity": 0.999735,
+                "total": 0.999333
+              },
+              "feature_metadata": {
+                "file_size_bytes": 318179,
+                "byte_entropy": 7.987729
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 9313,
+          "selected_path": "outputs/candidates/09/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.999051,
+            "continuity": 0.999808,
+            "total": 0.999392
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 9313,
+              "output_path": "outputs/candidates/09/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.999051,
+                "continuity": 0.999808,
+                "total": 0.999392
+              },
+              "feature_metadata": {
+                "file_size_bytes": 339924,
+                "byte_entropy": 7.988321
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 9314,
+              "output_path": "outputs/candidates/09/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998868,
+                "continuity": 0.999813,
+                "total": 0.999293
+              },
+              "feature_metadata": {
+                "file_size_bytes": 351393,
+                "byte_entropy": 7.986067
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/09/scene_1/candidate_2.png",
+        "outputs/candidates/09/scene_2/candidate_1.png",
+        "outputs/candidates/09/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "11",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 1,
+          "selected_seed": 10113,
+          "selected_path": "outputs/candidates/11/scene_1/candidate_1.png",
+          "scores": {
+            "quality": 0.998984,
+            "continuity": 0.0,
+            "total": 0.549441
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 10113,
+              "output_path": "outputs/candidates/11/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998984,
+                "continuity": 0.0,
+                "total": 0.549441
+              },
+              "feature_metadata": {
+                "file_size_bytes": 338499,
+                "byte_entropy": 7.9875
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 10114,
+              "output_path": "outputs/candidates/11/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998964,
+                "continuity": 0.0,
+                "total": 0.54943
+              },
+              "feature_metadata": {
+                "file_size_bytes": 331766,
+                "byte_entropy": 7.987244
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 10213,
+          "selected_path": "outputs/candidates/11/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.999094,
+            "continuity": 0.99979,
+            "total": 0.999407
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 10213,
+              "output_path": "outputs/candidates/11/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.999094,
+                "continuity": 0.99979,
+                "total": 0.999407
+              },
+              "feature_metadata": {
+                "file_size_bytes": 290564,
+                "byte_entropy": 7.988853
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 10214,
+              "output_path": "outputs/candidates/11/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.998198,
+                "continuity": 0.999834,
+                "total": 0.998935
+              },
+              "feature_metadata": {
+                "file_size_bytes": 343090,
+                "byte_entropy": 7.977827
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 10313,
+          "selected_path": "outputs/candidates/11/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.998994,
+            "continuity": 0.999888,
+            "total": 0.999396
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 10313,
+              "output_path": "outputs/candidates/11/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998994,
+                "continuity": 0.999888,
+                "total": 0.999396
+              },
+              "feature_metadata": {
+                "file_size_bytes": 344071,
+                "byte_entropy": 7.987624
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 10314,
+              "output_path": "outputs/candidates/11/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998381,
+                "continuity": 0.999812,
+                "total": 0.999025
+              },
+              "feature_metadata": {
+                "file_size_bytes": 384960,
+                "byte_entropy": 7.980079
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/11/scene_1/candidate_1.png",
+        "outputs/candidates/11/scene_2/candidate_1.png",
+        "outputs/candidates/11/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "14",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 2,
+          "selected_seed": 11114,
+          "selected_path": "outputs/candidates/14/scene_1/candidate_2.png",
+          "scores": {
+            "quality": 0.998785,
+            "continuity": 0.0,
+            "total": 0.549332
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 11113,
+              "output_path": "outputs/candidates/14/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998679,
+                "continuity": 0.0,
+                "total": 0.549273
+              },
+              "feature_metadata": {
+                "file_size_bytes": 393586,
+                "byte_entropy": 7.983742
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 11114,
+              "output_path": "outputs/candidates/14/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998785,
+                "continuity": 0.0,
+                "total": 0.549332
+              },
+              "feature_metadata": {
+                "file_size_bytes": 387308,
+                "byte_entropy": 7.985051
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 2,
+          "selected_seed": 11214,
+          "selected_path": "outputs/candidates/14/scene_2/candidate_2.png",
+          "scores": {
+            "quality": 0.999043,
+            "continuity": 0.999842,
+            "total": 0.999403
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 11213,
+              "output_path": "outputs/candidates/14/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.998896,
+                "continuity": 0.99982,
+                "total": 0.999311
+              },
+              "feature_metadata": {
+                "file_size_bytes": 398227,
+                "byte_entropy": 7.986408
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 11214,
+              "output_path": "outputs/candidates/14/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.999043,
+                "continuity": 0.999842,
+                "total": 0.999403
+              },
+              "feature_metadata": {
+                "file_size_bytes": 362188,
+                "byte_entropy": 7.988226
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 11313,
+          "selected_path": "outputs/candidates/14/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.998722,
+            "continuity": 0.999712,
+            "total": 0.999168
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 11313,
+              "output_path": "outputs/candidates/14/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998722,
+                "continuity": 0.999712,
+                "total": 0.999168
+              },
+              "feature_metadata": {
+                "file_size_bytes": 361753,
+                "byte_entropy": 7.984273
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 11314,
+              "output_path": "outputs/candidates/14/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998335,
+                "continuity": 0.999842,
+                "total": 0.999013
+              },
+              "feature_metadata": {
+                "file_size_bytes": 369202,
+                "byte_entropy": 7.979512
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/14/scene_1/candidate_2.png",
+        "outputs/candidates/14/scene_2/candidate_2.png",
+        "outputs/candidates/14/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "16",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 1,
+          "selected_seed": 12113,
+          "selected_path": "outputs/candidates/16/scene_1/candidate_1.png",
+          "scores": {
+            "quality": 0.998955,
+            "continuity": 0.0,
+            "total": 0.549425
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 12113,
+              "output_path": "outputs/candidates/16/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998955,
+                "continuity": 0.0,
+                "total": 0.549425
+              },
+              "feature_metadata": {
+                "file_size_bytes": 367907,
+                "byte_entropy": 7.987137
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 12114,
+              "output_path": "outputs/candidates/16/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998924,
+                "continuity": 0.0,
+                "total": 0.549408
+              },
+              "feature_metadata": {
+                "file_size_bytes": 364820,
+                "byte_entropy": 7.986755
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 2,
+          "selected_seed": 12214,
+          "selected_path": "outputs/candidates/16/scene_2/candidate_2.png",
+          "scores": {
+            "quality": 0.999141,
+            "continuity": 0.99983,
+            "total": 0.999451
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 12213,
+              "output_path": "outputs/candidates/16/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.999188,
+                "continuity": 0.999757,
+                "total": 0.999444
+              },
+              "feature_metadata": {
+                "file_size_bytes": 321278,
+                "byte_entropy": 7.990009
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 12214,
+              "output_path": "outputs/candidates/16/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.999141,
+                "continuity": 0.99983,
+                "total": 0.999451
+              },
+              "feature_metadata": {
+                "file_size_bytes": 334723,
+                "byte_entropy": 7.989428
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 12313,
+          "selected_path": "outputs/candidates/16/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.999209,
+            "continuity": 0.999846,
+            "total": 0.999496
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 12313,
+              "output_path": "outputs/candidates/16/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.999209,
+                "continuity": 0.999846,
+                "total": 0.999496
+              },
+              "feature_metadata": {
+                "file_size_bytes": 346199,
+                "byte_entropy": 7.990266
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 12314,
+              "output_path": "outputs/candidates/16/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.999101,
+                "continuity": 0.999845,
+                "total": 0.999436
+              },
+              "feature_metadata": {
+                "file_size_bytes": 329975,
+                "byte_entropy": 7.988937
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/16/scene_1/candidate_1.png",
+        "outputs/candidates/16/scene_2/candidate_2.png",
+        "outputs/candidates/16/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "17",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 2,
+          "selected_seed": 13114,
+          "selected_path": "outputs/candidates/17/scene_1/candidate_2.png",
+          "scores": {
+            "quality": 0.998712,
+            "continuity": 0.0,
+            "total": 0.549292
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 13113,
+              "output_path": "outputs/candidates/17/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998647,
+                "continuity": 0.0,
+                "total": 0.549256
+              },
+              "feature_metadata": {
+                "file_size_bytes": 403287,
+                "byte_entropy": 7.983347
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 13114,
+              "output_path": "outputs/candidates/17/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998712,
+                "continuity": 0.0,
+                "total": 0.549292
+              },
+              "feature_metadata": {
+                "file_size_bytes": 397394,
+                "byte_entropy": 7.984148
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 13213,
+          "selected_path": "outputs/candidates/17/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.998599,
+            "continuity": 0.99973,
+            "total": 0.999108
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 13213,
+              "output_path": "outputs/candidates/17/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.998599,
+                "continuity": 0.99973,
+                "total": 0.999108
+              },
+              "feature_metadata": {
+                "file_size_bytes": 365638,
+                "byte_entropy": 7.982757
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 13214,
+              "output_path": "outputs/candidates/17/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.998141,
+                "continuity": 0.999792,
+                "total": 0.998884
+              },
+              "feature_metadata": {
+                "file_size_bytes": 374419,
+                "byte_entropy": 7.977122
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 2,
+          "selected_seed": 13314,
+          "selected_path": "outputs/candidates/17/scene_3/candidate_2.png",
+          "scores": {
+            "quality": 0.998558,
+            "continuity": 0.99982,
+            "total": 0.999126
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 13313,
+              "output_path": "outputs/candidates/17/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998595,
+                "continuity": 0.999718,
+                "total": 0.9991
+              },
+              "feature_metadata": {
+                "file_size_bytes": 357015,
+                "byte_entropy": 7.98271
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 13314,
+              "output_path": "outputs/candidates/17/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998558,
+                "continuity": 0.99982,
+                "total": 0.999126
+              },
+              "feature_metadata": {
+                "file_size_bytes": 376434,
+                "byte_entropy": 7.982249
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/17/scene_1/candidate_2.png",
+        "outputs/candidates/17/scene_2/candidate_1.png",
+        "outputs/candidates/17/scene_3/candidate_2.png"
+      ]
+    },
+    {
+      "case_id": "extra_03",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 2,
+          "selected_seed": 14114,
+          "selected_path": "outputs/candidates/extra_03/scene_1/candidate_2.png",
+          "scores": {
+            "quality": 0.998618,
+            "continuity": 0.0,
+            "total": 0.54924
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 14113,
+              "output_path": "outputs/candidates/extra_03/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.998272,
+                "continuity": 0.0,
+                "total": 0.54905
+              },
+              "feature_metadata": {
+                "file_size_bytes": 416578,
+                "byte_entropy": 7.97873
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 14114,
+              "output_path": "outputs/candidates/extra_03/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998618,
+                "continuity": 0.0,
+                "total": 0.54924
+              },
+              "feature_metadata": {
+                "file_size_bytes": 385142,
+                "byte_entropy": 7.982997
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 2,
+          "selected_seed": 14214,
+          "selected_path": "outputs/candidates/extra_03/scene_2/candidate_2.png",
+          "scores": {
+            "quality": 0.999245,
+            "continuity": 0.999762,
+            "total": 0.999478
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 14213,
+              "output_path": "outputs/candidates/extra_03/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.998727,
+                "continuity": 0.999796,
+                "total": 0.999208
+              },
+              "feature_metadata": {
+                "file_size_bytes": 391245,
+                "byte_entropy": 7.984328
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 14214,
+              "output_path": "outputs/candidates/extra_03/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.999245,
+                "continuity": 0.999762,
+                "total": 0.999478
+              },
+              "feature_metadata": {
+                "file_size_bytes": 398784,
+                "byte_entropy": 7.990705
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 14313,
+          "selected_path": "outputs/candidates/extra_03/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.998635,
+            "continuity": 0.999809,
+            "total": 0.999163
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 14313,
+              "output_path": "outputs/candidates/extra_03/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998635,
+                "continuity": 0.999809,
+                "total": 0.999163
+              },
+              "feature_metadata": {
+                "file_size_bytes": 369583,
+                "byte_entropy": 7.983205
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 14314,
+              "output_path": "outputs/candidates/extra_03/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998581,
+                "continuity": 0.999765,
+                "total": 0.999114
+              },
+              "feature_metadata": {
+                "file_size_bytes": 386792,
+                "byte_entropy": 7.982537
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/extra_03/scene_1/candidate_2.png",
+        "outputs/candidates/extra_03/scene_2/candidate_2.png",
+        "outputs/candidates/extra_03/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "extra_06",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 1,
+          "selected_seed": 15113,
+          "selected_path": "outputs/candidates/extra_06/scene_1/candidate_1.png",
+          "scores": {
+            "quality": 0.999048,
+            "continuity": 0.0,
+            "total": 0.549476
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 15113,
+              "output_path": "outputs/candidates/extra_06/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.999048,
+                "continuity": 0.0,
+                "total": 0.549476
+              },
+              "feature_metadata": {
+                "file_size_bytes": 339283,
+                "byte_entropy": 7.988284
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 15114,
+              "output_path": "outputs/candidates/extra_06/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998683,
+                "continuity": 0.0,
+                "total": 0.549276
+              },
+              "feature_metadata": {
+                "file_size_bytes": 376144,
+                "byte_entropy": 7.983792
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 2,
+          "selected_seed": 15214,
+          "selected_path": "outputs/candidates/extra_06/scene_2/candidate_2.png",
+          "scores": {
+            "quality": 0.99891,
+            "continuity": 0.999722,
+            "total": 0.999275
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 15213,
+              "output_path": "outputs/candidates/extra_06/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.998517,
+                "continuity": 0.999733,
+                "total": 0.999065
+              },
+              "feature_metadata": {
+                "file_size_bytes": 372839,
+                "byte_entropy": 7.981752
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 15214,
+              "output_path": "outputs/candidates/extra_06/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.99891,
+                "continuity": 0.999722,
+                "total": 0.999275
+              },
+              "feature_metadata": {
+                "file_size_bytes": 384959,
+                "byte_entropy": 7.986589
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 1,
+          "selected_seed": 15313,
+          "selected_path": "outputs/candidates/extra_06/scene_3/candidate_1.png",
+          "scores": {
+            "quality": 0.998961,
+            "continuity": 0.999863,
+            "total": 0.999367
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 15313,
+              "output_path": "outputs/candidates/extra_06/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998961,
+                "continuity": 0.999863,
+                "total": 0.999367
+              },
+              "feature_metadata": {
+                "file_size_bytes": 386153,
+                "byte_entropy": 7.987217
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 15314,
+              "output_path": "outputs/candidates/extra_06/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998596,
+                "continuity": 0.99981,
+                "total": 0.999143
+              },
+              "feature_metadata": {
+                "file_size_bytes": 353753,
+                "byte_entropy": 7.982723
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/extra_06/scene_1/candidate_1.png",
+        "outputs/candidates/extra_06/scene_2/candidate_2.png",
+        "outputs/candidates/extra_06/scene_3/candidate_1.png"
+      ]
+    },
+    {
+      "case_id": "extra_08",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 1,
+          "selected_seed": 16113,
+          "selected_path": "outputs/candidates/extra_08/scene_1/candidate_1.png",
+          "scores": {
+            "quality": 0.999011,
+            "continuity": 0.0,
+            "total": 0.549456
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 16113,
+              "output_path": "outputs/candidates/extra_08/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.999011,
+                "continuity": 0.0,
+                "total": 0.549456
+              },
+              "feature_metadata": {
+                "file_size_bytes": 325687,
+                "byte_entropy": 7.987832
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 16114,
+              "output_path": "outputs/candidates/extra_08/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998997,
+                "continuity": 0.0,
+                "total": 0.549449
+              },
+              "feature_metadata": {
+                "file_size_bytes": 328400,
+                "byte_entropy": 7.987661
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 16213,
+          "selected_path": "outputs/candidates/extra_08/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.998575,
+            "continuity": 0.999931,
+            "total": 0.999185
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 16213,
+              "output_path": "outputs/candidates/extra_08/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.998575,
+                "continuity": 0.999931,
+                "total": 0.999185
+              },
+              "feature_metadata": {
+                "file_size_bytes": 386160,
+                "byte_entropy": 7.982457
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 16214,
+              "output_path": "outputs/candidates/extra_08/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.998416,
+                "continuity": 0.999837,
+                "total": 0.999055
+              },
+              "feature_metadata": {
+                "file_size_bytes": 408744,
+                "byte_entropy": 7.980505
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 2,
+          "selected_seed": 16314,
+          "selected_path": "outputs/candidates/extra_08/scene_3/candidate_2.png",
+          "scores": {
+            "quality": 0.998872,
+            "continuity": 0.999887,
+            "total": 0.999329
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 16313,
+              "output_path": "outputs/candidates/extra_08/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998867,
+                "continuity": 0.999824,
+                "total": 0.999298
+              },
+              "feature_metadata": {
+                "file_size_bytes": 388686,
+                "byte_entropy": 7.986056
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 16314,
+              "output_path": "outputs/candidates/extra_08/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.998872,
+                "continuity": 0.999887,
+                "total": 0.999329
+              },
+              "feature_metadata": {
+                "file_size_bytes": 380366,
+                "byte_entropy": 7.986119
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/extra_08/scene_1/candidate_1.png",
+        "outputs/candidates/extra_08/scene_2/candidate_1.png",
+        "outputs/candidates/extra_08/scene_3/candidate_2.png"
+      ]
+    },
+    {
+      "case_id": "extra_09",
+      "selected_panels": [
+        {
+          "scene_id": 1,
+          "selected_candidate_id": 1,
+          "selected_seed": 17113,
+          "selected_path": "outputs/candidates/extra_09/scene_1/candidate_1.png",
+          "scores": {
+            "quality": 0.99905,
+            "continuity": 0.0,
+            "total": 0.549477
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 17113,
+              "output_path": "outputs/candidates/extra_09/scene_1/candidate_1.png",
+              "scores": {
+                "quality": 0.99905,
+                "continuity": 0.0,
+                "total": 0.549477
+              },
+              "feature_metadata": {
+                "file_size_bytes": 326410,
+                "byte_entropy": 7.988303
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 17114,
+              "output_path": "outputs/candidates/extra_09/scene_1/candidate_2.png",
+              "scores": {
+                "quality": 0.998919,
+                "continuity": 0.0,
+                "total": 0.549406
+              },
+              "feature_metadata": {
+                "file_size_bytes": 354437,
+                "byte_entropy": 7.986697
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 2,
+          "selected_candidate_id": 1,
+          "selected_seed": 17213,
+          "selected_path": "outputs/candidates/extra_09/scene_2/candidate_1.png",
+          "scores": {
+            "quality": 0.999292,
+            "continuity": 0.999871,
+            "total": 0.999553
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 17213,
+              "output_path": "outputs/candidates/extra_09/scene_2/candidate_1.png",
+              "scores": {
+                "quality": 0.999292,
+                "continuity": 0.999871,
+                "total": 0.999553
+              },
+              "feature_metadata": {
+                "file_size_bytes": 326996,
+                "byte_entropy": 7.991288
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 17214,
+              "output_path": "outputs/candidates/extra_09/scene_2/candidate_2.png",
+              "scores": {
+                "quality": 0.999018,
+                "continuity": 0.999799,
+                "total": 0.99937
+              },
+              "feature_metadata": {
+                "file_size_bytes": 379842,
+                "byte_entropy": 7.987915
+              }
+            }
+          ]
+        },
+        {
+          "scene_id": 3,
+          "selected_candidate_id": 2,
+          "selected_seed": 17314,
+          "selected_path": "outputs/candidates/extra_09/scene_3/candidate_2.png",
+          "scores": {
+            "quality": 0.999188,
+            "continuity": 0.99978,
+            "total": 0.999454
+          },
+          "alternatives": [
+            {
+              "candidate_id": 1,
+              "seed": 17313,
+              "output_path": "outputs/candidates/extra_09/scene_3/candidate_1.png",
+              "scores": {
+                "quality": 0.998974,
+                "continuity": 0.999775,
+                "total": 0.999335
+              },
+              "feature_metadata": {
+                "file_size_bytes": 348542,
+                "byte_entropy": 7.987375
+              }
+            },
+            {
+              "candidate_id": 2,
+              "seed": 17314,
+              "output_path": "outputs/candidates/extra_09/scene_3/candidate_2.png",
+              "scores": {
+                "quality": 0.999188,
+                "continuity": 0.99978,
+                "total": 0.999454
+              },
+              "feature_metadata": {
+                "file_size_bytes": 356771,
+                "byte_entropy": 7.990012
+              }
+            }
+          ]
+        }
+      ],
+      "selected_sequence": [
+        "outputs/candidates/extra_09/scene_1/candidate_1.png",
+        "outputs/candidates/extra_09/scene_2/candidate_1.png",
+        "outputs/candidates/extra_09/scene_3/candidate_2.png"
+      ]
+    }
+  ]
+}

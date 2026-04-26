@@ -62,7 +62,7 @@ Our method uses a local open-source image generation model and builds a structur
 
 ### 3.1 Pipeline Overview
 
-Our pipeline consists of four main stages:
+Our pipeline consists of five main stages:
 
 #### Stage 1: Story Parsing
 We parse the input story into structured information:
@@ -99,7 +99,9 @@ Candidates are automatically scored and selected based on:
 - style consistency
 - image quality
 
-The final selected sequence is saved in the official output format.
+#### Stage 5: Packaging
+The selected final images are copied into the final output directory together
+with a manifest for checking counts, paths, and image sizes.
 
 ---
 
@@ -132,9 +134,28 @@ project_root/
 │   ├── run_local_generation_batch.py
 │   ├── qwen_image_infer.py
 │   ├── rerank_candidates.py
+│   ├── package_outputs.py
+│   ├── run_story_pipeline.py
 │   └── validate_member_a.py
 └── outputs/
     ├── candidates/
+    ├── final/
     ├── intermediate/
     └── logs/
 ```
+
+## 5. Quick Start
+
+Run the integrated post-generation pipeline from the project root:
+
+```bash
+python3 scripts/run_story_pipeline.py
+```
+
+This will:
+
+1. parse the Task A stories
+2. build prompts
+3. validate the parsed/prompt outputs
+4. rerank the existing candidate images
+5. package the final selected images into `outputs/final/`
