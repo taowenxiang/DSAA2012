@@ -405,6 +405,9 @@ def build_prompt_package(
     style_display_name: str = "Storybook",
     style_backend_preference: str = "prompt_only",
     style_reference_image_path: str | None = None,
+    style_lora_path: str | None = None,
+    style_lora_weight_name: str | None = None,
+    style_lora_scale: float = 1.0,
 ) -> dict[str, Any]:
     return {
         "case_id": parsed_story["case_id"],
@@ -413,6 +416,9 @@ def build_prompt_package(
         "style_display_name": style_display_name,
         "style_backend_preference": style_backend_preference,
         "style_reference_image_path": style_reference_image_path,
+        "style_lora_path": style_lora_path,
+        "style_lora_weight_name": style_lora_weight_name,
+        "style_lora_scale": style_lora_scale,
         "characters": parsed_story.get("characters", []),
         "global_context": parsed_story.get("global_context", {}),
         "continuity_notes": parsed_story.get("continuity_notes", []),

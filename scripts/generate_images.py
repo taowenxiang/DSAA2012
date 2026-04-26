@@ -310,6 +310,13 @@ def build_manifest(
                         "style_reference_image_path": prompt_package.get(
                             "style_reference_image_path"
                         ),
+                        "style_lora_path": prompt_package.get("style_lora_path"),
+                        "style_lora_weight_name": prompt_package.get(
+                            "style_lora_weight_name"
+                        ),
+                        "style_lora_scale": float(
+                            prompt_package.get("style_lora_scale", 1.0)
+                        ),
                         "style_backend_requested": prompt_package.get(
                             "style_backend_preference", "prompt_only"
                         ),

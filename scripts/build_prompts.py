@@ -92,6 +92,9 @@ def main() -> int:
             style_display_name=preset.display_name,
             style_backend_preference=preset.backend_preference,
             style_reference_image_path=preset.reference_image_path,
+            style_lora_path=preset.lora_path,
+            style_lora_weight_name=preset.lora_weight_name,
+            style_lora_scale=preset.lora_scale,
         )
         output_path = output_dir / f"{parsed_story['case_id']}.prompts.json"
         write_json(output_path, prompt_package)

@@ -20,6 +20,9 @@ class StylePreset:
     negative_prompt_append: str
     reference_image_path: str | None
     backend_preference: str
+    lora_path: str | None
+    lora_weight_name: str | None
+    lora_scale: float
 
 
 @dataclass(frozen=True)
@@ -74,6 +77,13 @@ def load_style_presets(config_path: Path | None = None) -> dict[str, StylePreset
                 else None
             ),
             backend_preference=str(item.get("backend_preference", "prompt_only")).strip(),
+            lora_path=str(item["lora_path"]).strip() if item.get("lora_path") else None,
+            lora_weight_name=(
+                str(item["lora_weight_name"]).strip()
+                if item.get("lora_weight_name")
+                else None
+            ),
+            lora_scale=float(item.get("lora_scale", 1.0)),
         )
         if preset.backend_preference not in {
             "prompt_only",
@@ -83,6 +93,10 @@ def load_style_presets(config_path: Path | None = None) -> dict[str, StylePreset
             raise SystemExit(
                 f"Unsupported backend_preference for style {style_id}: "
                 f"{preset.backend_preference}"
+            )
+        if preset.lora_scale <= 0:
+            raise SystemExit(
+                f"Unsupported lora_scale for style {style_id}: {preset.lora_scale}"
             )
         result[style_id] = preset
     return result

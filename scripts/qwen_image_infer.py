@@ -111,6 +111,9 @@ def _pipeline_cache_key(payload: dict[str, Any]) -> str:
             str(ip_config.get("enabled", False)),
             str(ip_config.get("model_path", "")),
             str(ip_config.get("image_encoder_path", "")),
+            str(payload.get("style_lora_path", "")),
+            str(payload.get("style_lora_weight_name", "")),
+            str(payload.get("style_lora_scale", 1.0)),
         ]
     )
 
@@ -139,6 +142,40 @@ def _load_reference_image(path_value: str) -> Any:
     from PIL import Image
 
     return Image.open(path_value).convert("RGB")
+
+
+def _ensure_style_lora_loaded(pipe: Any, payload: dict[str, Any]) -> None:
+    lora_path = str(payload.get("style_lora_path") or "").strip()
+    if not lora_path:
+        return
+    if not Path(lora_path).exists():
+        raise RuntimeError(f"style_lora_path not found: {lora_path}")
+    if not hasattr(pipe, "load_lora_weights"):
+        raise RuntimeError("pipeline runtime does not expose load_lora_weights")
+
+    lora_weight_name = str(payload.get("style_lora_weight_name") or "").strip()
+    lora_scale = float(payload.get("style_lora_scale", 1.0))
+    adapter_name = "style_lora"
+    cache_key = "|".join([lora_path, lora_weight_name, str(lora_scale)])
+    if getattr(pipe, "_style_lora_cache_key", None) == cache_key:
+        return
+
+    load_signature = inspect.signature(pipe.load_lora_weights).parameters
+    kwargs: dict[str, Any] = {}
+    if "weight_name" in load_signature and lora_weight_name:
+        kwargs["weight_name"] = lora_weight_name
+    if "adapter_name" in load_signature:
+        kwargs["adapter_name"] = adapter_name
+    if "local_files_only" in load_signature:
+        kwargs["local_files_only"] = True
+    pipe.load_lora_weights(lora_path, **kwargs)
+
+    if hasattr(pipe, "set_adapters"):
+        try:
+            pipe.set_adapters(adapter_name, adapter_weights=[lora_scale])
+        except TypeError:
+            pipe.set_adapters(adapter_name, lora_scale)
+    pipe._style_lora_cache_key = cache_key
 
 
 def _ensure_ip_adapter_loaded(pipe: Any, payload: dict[str, Any]) -> None:
@@ -268,6 +305,7 @@ def _build_generation_kwargs(
 
 def generate_from_payload(payload: dict[str, Any]) -> dict[str, Any]:
     pipe = get_pipeline(payload)
+    _ensure_style_lora_loaded(pipe, payload)
     output_path = Path(payload["output_path"])
     output_path.parent.mkdir(parents=True, exist_ok=True)
 

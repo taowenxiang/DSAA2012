@@ -87,6 +87,9 @@ def write_run_metadata(
             "negative_prompt_append": style_preset.negative_prompt_append,
             "reference_image_path": style_preset.reference_image_path,
             "backend_preference": style_preset.backend_preference,
+            "lora_path": style_preset.lora_path,
+            "lora_weight_name": style_preset.lora_weight_name,
+            "lora_scale": style_preset.lora_scale,
         },
         "paths": {
             "run_root": run_paths.run_root.as_posix(),

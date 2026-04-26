@@ -6,7 +6,10 @@
       "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition",
       "negative_prompt_append": "",
       "reference_image_path": null,
-      "backend_preference": "prompt_only"
+      "backend_preference": "prompt_only",
+      "lora_path": null,
+      "lora_weight_name": null,
+      "lora_scale": 1.0
     },
     {
       "style_id": "watercolor",
@@ -14,7 +17,10 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "negative_prompt_append": "hard digital edges, flat cel shading, photorealism",
       "reference_image_path": null,
-      "backend_preference": "prompt_only"
+      "backend_preference": "prompt_only",
+      "lora_path": null,
+      "lora_weight_name": null,
+      "lora_scale": 1.0
     },
     {
       "style_id": "anime",
@@ -22,7 +28,10 @@
       "style_prompt": "polished anime key visual, expressive character design, crisp line art, vibrant but controlled palette, cinematic framing, clean shading",
       "negative_prompt_append": "photorealism, muddy colors, rough sketch",
       "reference_image_path": null,
-      "backend_preference": "prompt_only"
+      "backend_preference": "prompt_only",
+      "lora_path": null,
+      "lora_weight_name": null,
+      "lora_scale": 1.0
     },
     {
       "style_id": "paper_cutout",
@@ -30,7 +39,32 @@
       "style_prompt": "layered paper cutout illustration, tactile collage shapes, bold silhouette design, handcrafted texture, playful depth, graphic composition",
       "negative_prompt_append": "photorealism, glossy 3d rendering, smooth gradient airbrush",
       "reference_image_path": null,
-      "backend_preference": "auto_ip_adapter"
+      "backend_preference": "auto_ip_adapter",
+      "lora_path": null,
+      "lora_weight_name": null,
+      "lora_scale": 1.0
+    },
+    {
+      "style_id": "baroque",
+      "display_name": "Baroque",
+      "style_prompt": "ornate baroque illustration, dramatic chiaroscuro, gilded detail, rich texture, theatrical composition, painterly storytelling",
+      "negative_prompt_append": "flat modern vector style, low detail, washed out lighting, casual snapshot look",
+      "reference_image_path": null,
+      "backend_preference": "prompt_only",
+      "lora_path": "artifacts/loras/qwen-image-2512/baroque-lora-v1",
+      "lora_weight_name": "pytorch_lora_weights.safetensors",
+      "lora_scale": 0.9
+    },
+    {
+      "style_id": "shinkai",
+      "display_name": "Shinkai Inspired",
+      "style_prompt": "luminous anime film illustration, atmospheric skies, emotional lighting, detailed clouds, cinematic perspective, reflective color transitions",
+      "negative_prompt_append": "muddy colors, rough sketch lines, flat lighting, low detail background",
+      "reference_image_path": null,
+      "backend_preference": "prompt_only",
+      "lora_path": "artifacts/loras/qwen-image-2512/shinkai-lora-v1",
+      "lora_weight_name": "pytorch_lora_weights.safetensors",
+      "lora_scale": 0.9
     }
   ]
 }
