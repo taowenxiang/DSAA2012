@@ -1,6 +1,9 @@
 # DSAA2012 Final Project 2
 ## Task 1: Story (Multi-Shot / Multi-Panel Image Generation)
 
+Current integrated project status is summarized in `PROJECT_STATUS.md`.
+Use the root-level `configs/`, `data/`, `docs/`, `outputs/`, and `scripts/` folders as the main working copy.
+
 ### Team Information
 - Team Name: [Your Team Name]
 - Course: DSAA2012
@@ -105,23 +108,33 @@ The final selected sequence is saved in the official output format.
 ```text
 project_root/
 ├── README.md
-├── requirements.txt
+├── PROJECT_STATUS.md
+├── .gitignore
 ├── configs/
-│   └── default.yaml
+│   ├── member_a_prompt_config.json
+│   ├── member_b_generation_config.json
+│   └── member_b_generation_config.local_4gpu.json
 ├── data/
-│   ├── testA/
-│   ├── testB/
-│   └── examples/
+│   ├── task_a/
+│   └── task_b/
+├── docs/
+│   ├── labor_division.md
+│   ├── member_a_notes.md
+│   ├── member_b_notes.md
+│   ├── project_goal.md
+│   ├── project_progress.md
+│   └── project_spec.pdf
 ├── scripts/
 │   ├── parse_story.py
 │   ├── build_prompts.py
 │   ├── generate_images.py
+│   ├── run_hpc_generation.py
+│   ├── run_local_generation_batch.py
+│   ├── qwen_image_infer.py
 │   ├── rerank_candidates.py
-│   └── package_outputs.py
-├── models/
-│   └── [local model files or checkpoints]
-├── outputs/
-│   ├── intermediate/
-│   └── final/
-└── report/
-    └── final_report.pdf
+│   └── validate_member_a.py
+└── outputs/
+    ├── candidates/
+    ├── intermediate/
+    └── logs/
+```

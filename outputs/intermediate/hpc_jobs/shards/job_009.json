@@ -1,0 +1,71 @@
+{
+  "job_index": 9,
+  "job_name": "member_b_14",
+  "case_ids": [
+    "14"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "14",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 11113,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 1: Girl runs in the rain. Setting: in the rain. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 11114,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 1: Girl runs in the rain. Setting: in the rain. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 11213,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 2: Girl stands under a roof for cover. Setting: under a roof for cover. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 11214,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 2: Girl stands under a roof for cover. Setting: under a roof for cover. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 11313,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 3: Girl watches the rain slow down. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 11314,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 3: Girl watches the rain slow down. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

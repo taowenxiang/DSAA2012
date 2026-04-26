@@ -1,0 +1,71 @@
+{
+  "job_index": 8,
+  "job_name": "member_b_11",
+  "case_ids": [
+    "11"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "11",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 10113,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 1: Olivia writes in a classroom. Setting: in a classroom. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 10114,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 1: Olivia writes in a classroom. Setting: in a classroom. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 10213,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 2: Olivia looks out the window. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 10214,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 2: Olivia looks out the window. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 10313,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 3: Olivia packs her bag and leaves. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 10314,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 3: Olivia packs her bag and leaves. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

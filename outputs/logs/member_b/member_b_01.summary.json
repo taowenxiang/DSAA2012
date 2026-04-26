@@ -1,0 +1,47 @@
+{
+  "job_name": "member_b_01",
+  "job_index": 0,
+  "model_family": "qwen_image",
+  "adapter_type": "mock",
+  "selected_record_count": 6,
+  "success_count": 6,
+  "failed_count": 0,
+  "records": [
+    {
+      "record_key": "01|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/candidates/01/scene_1/candidate_1.png"
+    },
+    {
+      "record_key": "01|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/candidates/01/scene_1/candidate_2.png"
+    },
+    {
+      "record_key": "01|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/candidates/01/scene_2/candidate_1.png"
+    },
+    {
+      "record_key": "01|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/candidates/01/scene_2/candidate_2.png"
+    },
+    {
+      "record_key": "01|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/candidates/01/scene_3/candidate_1.png"
+    },
+    {
+      "record_key": "01|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/candidates/01/scene_3/candidate_2.png"
+    }
+  ]
+}

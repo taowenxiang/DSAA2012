@@ -1,0 +1,71 @@
+{
+  "job_index": 6,
+  "job_name": "member_b_08",
+  "case_ids": [
+    "08"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "08",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 8113,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 1: Tom runs down a street. Setting: down a street. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 8114,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 1: Tom runs down a street. Setting: down a street. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 8213,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 2: Tom moves through traffic. Setting: through traffic. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 8214,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 2: Tom moves through traffic. Setting: through traffic. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 8313,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 3: Tom meets his friend and keeps going. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 8314,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 3: Tom meets his friend and keeps going. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

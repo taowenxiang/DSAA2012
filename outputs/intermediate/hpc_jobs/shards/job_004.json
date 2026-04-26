@@ -1,0 +1,71 @@
+{
+  "job_index": 4,
+  "job_name": "member_b_06",
+  "case_ids": [
+    "06"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "06",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 6113,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 1: Jack and Sara sit in a park and talk. Setting: in a park. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 6114,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 1: Jack and Sara sit in a park and talk. Setting: in a park. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 6213,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 2: Jack and Sara continue talking in a cafe. Setting: in a cafe. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 6214,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 2: Jack and Sara continue talking in a cafe. Setting: in a cafe. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 6313,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 3: Jack and Sara look at an exhibition together. Setting: at an exhibition. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 6314,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 3: Jack and Sara look at an exhibition together. Setting: at an exhibition. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

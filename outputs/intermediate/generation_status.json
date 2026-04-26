@@ -1,0 +1,79 @@
+{
+  "status_version": "member-b-status-v1",
+  "model_family": "qwen_image",
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "record_key": "01|1|1",
+      "case_id": "01",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "output_path": "outputs/candidates/01/scene_1/candidate_1.png",
+      "seed": 2113,
+      "state": "success",
+      "attempt": 1,
+      "message": "generated",
+      "updated_at_epoch": 1777134808
+    },
+    {
+      "record_key": "01|1|2",
+      "case_id": "01",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "output_path": "outputs/candidates/01/scene_1/candidate_2.png",
+      "seed": 2114,
+      "state": "success",
+      "attempt": 1,
+      "message": "generated",
+      "updated_at_epoch": 1777134808
+    },
+    {
+      "record_key": "01|2|1",
+      "case_id": "01",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "output_path": "outputs/candidates/01/scene_2/candidate_1.png",
+      "seed": 2213,
+      "state": "success",
+      "attempt": 1,
+      "message": "generated",
+      "updated_at_epoch": 1777134808
+    },
+    {
+      "record_key": "01|2|2",
+      "case_id": "01",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "output_path": "outputs/candidates/01/scene_2/candidate_2.png",
+      "seed": 2214,
+      "state": "success",
+      "attempt": 1,
+      "message": "generated",
+      "updated_at_epoch": 1777134808
+    },
+    {
+      "record_key": "01|3|1",
+      "case_id": "01",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "output_path": "outputs/candidates/01/scene_3/candidate_1.png",
+      "seed": 2313,
+      "state": "success",
+      "attempt": 1,
+      "message": "generated",
+      "updated_at_epoch": 1777134808
+    },
+    {
+      "record_key": "01|3|2",
+      "case_id": "01",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "output_path": "outputs/candidates/01/scene_3/candidate_2.png",
+      "seed": 2314,
+      "state": "success",
+      "attempt": 1,
+      "message": "generated",
+      "updated_at_epoch": 1777134808
+    }
+  ]
+}

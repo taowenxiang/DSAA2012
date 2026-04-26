@@ -1,0 +1,988 @@
+{
+  "manifest_version": "member-b-v2",
+  "mode": "hpc_batch",
+  "placeholder_images": false,
+  "config": {
+    "base_seed": 2012,
+    "candidates_per_panel": 2,
+    "width": 512,
+    "height": 512,
+    "device": "cuda",
+    "dtype": "bfloat16",
+    "model_family": "qwen_image",
+    "model_path": "/data/home/sim6g/code/DSAA2012/Qwen-Image-2512",
+    "adapter_type": "python",
+    "num_inference_steps": 28,
+    "guidance_scale": 4.5,
+    "temperature": 1.0,
+    "tensor_parallel_size": 4,
+    "records_per_shard": 96,
+    "retries": 2,
+    "logs_dir": "outputs/logs/member_b_local_4gpu",
+    "status_path": "outputs/intermediate/generation_status.local_4gpu.json"
+  },
+  "source_prompt_count": 16,
+  "candidate_count": 96,
+  "candidates": [
+    {
+      "case_id": "01",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 2113,
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 1: Lily makes breakfast in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/01/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "01",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 2114,
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 1: Lily makes breakfast in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/01/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "01",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 2213,
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 2: Lily looks out the window quietly. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/01/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "01",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 2214,
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 2: Lily looks out the window quietly. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/01/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "01",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 2313,
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 3: Lily sits down to eat with a book beside her. Setting: beside her. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/01/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "01",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 2314,
+      "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 3: Lily sits down to eat with a book beside her. Setting: beside her. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/01/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 3113,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 1: Ryan walks quickly toward a bus. Setting: toward a bus. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 3114,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 1: Ryan walks quickly toward a bus. Setting: toward a bus. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 3213,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 2: Ryan pauses at the door and looks ahead. Setting: at the door. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 3214,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 2: Ryan pauses at the door and looks ahead. Setting: at the door. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 3313,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 3: Ryan gets inside and sits by the window. Setting: by the window. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 3314,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 3: Ryan gets inside and sits by the window. Setting: by the window. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "04",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 4113,
+      "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 1: Milo sits on the floor with toys. Setting: with toys. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/04/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "04",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 4114,
+      "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 1: Milo sits on the floor with toys. Setting: with toys. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/04/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "04",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 4213,
+      "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 2: Milo rolls over and laughs. Setting: over. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/04/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "04",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 4214,
+      "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 2: Milo rolls over and laughs. Setting: over. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/04/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "04",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 4313,
+      "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 3: Milo lies down and rests. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/04/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "04",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 4314,
+      "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 3: Milo lies down and rests. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/04/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 5113,
+      "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 1: Emma stands on a bridge and looks down. Setting: on a bridge. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 5114,
+      "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 1: Emma stands on a bridge and looks down. Setting: on a bridge. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 5213,
+      "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 2: The city lights come on at night. Setting: at night. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 5214,
+      "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 2: The city lights come on at night. Setting: at night. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 5313,
+      "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 3: Emma smiles at the view. Setting: at the view. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 5314,
+      "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 3: Emma smiles at the view. Setting: at the view. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 6113,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 1: Jack and Sara sit in a park and talk. Setting: in a park. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 6114,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 1: Jack and Sara sit in a park and talk. Setting: in a park. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 6213,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 2: Jack and Sara continue talking in a cafe. Setting: in a cafe. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 6214,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 2: Jack and Sara continue talking in a cafe. Setting: in a cafe. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 6313,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 3: Jack and Sara look at an exhibition together. Setting: at an exhibition. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "06",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 6314,
+      "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 3: Jack and Sara look at an exhibition together. Setting: at an exhibition. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/06/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "07",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 7113,
+      "prompt": "A consistent story panel illustration of Nina. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 1: Nina stands in the snow. Setting: in the snow. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/07/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "07",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 7114,
+      "prompt": "A consistent story panel illustration of Nina. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 1: Nina stands in the snow. Setting: in the snow. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/07/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "07",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 7213,
+      "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 2: Nina meets Leo in a crowd. Setting: in a crowd. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/07/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "07",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 7214,
+      "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 2: Nina meets Leo in a crowd. Setting: in a crowd. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/07/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "07",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 7313,
+      "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 3: Nina and Leo look at each other quietly. Setting: at each other. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/07/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "07",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 7314,
+      "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 3: Nina and Leo look at each other quietly. Setting: at each other. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/07/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 8113,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 1: Tom runs down a street. Setting: down a street. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 8114,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 1: Tom runs down a street. Setting: down a street. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 8213,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 2: Tom moves through traffic. Setting: through traffic. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 8214,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 2: Tom moves through traffic. Setting: through traffic. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 8313,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 3: Tom meets his friend and keeps going. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "08",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 8314,
+      "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 3: Tom meets his friend and keeps going. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/08/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 9113,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 1: Ben drives along a road. Setting: along a road. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 9114,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 1: Ben drives along a road. Setting: along a road. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 9213,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 2: Ben looks at the scenery outside. Setting: at the scenery. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 9214,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 2: Ben looks at the scenery outside. Setting: at the scenery. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 9313,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 3: Ben stops to take a break. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 9314,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 3: Ben stops to take a break. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 10113,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 1: Olivia writes in a classroom. Setting: in a classroom. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 10114,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 1: Olivia writes in a classroom. Setting: in a classroom. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 10213,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 2: Olivia looks out the window. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 10214,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 2: Olivia looks out the window. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 10313,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 3: Olivia packs her bag and leaves. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "11",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 10314,
+      "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 3: Olivia packs her bag and leaves. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/11/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 11113,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 1: Girl runs in the rain. Setting: in the rain. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 11114,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 1: Girl runs in the rain. Setting: in the rain. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 11213,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 2: Girl stands under a roof for cover. Setting: under a roof for cover. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 11214,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 2: Girl stands under a roof for cover. Setting: under a roof for cover. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 11313,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 3: Girl watches the rain slow down. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "14",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 11314,
+      "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 3: Girl watches the rain slow down. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/14/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "16",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 12113,
+      "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 1: Chef cuts vegetables in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/16/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "16",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 12114,
+      "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 1: Chef cuts vegetables in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/16/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "16",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 12213,
+      "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 2: Chef checks the taste of the food. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/16/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "16",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 12214,
+      "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 2: Chef checks the taste of the food. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/16/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "16",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 12313,
+      "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 3: Chef serves the finished dish. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/16/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "16",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 12314,
+      "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 3: Chef serves the finished dish. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/16/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 13113,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 1: Artist paints in front of a canvas. Setting: in front of a canvas. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 13114,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 1: Artist paints in front of a canvas. Setting: in front of a canvas. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 13213,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 2: Artist stops and thinks for a moment. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 13214,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 2: Artist stops and thinks for a moment. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 13313,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 3: Artist continues painting. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 13314,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 3: Artist continues painting. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_03",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 14113,
+      "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 1: Dog runs across a field. Setting: across a field. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_03/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_03",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 14114,
+      "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 1: Dog runs across a field. Setting: across a field. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_03/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_03",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 14213,
+      "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 2: Dog chases a ball. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_03/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_03",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 14214,
+      "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 2: Dog chases a ball. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_03/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_03",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 14313,
+      "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 3: Dog returns happily. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_03/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_03",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 14314,
+      "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 3: Dog returns happily. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_03/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 15113,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 1: Bird sits on a branch. Setting: on a branch. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 15114,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 1: Bird sits on a branch. Setting: on a branch. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 15213,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 2: Bird looks around. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 15214,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 2: Bird looks around. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 15313,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 3: Bird flies away. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 15314,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 3: Bird flies away. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_08",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 16113,
+      "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 1: Man waits at a station. Setting: at a station. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_08/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_08",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 16114,
+      "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 1: Man waits at a station. Setting: at a station. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_08/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_08",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 16213,
+      "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 2: A train arrives. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_08/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_08",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 16214,
+      "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 2: A train arrives. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_08/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_08",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 16313,
+      "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 3: Man gets on board. Setting: on board. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_08/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_08",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 16314,
+      "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 3: Man gets on board. Setting: on board. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_08/scene_3/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_09",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 17113,
+      "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 1: Kid draws on paper. Setting: on paper. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_09/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_09",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 17114,
+      "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 1: Kid draws on paper. Setting: on paper. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_09/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_09",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 17213,
+      "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 2: Kid adds colors. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_09/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_09",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 17214,
+      "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 2: Kid adds colors. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_09/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_09",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 17313,
+      "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 3: Kid shows the drawing. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_09/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_09",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 17314,
+      "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 3: Kid shows the drawing. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_09/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

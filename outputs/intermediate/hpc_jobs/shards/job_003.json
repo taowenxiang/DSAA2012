@@ -1,0 +1,71 @@
+{
+  "job_index": 3,
+  "job_name": "member_b_05",
+  "case_ids": [
+    "05"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "05",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 5113,
+      "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 1: Emma stands on a bridge and looks down. Setting: on a bridge. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 5114,
+      "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 1: Emma stands on a bridge and looks down. Setting: on a bridge. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 5213,
+      "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 2: The city lights come on at night. Setting: at night. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 5214,
+      "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 2: The city lights come on at night. Setting: at night. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 5313,
+      "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 3: Emma smiles at the view. Setting: at the view. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "05",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 5314,
+      "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 3: Emma smiles at the view. Setting: at the view. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/05/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

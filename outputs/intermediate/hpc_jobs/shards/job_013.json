@@ -1,0 +1,71 @@
+{
+  "job_index": 13,
+  "job_name": "member_b_extra_06",
+  "case_ids": [
+    "extra_06"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "extra_06",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 15113,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 1: Bird sits on a branch. Setting: on a branch. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 15114,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 1: Bird sits on a branch. Setting: on a branch. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 15213,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 2: Bird looks around. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 15214,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 2: Bird looks around. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 15313,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 3: Bird flies away. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "extra_06",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 15314,
+      "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 3: Bird flies away. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/extra_06/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

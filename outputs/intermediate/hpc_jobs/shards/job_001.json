@@ -1,0 +1,71 @@
+{
+  "job_index": 1,
+  "job_name": "member_b_02",
+  "case_ids": [
+    "02"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "02",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 3113,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 1: Ryan walks quickly toward a bus. Setting: toward a bus. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 3114,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 1: Ryan walks quickly toward a bus. Setting: toward a bus. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 3213,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 2: Ryan pauses at the door and looks ahead. Setting: at the door. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 3214,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 2: Ryan pauses at the door and looks ahead. Setting: at the door. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 3313,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 3: Ryan gets inside and sits by the window. Setting: by the window. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "02",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 3314,
+      "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 3: Ryan gets inside and sits by the window. Setting: by the window. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/02/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

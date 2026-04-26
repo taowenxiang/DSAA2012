@@ -1,0 +1,71 @@
+{
+  "job_index": 7,
+  "job_name": "member_b_09",
+  "case_ids": [
+    "09"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "09",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 9113,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 1: Ben drives along a road. Setting: along a road. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 9114,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 1: Ben drives along a road. Setting: along a road. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 9213,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 2: Ben looks at the scenery outside. Setting: at the scenery. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 9214,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 2: Ben looks at the scenery outside. Setting: at the scenery. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 9313,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 3: Ben stops to take a break. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "09",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 9314,
+      "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 3: Ben stops to take a break. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/09/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "job_index": 11,
+  "job_name": "member_b_17",
+  "case_ids": [
+    "17"
+  ],
+  "record_count": 6,
+  "status_path": "outputs/intermediate/generation_status.json",
+  "records": [
+    {
+      "case_id": "17",
+      "scene_id": 1,
+      "candidate_id": 1,
+      "seed": 13113,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 1: Artist paints in front of a canvas. Setting: in front of a canvas. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_1/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 1,
+      "candidate_id": 2,
+      "seed": 13114,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 1: Artist paints in front of a canvas. Setting: in front of a canvas. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_1/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 2,
+      "candidate_id": 1,
+      "seed": 13213,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 2: Artist stops and thinks for a moment. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_2/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 2,
+      "candidate_id": 2,
+      "seed": 13214,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 2: Artist stops and thinks for a moment. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_2/candidate_2.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 3,
+      "candidate_id": 1,
+      "seed": 13313,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 3: Artist continues painting. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_3/candidate_1.png",
+      "status": "pending"
+    },
+    {
+      "case_id": "17",
+      "scene_id": 3,
+      "candidate_id": 2,
+      "seed": 13314,
+      "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 3: Artist continues painting. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition, cinematic composition, clear subject, high quality.",
+      "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo",
+      "output_path": "outputs/candidates/17/scene_3/candidate_2.png",
+      "status": "pending"
+    }
+  ]
+}

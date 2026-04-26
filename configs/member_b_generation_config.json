@@ -1,0 +1,36 @@
+{
+  "base_seed": 2012,
+  "candidates_per_panel": 2,
+  "width": 512,
+  "height": 512,
+  "device": "cuda",
+  "dtype": "bfloat16",
+  "model_family": "qwen_image",
+  "model_path": "/data/home/sim6g/code/DSAA2012/Qwen-Image-2512",
+  "num_inference_steps": 28,
+  "guidance_scale": 4.5,
+  "temperature": 1.0,
+  "tensor_parallel_size": 4,
+  "records_per_shard": 6,
+  "shard_strategy": "case",
+  "retries": 2,
+  "logs_dir": "outputs/logs/member_b",
+  "status_path": "outputs/intermediate/generation_status.json",
+  "adapter": {
+    "type": "python",
+    "command": [
+      "python",
+      "scripts/qwen_image_infer.py",
+      "--prompt-payload",
+      "{prompt_payload_path}"
+    ]
+  },
+  "scheduler": {
+    "gpus_per_task": 4,
+    "cpus_per_task": 8,
+    "mem_gb": 96,
+    "time_limit": "08:00:00",
+    "partition": "",
+    "account": ""
+  }
+}

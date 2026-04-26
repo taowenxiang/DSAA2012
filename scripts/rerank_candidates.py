@@ -105,11 +105,10 @@ class StoryReranker:
 
 def main():
     reranker = StoryReranker()
-    with open("intermediate/parsed/01.parsed.json", "r") as f:
+    with open("outputs/intermediate/parsed/01.parsed.json", "r") as f:
         data = json.load(f)
     final_story = reranker.select_best_sequence(data["panels"])
     print(final_story)
 
 if __name__ == "__main__":
     main()
-

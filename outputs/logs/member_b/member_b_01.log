@@ -1,0 +1,8 @@
+Starting member_b_01 with 6 record(s)
+Starting member_b_01 with 6 record(s)
+SUCCESS 01|1|1 seed=2113 output=outputs/candidates/01/scene_1/candidate_1.png
+SUCCESS 01|1|2 seed=2114 output=outputs/candidates/01/scene_1/candidate_2.png
+SUCCESS 01|2|1 seed=2213 output=outputs/candidates/01/scene_2/candidate_1.png
+SUCCESS 01|2|2 seed=2214 output=outputs/candidates/01/scene_2/candidate_2.png
+SUCCESS 01|3|1 seed=2313 output=outputs/candidates/01/scene_3/candidate_1.png
+SUCCESS 01|3|2 seed=2314 output=outputs/candidates/01/scene_3/candidate_2.png
