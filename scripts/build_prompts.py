@@ -5,6 +5,12 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from run_utils import resolve_run_paths
+from style_utils import (
+    DEFAULT_STYLE_CONFIG,
+    resolve_style_preset,
+    merge_negative_prompts,
+)
 from story_utils import (
     build_prompt_package,
     discover_json_inputs,
@@ -15,7 +21,6 @@ from story_utils import (
 
 
 DEFAULT_PARSED_DIR = Path("outputs") / "intermediate" / "parsed"
-DEFAULT_OUTPUT_DIR = Path("outputs") / "intermediate" / "prompts"
 DEFAULT_CONFIG = Path("configs") / "member_a_prompt_config.json"
 
 
@@ -30,14 +35,31 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=DEFAULT_OUTPUT_DIR,
+        default=None,
         help="Directory for *.prompts.json files.",
     )
     parser.add_argument(
         "--config",
         type=Path,
         default=DEFAULT_CONFIG,
-        help="Optional JSON config for style_prompt and negative_prompt.",
+        help="Optional JSON config for prompt defaults.",
+    )
+    parser.add_argument(
+        "--style",
+        default=None,
+        help="Style preset id. Defaults to the config's default_style_id.",
+    )
+    parser.add_argument(
+        "--run-dir",
+        type=Path,
+        default=None,
+        help="Optional numbered run directory. If provided, prompts are written into that run.",
+    )
+    parser.add_argument(
+        "--style-config",
+        type=Path,
+        default=DEFAULT_STYLE_CONFIG,
+        help="Style preset configuration file.",
     )
     return parser.parse_args()
 
@@ -45,23 +67,40 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     config = load_prompt_config(args.config)
+    style_id = args.style or config["default_style_id"]
+    preset = resolve_style_preset(style_id, args.style_config)
     parsed_files = discover_json_inputs(args.parsed, suffix=".parsed.json")
     if not parsed_files:
         raise SystemExit(f"No *.parsed.json files found at {args.parsed}")
 
+    run_paths = resolve_run_paths(args.run_dir) if args.run_dir else None
+    output_dir = args.output_dir or (run_paths.prompts_dir if run_paths else None)
+    if output_dir is None:
+        raise SystemExit("Either --output-dir or --run-dir is required for build_prompts.py")
+    negative_prompt = merge_negative_prompts(
+        config["base_negative_prompt"], preset.negative_prompt_append
+    )
     written: list[Path] = []
     for parsed_path in parsed_files:
         parsed_story = read_json(parsed_path)
         prompt_package = build_prompt_package(
             parsed_story,
-            style_prompt=config["style_prompt"],
-            negative_prompt=config["negative_prompt"],
+            style_prompt=preset.style_prompt,
+            negative_prompt=negative_prompt,
+            prompt_version=config["prompt_version"],
+            style_id=preset.style_id,
+            style_display_name=preset.display_name,
+            style_backend_preference=preset.backend_preference,
+            style_reference_image_path=preset.reference_image_path,
         )
-        output_path = args.output_dir / f"{parsed_story['case_id']}.prompts.json"
+        output_path = output_dir / f"{parsed_story['case_id']}.prompts.json"
         write_json(output_path, prompt_package)
         written.append(output_path)
 
-    print(f"Built {len(written)} prompt file(s) into {args.output_dir}")
+    print(
+        f"Built {len(written)} prompt file(s) into {output_dir} "
+        f"for style={preset.style_id}"
+    )
     return 0
 
 

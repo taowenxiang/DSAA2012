@@ -5,6 +5,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from run_utils import resolve_run_paths
+from style_utils import DEFAULT_STYLE_ID, resolve_style_run_paths
 from story_utils import (
     discover_text_inputs,
     extract_tags,
@@ -16,15 +18,16 @@ from story_utils import (
 
 DEFAULT_INPUT_DIR = Path("data") / "task_a"
 DEFAULT_PARSED_DIR = Path("outputs") / "intermediate" / "parsed"
-DEFAULT_PROMPTS_DIR = Path("outputs") / "intermediate" / "prompts"
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-dir", type=Path, default=DEFAULT_INPUT_DIR)
     parser.add_argument("--parsed-dir", type=Path, default=DEFAULT_PARSED_DIR)
-    parser.add_argument("--prompts-dir", type=Path, default=DEFAULT_PROMPTS_DIR)
+    parser.add_argument("--prompts-dir", type=Path, default=None)
     parser.add_argument("--expected-panels", type=int, default=3)
+    parser.add_argument("--style", default=DEFAULT_STYLE_ID)
+    parser.add_argument("--run-dir", type=Path, default=None)
     return parser.parse_args()
 
 
@@ -93,6 +96,12 @@ def validate_case(
         errors.append(
             f"{case_id}: expected {expected_panels} panel prompts, got {len(panel_prompts)}"
         )
+    if not prompts.get("style_id", "").strip():
+        errors.append(f"{case_id}: missing style_id in prompt package")
+    if not prompts.get("style_display_name", "").strip():
+        errors.append(f"{case_id}: missing style_display_name in prompt package")
+    if not prompts.get("style_backend_preference", "").strip():
+        errors.append(f"{case_id}: missing style_backend_preference in prompt package")
     for panel_prompt in panel_prompts:
         if not panel_prompt.get("prompt", "").strip():
             errors.append(
@@ -112,6 +121,15 @@ def validate_case(
 
 def main() -> int:
     args = parse_args()
+    run_paths = resolve_run_paths(args.run_dir) if args.run_dir else None
+    prompts_dir = args.prompts_dir or (run_paths.prompts_dir if run_paths else None)
+    parsed_dir = args.parsed_dir if args.parsed_dir != DEFAULT_PARSED_DIR else None
+    if parsed_dir is None and run_paths is not None:
+        parsed_dir = run_paths.parsed_dir
+    if parsed_dir is None:
+        parsed_dir = args.parsed_dir
+    if prompts_dir is None:
+        prompts_dir = resolve_style_run_paths(args.style).prompts_dir
     inputs = discover_text_inputs(args.input_dir)
     if not inputs:
         raise SystemExit(f"No .txt story files found at {args.input_dir}")
@@ -121,8 +139,8 @@ def main() -> int:
         all_errors.extend(
             validate_case(
                 source_path,
-                args.parsed_dir,
-                args.prompts_dir,
+                parsed_dir,
+                prompts_dir,
                 args.expected_panels,
             )
         )

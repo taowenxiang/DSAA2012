@@ -1,0 +1,36 @@
+{
+  "presets": [
+    {
+      "style_id": "storybook",
+      "display_name": "Storybook",
+      "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition",
+      "negative_prompt_append": "",
+      "reference_image_path": null,
+      "backend_preference": "prompt_only"
+    },
+    {
+      "style_id": "watercolor",
+      "display_name": "Watercolor",
+      "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
+      "negative_prompt_append": "hard digital edges, flat cel shading, photorealism",
+      "reference_image_path": null,
+      "backend_preference": "prompt_only"
+    },
+    {
+      "style_id": "anime",
+      "display_name": "Anime",
+      "style_prompt": "polished anime key visual, expressive character design, crisp line art, vibrant but controlled palette, cinematic framing, clean shading",
+      "negative_prompt_append": "photorealism, muddy colors, rough sketch",
+      "reference_image_path": null,
+      "backend_preference": "prompt_only"
+    },
+    {
+      "style_id": "paper_cutout",
+      "display_name": "Paper Cutout",
+      "style_prompt": "layered paper cutout illustration, tactile collage shapes, bold silhouette design, handcrafted texture, playful depth, graphic composition",
+      "negative_prompt_append": "photorealism, glossy 3d rendering, smooth gradient airbrush",
+      "reference_image_path": null,
+      "backend_preference": "auto_ip_adapter"
+    }
+  ]
+}

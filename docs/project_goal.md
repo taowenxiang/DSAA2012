@@ -7,7 +7,7 @@ DSAA2012 Task 1（Story）项目开发计划
 阶段 0：环境与仓库基座（1–3 天）
 补齐 requirements.txt、Python 版本说明；选定本地开源文生图方案（如 Diffusers + 指定 checkpoint，具体以课程允许范围为准）。
 建立 configs/default.yaml：模型路径、分辨率、采样步数、随机种子、每格候选数 K、设备（CPU/GPU）等。
-约定 data/ 下测试/示例的输入格式；outputs/intermediate/ 与 outputs/final/ 的目录与命名规则（与官方提交格式对齐，需在课程文档中核实）。
+约定 data/ 下测试/示例的输入格式；以 `outputs/runs/run_000x_<style_id>/...` 为核心的实验目录规则，以及最终打包目录与命名规则（与官方提交格式对齐，需在课程文档中核实）。
 阶段 1：Story Parsing（scripts/parse_story.py）
 定义解析输出结构：全局（角色、物体、场景、风格）+ 每格（动作与细节）。
 在禁止 Agent / 外部 API 前提下：用规则 + 模板 + 轻量本地 NLP（若课程允许）或完全规则化分段；关键是输出稳定、可复现。
@@ -25,7 +25,7 @@ DSAA2012 Task 1（Story）项目开发计划
 风格/质量 proxy（清晰度、饱和度等启发式或轻量模型，视时间而定）。
 贪心或动态规划式选序列：逐格在候选中选分最高且兼顾与前一张一致的一张（先实现贪心，时间允许再优化）。
 阶段 5：打包交付（scripts/package_outputs.py）
-将最终序列整理为官方要求的 outputs/final/ 格式；校验张数、顺序、分辨率。
+将最终序列整理为官方要求的 `outputs/runs/run_000x_<style_id>/final/` 格式；校验张数、顺序、分辨率。
 三、里程碑建议（可按周推进）
 里程碑	内容	产出
 M1

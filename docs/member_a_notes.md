@@ -24,15 +24,15 @@ Run from the project root:
 
 ```powershell
 python scripts/parse_story.py
-python scripts/build_prompts.py
-python scripts/validate_member_a.py
+python scripts/build_prompts.py --style storybook
+python scripts/validate_member_a.py --style storybook
 ```
 
 Outputs are written to:
 
 ```text
-outputs/intermediate/parsed/*.parsed.json
-outputs/intermediate/prompts/*.prompts.json
+outputs/runs/run_000x_<style_id>/intermediate/parsed/*.parsed.json
+outputs/runs/run_000x_<style_id>/intermediate/prompts/*.prompts.json
 ```
 
 ## Interface for Member B

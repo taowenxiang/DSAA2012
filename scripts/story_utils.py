@@ -11,6 +11,8 @@ import re
 from pathlib import Path
 from typing import Any, Iterable
 
+from style_utils import merge_negative_prompts
+
 
 SCENE_RE = re.compile(r"^\s*\[SCENE-(\d+)\]\s*(.*?)\s*$", re.DOTALL)
 TAG_RE = re.compile(r"<([^<>]+)>")
@@ -387,6 +389,7 @@ def build_panel_prompt(
         "active_characters": active_characters,
         "resolved_action": action,
         "setting_hint": setting,
+        "style_prompt": style_prompt,
         "prompt": re.sub(r"\s+", " ", prompt).strip(),
         "negative_prompt": negative_prompt,
         "seed_offset": scene_id,
@@ -397,14 +400,23 @@ def build_prompt_package(
     parsed_story: dict[str, Any],
     style_prompt: str = DEFAULT_STYLE_PROMPT,
     negative_prompt: str = DEFAULT_NEGATIVE_PROMPT,
-    prompt_version: str = "member-a-v1",
+    prompt_version: str = "member-a-v2-style",
+    style_id: str = "storybook",
+    style_display_name: str = "Storybook",
+    style_backend_preference: str = "prompt_only",
+    style_reference_image_path: str | None = None,
 ) -> dict[str, Any]:
     return {
         "case_id": parsed_story["case_id"],
         "prompt_version": prompt_version,
+        "style_id": style_id,
+        "style_display_name": style_display_name,
+        "style_backend_preference": style_backend_preference,
+        "style_reference_image_path": style_reference_image_path,
         "characters": parsed_story.get("characters", []),
         "global_context": parsed_story.get("global_context", {}),
         "continuity_notes": parsed_story.get("continuity_notes", []),
+        "style_prompt": style_prompt,
         "negative_prompt": negative_prompt,
         "panel_prompts": [
             build_panel_prompt(parsed_story, panel, style_prompt, negative_prompt)
@@ -416,12 +428,23 @@ def build_prompt_package(
 def load_prompt_config(config_path: Path | None) -> dict[str, str]:
     if not config_path or not config_path.exists():
         return {
-            "style_prompt": DEFAULT_STYLE_PROMPT,
-            "negative_prompt": DEFAULT_NEGATIVE_PROMPT,
+            "default_style_id": "storybook",
+            "style_presets_path": "configs/style_presets.json",
+            "base_negative_prompt": DEFAULT_NEGATIVE_PROMPT,
+            "prompt_version": "member-a-v2-style",
         }
 
     config = read_json(config_path)
     return {
-        "style_prompt": config.get("style_prompt", DEFAULT_STYLE_PROMPT),
-        "negative_prompt": config.get("negative_prompt", DEFAULT_NEGATIVE_PROMPT),
+        "default_style_id": str(config.get("default_style_id", "storybook")),
+        "style_presets_path": str(
+            config.get("style_presets_path", "configs/style_presets.json")
+        ),
+        "base_negative_prompt": str(
+            config.get(
+                "base_negative_prompt",
+                config.get("negative_prompt", DEFAULT_NEGATIVE_PROMPT),
+            )
+        ),
+        "prompt_version": str(config.get("prompt_version", "member-a-v2-style")),
     }

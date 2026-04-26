@@ -1,27 +1,25 @@
-"""Run one HPC shard for Member B candidate generation.
-
-The worker reads a shard file produced by generate_images.py and generates
-candidate images record-by-record. The default adapter is a local mock so the
-pipeline can be tested without the real 30B model; HPC users can switch to the
-command adapter and point it at their Qwen-Image inference entrypoint.
-"""
+"""Run one style-aware HPC shard for Member B candidate generation."""
 
 from __future__ import annotations
 
 import argparse
-import json
-import shlex
 import subprocess
 import tempfile
 import time
 from pathlib import Path
 from typing import Any
 
-from generate_images import draw_placeholder, read_json, write_json
+from generate_images import read_json, write_json
+from style_utils import DEFAULT_STYLE_ID, format_style_template, resolve_style_run_paths
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--style",
+        default=DEFAULT_STYLE_ID,
+        help="Style id used to resolve logs and status paths.",
+    )
     parser.add_argument(
         "--config",
         type=Path,
@@ -54,11 +52,17 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_runtime_config(path: Path) -> dict[str, Any]:
+def _resolve_style_path(raw: Any, style_id: str, fallback: str) -> str:
+    return format_style_template(str(raw or fallback), style_id)
+
+
+def load_runtime_config(path: Path, style_id: str) -> dict[str, Any]:
     raw = read_json(path)
     adapter = raw.get("adapter", {})
     scheduler = raw.get("scheduler", {})
+    ip_adapter = raw.get("ip_adapter", {})
     return {
+        "style_id": style_id,
         "model_family": str(raw.get("model_family", "qwen_image")),
         "model_path": str(raw.get("model_path", "")),
         "width": int(raw["width"]),
@@ -70,20 +74,40 @@ def load_runtime_config(path: Path) -> dict[str, Any]:
         "temperature": float(raw.get("temperature", 1.0)),
         "tensor_parallel_size": int(raw.get("tensor_parallel_size", 1)),
         "retries": int(raw.get("retries", 2)),
-        "logs_dir": str(raw.get("logs_dir", "outputs/logs/member_b")),
-        "status_path": str(raw.get("status_path", "outputs/intermediate/generation_status.json")),
+        "logs_dir": _resolve_style_path(
+            raw.get("logs_dir"),
+            style_id,
+            "outputs/runs/{style_id}/logs/member_b",
+        ),
+        "status_path": _resolve_style_path(
+            raw.get("status_path"),
+            style_id,
+            "outputs/runs/{style_id}/intermediate/generation_status.json",
+        ),
+        "local_status_path": _resolve_style_path(
+            raw.get("local_status_path"),
+            style_id,
+            "outputs/runs/{style_id}/intermediate/generation_status.local_4gpu.json",
+        ),
         "adapter_type": str(adapter.get("type", "mock")),
         "adapter_command": adapter.get("command", []),
         "gpus_per_task": int(scheduler.get("gpus_per_task", 1)),
+        "ip_adapter": {
+            "enabled": bool(ip_adapter.get("enabled", False)),
+            "model_path": str(ip_adapter.get("model_path", "")),
+            "image_encoder_path": str(ip_adapter.get("image_encoder_path", "")),
+            "scale": float(ip_adapter.get("scale", 1.0)),
+        },
     }
 
 
-def load_status(path: Path, shard: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
+def load_status(path: Path, config: dict[str, Any]) -> dict[str, Any]:
     if path.exists():
         return read_json(path)
 
     payload = {
-        "status_version": "member-b-status-v1",
+        "status_version": "member-b-status-v2-style",
+        "style_id": config["style_id"],
         "model_family": config["model_family"],
         "records": [],
     }
@@ -96,7 +120,7 @@ def save_status(path: Path, data: dict[str, Any]) -> None:
 
 
 def record_key(record: dict[str, Any]) -> str:
-    return f"{record['case_id']}|{record['scene_id']}|{record['candidate_id']}"
+    return f"{record['style_id']}|{record['case_id']}|{record['scene_id']}|{record['candidate_id']}"
 
 
 def index_status_records(status_data: dict[str, Any]) -> dict[str, dict[str, Any]]:
@@ -112,11 +136,13 @@ def upsert_status_record(
     state: str,
     attempt: int,
     message: str,
+    backend_effective: str | None = None,
 ) -> None:
     key = record_key(record)
     indexed = index_status_records(status_data)
     payload = {
         "record_key": key,
+        "style_id": record["style_id"],
         "case_id": record["case_id"],
         "scene_id": record["scene_id"],
         "candidate_id": record["candidate_id"],
@@ -125,6 +151,8 @@ def upsert_status_record(
         "state": state,
         "attempt": attempt,
         "message": message,
+        "style_backend_requested": record.get("style_backend_requested"),
+        "style_backend_effective": backend_effective,
         "updated_at_epoch": int(time.time()),
     }
     indexed[key] = payload
@@ -145,10 +173,7 @@ def should_run_record(
 
 
 def apply_template(values: dict[str, Any], command: list[str]) -> list[str]:
-    rendered: list[str] = []
-    for token in command:
-        rendered.append(token.format(**values))
-    return rendered
+    return [token.format(**values) for token in command]
 
 
 def build_template_values(record: dict[str, Any], config: dict[str, Any], prompt_path: Path) -> dict[str, Any]:
@@ -168,6 +193,7 @@ def build_template_values(record: dict[str, Any], config: dict[str, Any], prompt
         "temperature": config["temperature"],
         "tensor_parallel_size": config["tensor_parallel_size"],
         "prompt_payload_path": prompt_path.as_posix(),
+        "style_id": record["style_id"],
         "case_id": record["case_id"],
         "scene_id": record["scene_id"],
         "candidate_id": record["candidate_id"],
@@ -190,6 +216,13 @@ def build_payload(record: dict[str, Any], config: dict[str, Any]) -> dict[str, A
         "guidance_scale": config["guidance_scale"],
         "temperature": config["temperature"],
         "tensor_parallel_size": config["tensor_parallel_size"],
+        "style_id": record["style_id"],
+        "style_prompt": record.get("style_prompt", ""),
+        "style_display_name": record.get("style_display_name", ""),
+        "style_reference_image_path": record.get("style_reference_image_path"),
+        "style_backend_requested": record.get("style_backend_requested", "prompt_only"),
+        "style_backend_effective": record.get("style_backend_effective", "pending"),
+        "ip_adapter": config["ip_adapter"],
         "case_id": record["case_id"],
         "scene_id": record["scene_id"],
         "candidate_id": record["candidate_id"],
@@ -200,13 +233,20 @@ def ensure_parent(path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
 
 
-def run_mock_adapter(record: dict[str, Any], config: dict[str, Any]) -> None:
+def run_mock_adapter(record: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
+    from generate_images import draw_placeholder
+
     output_path = Path(record["output_path"])
     ensure_parent(output_path)
     draw_placeholder(output_path, record, config["width"], config["height"])
+    return {
+        "output_path": output_path.as_posix(),
+        "style_backend_effective": "mock",
+        "style_backend_message": "generated by mock adapter",
+    }
 
 
-def run_command_adapter(record: dict[str, Any], config: dict[str, Any]) -> None:
+def run_command_adapter(record: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
     output_path = Path(record["output_path"])
     ensure_parent(output_path)
 
@@ -224,25 +264,27 @@ def run_command_adapter(record: dict[str, Any], config: dict[str, Any]) -> None:
             "Adapter command finished without writing the expected output file: "
             f"{output_path}"
         )
+    return {
+        "output_path": output_path.as_posix(),
+        "style_backend_effective": "command",
+        "style_backend_message": "generated by command adapter",
+    }
 
 
-def run_python_adapter(record: dict[str, Any], config: dict[str, Any]) -> None:
+def run_python_adapter(record: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
     from qwen_image_infer import generate_from_payload
 
-    generate_from_payload(build_payload(record, config))
+    return generate_from_payload(build_payload(record, config))
 
 
-def run_single_record(record: dict[str, Any], config: dict[str, Any]) -> None:
+def run_single_record(record: dict[str, Any], config: dict[str, Any]) -> dict[str, Any]:
     adapter_type = config["adapter_type"]
     if adapter_type == "mock":
-        run_mock_adapter(record, config)
-        return
+        return run_mock_adapter(record, config)
     if adapter_type == "python":
-        run_python_adapter(record, config)
-        return
+        return run_python_adapter(record, config)
     if adapter_type == "command":
-        run_command_adapter(record, config)
-        return
+        return run_command_adapter(record, config)
     raise RuntimeError(f"Unsupported adapter type: {adapter_type}")
 
 
@@ -254,10 +296,11 @@ def append_job_log(log_path: Path, line: str) -> None:
 
 def main() -> int:
     args = parse_args()
-    config = load_runtime_config(args.config)
+    style_id = str(args.style or DEFAULT_STYLE_ID)
+    config = load_runtime_config(args.config, style_id)
     shard = read_json(args.shard)
     status_path = args.status_path or Path(shard.get("status_path") or config["status_path"])
-    status_data = load_status(status_path, shard, config)
+    status_data = load_status(status_path, config)
     status_index = index_status_records(status_data)
 
     logs_dir = Path(config["logs_dir"])
@@ -275,6 +318,7 @@ def main() -> int:
     summary = {
         "job_name": shard["job_name"],
         "job_index": shard["job_index"],
+        "style_id": style_id,
         "model_family": config["model_family"],
         "adapter_type": config["adapter_type"],
         "selected_record_count": len(selected_records),
@@ -283,21 +327,35 @@ def main() -> int:
         "records": [],
     }
 
-    append_job_log(job_log, f"Starting {shard['job_name']} with {len(selected_records)} record(s)")
+    append_job_log(
+        job_log,
+        f"Starting {shard['job_name']} style={style_id} with {len(selected_records)} record(s)",
+    )
 
     for record in selected_records:
         message = ""
         success = False
+        backend_effective = None
         for attempt in range(1, config["retries"] + 2):
             upsert_status_record(status_data, record, "running", attempt, "started")
             save_status(status_path, status_data)
             try:
-                run_single_record(record, config)
-                upsert_status_record(status_data, record, "success", attempt, "generated")
+                result = run_single_record(record, config)
+                backend_effective = result.get("style_backend_effective")
+                upsert_status_record(
+                    status_data,
+                    record,
+                    "success",
+                    attempt,
+                    result.get("style_backend_message", "generated"),
+                    backend_effective=backend_effective,
+                )
                 save_status(status_path, status_data)
                 append_job_log(
                     job_log,
-                    f"SUCCESS {record_key(record)} seed={record['seed']} output={record['output_path']}",
+                    "SUCCESS "
+                    f"{record_key(record)} seed={record['seed']} "
+                    f"backend={backend_effective} output={record['output_path']}",
                 )
                 summary["success_count"] += 1
                 summary["records"].append(
@@ -306,18 +364,28 @@ def main() -> int:
                         "state": "success",
                         "attempt": attempt,
                         "output_path": record["output_path"],
+                        "style_backend_requested": record.get("style_backend_requested"),
+                        "style_backend_effective": backend_effective,
                     }
                 )
                 success = True
                 break
             except Exception as exc:  # noqa: BLE001
                 message = str(exc)
-                upsert_status_record(status_data, record, "failed", attempt, message)
+                upsert_status_record(
+                    status_data,
+                    record,
+                    "failed",
+                    attempt,
+                    message,
+                    backend_effective=backend_effective,
+                )
                 save_status(status_path, status_data)
                 append_job_log(
                     job_log,
                     f"FAILED {record_key(record)} attempt={attempt} error={message}",
                 )
+
         if not success:
             summary["failed_count"] += 1
             summary["records"].append(
@@ -326,21 +394,20 @@ def main() -> int:
                     "state": "failed",
                     "message": message,
                     "output_path": record["output_path"],
+                    "style_backend_requested": record.get("style_backend_requested"),
+                    "style_backend_effective": backend_effective,
                 }
             )
 
+    summary["completed_at_epoch"] = int(time.time())
     write_json(summary_path, summary)
+
     print(
         f"Completed {shard['job_name']}: "
         f"{summary['success_count']} success, {summary['failed_count']} failed"
     )
     print(f"Job log: {job_log}")
     print(f"Summary: {summary_path}")
-    if config["adapter_type"] == "command":
-        print(
-            "Adapter command template: "
-            f"{shlex.join(list(config['adapter_command']))}"
-        )
     return 0 if summary["failed_count"] == 0 else 1
 
 

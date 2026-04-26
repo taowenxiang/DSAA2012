@@ -14,7 +14,7 @@ The manifest schema and candidate output directory stay stable for Member C.
 Member B reads:
 
 ```text
-outputs/intermediate/prompts/*.prompts.json
+outputs/runs/run_000x_<style_id>/intermediate/prompts/*.prompts.json
 ```
 
 Each file contains three `panel_prompts`, with a positive prompt, negative
@@ -46,7 +46,7 @@ python scripts/generate_images.py --dry-run
 Writes:
 
 ```text
-outputs/intermediate/generation_manifest.json
+outputs/runs/run_000x_<style_id>/intermediate/generation_manifest.json
 ```
 
 ### 2. Dry run with placeholder PNGs
@@ -58,7 +58,7 @@ python scripts/generate_images.py --dry-run --placeholder-images
 Writes placeholder images under:
 
 ```text
-outputs/candidates/{case_id}/scene_{scene_id}/candidate_{candidate_id}.png
+outputs/runs/run_000x_<style_id>/candidates/{case_id}/scene_{scene_id}/candidate_{candidate_id}.png
 ```
 
 ### 3. Prepare the HPC bundle
@@ -70,11 +70,11 @@ python scripts/generate_images.py --run-model
 Writes:
 
 ```text
-outputs/intermediate/generation_manifest.json
-outputs/intermediate/generation_status.json
-outputs/intermediate/hpc_jobs/shards/job_*.json
-outputs/intermediate/hpc_jobs/shards.txt
-outputs/intermediate/hpc_jobs/submit_member_b_array.slurm
+outputs/runs/run_000x_<style_id>/intermediate/generation_manifest.json
+outputs/runs/run_000x_<style_id>/intermediate/generation_status.json
+outputs/runs/run_000x_<style_id>/intermediate/hpc_jobs/shards/job_*.json
+outputs/runs/run_000x_<style_id>/intermediate/hpc_jobs/shards.txt
+outputs/runs/run_000x_<style_id>/intermediate/hpc_jobs/submit_member_b_array.slurm
 ```
 
 The default sharding strategy is one case per shard, so the current config
@@ -83,7 +83,7 @@ creates 16 shards, each with 6 candidate records.
 ### 4. Run one shard locally or on HPC
 
 ```powershell
-python scripts/run_hpc_generation.py --config configs/member_b_generation_config.json --shard outputs/intermediate/hpc_jobs/shards/job_000.json
+python scripts/run_hpc_generation.py --style storybook --config configs/member_b_generation_config.json --shard outputs/runs/run_0001_storybook/intermediate/hpc_jobs/shards/job_000.json
 ```
 
 The current config uses the `python` adapter and calls
@@ -126,7 +126,7 @@ real Qwen-Image inference code on HPC.
 Member C should continue reading:
 
 ```text
-outputs/intermediate/generation_manifest.json
+outputs/runs/run_000x_<style_id>/intermediate/generation_manifest.json
 ```
 
 Fields that remain stable:
@@ -151,9 +151,9 @@ seed = base_seed + case_index * 1000 + scene_id * 100 + candidate_id
 The worker writes:
 
 ```text
-outputs/intermediate/generation_status.json
-outputs/logs/member_b/*.log
-outputs/logs/member_b/*.summary.json
+outputs/runs/run_000x_<style_id>/intermediate/generation_status.json
+outputs/runs/run_000x_<style_id>/logs/member_b/*.log
+outputs/runs/run_000x_<style_id>/logs/member_b/*.summary.json
 ```
 
 Each record is tracked independently, so failed items can be rerun without
@@ -162,5 +162,5 @@ restarting the full 96-image batch.
 Example rerun of failed records only:
 
 ```powershell
-python scripts/run_hpc_generation.py --config configs/member_b_generation_config.json --shard outputs/intermediate/hpc_jobs/shards/job_000.json --only-failed
+python scripts/run_hpc_generation.py --style storybook --config configs/member_b_generation_config.json --shard outputs/runs/run_0001_storybook/intermediate/hpc_jobs/shards/job_000.json --only-failed
 ```

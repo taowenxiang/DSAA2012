@@ -12,6 +12,7 @@ import time
 from pathlib import Path
 
 from generate_images import read_json, write_json
+from run_utils import resolve_run_paths
 from run_hpc_generation import (
     append_job_log,
     index_status_records,
@@ -23,10 +24,22 @@ from run_hpc_generation import (
     should_run_record,
     upsert_status_record,
 )
+from style_utils import DEFAULT_STYLE_ID, resolve_style_run_paths
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--style",
+        default=DEFAULT_STYLE_ID,
+        help="Style id used to resolve manifest and status paths.",
+    )
+    parser.add_argument(
+        "--run-dir",
+        type=Path,
+        default=None,
+        help="Optional numbered run directory.",
+    )
     parser.add_argument(
         "--config",
         type=Path,
@@ -36,7 +49,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--manifest",
         type=Path,
-        default=Path("outputs") / "intermediate" / "generation_manifest.json",
+        default=None,
         help="Generation manifest produced by scripts/generate_images.py.",
     )
     parser.add_argument(
@@ -66,11 +79,13 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    config = load_runtime_config(args.config)
-    manifest = read_json(args.manifest)
+    legacy_style_paths = resolve_style_run_paths(args.style)
+    run_paths = resolve_run_paths(args.run_dir) if args.run_dir else None
+    config = load_runtime_config(args.config, args.style)
+    manifest = read_json(args.manifest or (run_paths.manifest_path if run_paths else legacy_style_paths.manifest_path))
 
-    status_path = args.status_path or Path(config["status_path"])
-    status_data = load_status(status_path, {"job_name": args.job_name}, config)
+    status_path = args.status_path or Path(config["local_status_path"])
+    status_data = load_status(status_path, config)
     status_index = index_status_records(status_data)
 
     logs_dir = Path(config["logs_dir"])
@@ -88,6 +103,7 @@ def main() -> int:
     summary = {
         "job_name": args.job_name,
         "mode": "local_batch",
+        "style_id": args.style,
         "model_family": config["model_family"],
         "adapter_type": config["adapter_type"],
         "selected_record_count": len(selected_records),
@@ -106,12 +122,22 @@ def main() -> int:
             upsert_status_record(status_data, record, "running", attempt, "started")
             save_status(status_path, status_data)
             try:
-                run_single_record(record, config)
-                upsert_status_record(status_data, record, "success", attempt, "generated")
+                result = run_single_record(record, config)
+                upsert_status_record(
+                    status_data,
+                    record,
+                    "success",
+                    attempt,
+                    result.get("style_backend_message", "generated"),
+                    backend_effective=result.get("style_backend_effective"),
+                )
                 save_status(status_path, status_data)
                 append_job_log(
                     job_log,
-                    f"SUCCESS {record_key(record)} seed={record['seed']} output={record['output_path']}",
+                    "SUCCESS "
+                    f"{record_key(record)} seed={record['seed']} "
+                    f"backend={result.get('style_backend_effective')} "
+                    f"output={record['output_path']}",
                 )
                 summary["success_count"] += 1
                 summary["records"].append(
@@ -120,13 +146,17 @@ def main() -> int:
                         "state": "success",
                         "attempt": attempt,
                         "output_path": record["output_path"],
+                        "style_backend_requested": record.get("style_backend_requested"),
+                        "style_backend_effective": result.get("style_backend_effective"),
                     }
                 )
                 success = True
                 break
             except Exception as exc:  # noqa: BLE001
                 message = str(exc)
-                upsert_status_record(status_data, record, "failed", attempt, message)
+                upsert_status_record(
+                    status_data, record, "failed", attempt, message, backend_effective=None
+                )
                 save_status(status_path, status_data)
                 append_job_log(
                     job_log,
@@ -141,6 +171,8 @@ def main() -> int:
                     "state": "failed",
                     "message": message,
                     "output_path": record["output_path"],
+                    "style_backend_requested": record.get("style_backend_requested"),
+                    "style_backend_effective": None,
                 }
             )
 

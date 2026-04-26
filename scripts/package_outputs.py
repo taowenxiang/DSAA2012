@@ -9,30 +9,39 @@ import struct
 from pathlib import Path
 from typing import Any
 
-
-DEFAULT_SELECTION = Path("outputs") / "intermediate" / "selection_results.json"
-DEFAULT_OUTPUT_DIR = Path("outputs") / "final"
-DEFAULT_MANIFEST = DEFAULT_OUTPUT_DIR / "submission_manifest.json"
+from run_utils import resolve_run_paths
+from style_utils import DEFAULT_STYLE_ID, resolve_style_run_paths
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--style",
+        default=DEFAULT_STYLE_ID,
+        help="Style id used to resolve default selection and final output paths.",
+    )
+    parser.add_argument(
+        "--run-dir",
+        type=Path,
+        default=None,
+        help="Optional numbered run directory. If provided, packaged outputs are written there.",
+    )
+    parser.add_argument(
         "--selection",
         type=Path,
-        default=DEFAULT_SELECTION,
+        default=None,
         help="Selection results produced by scripts/rerank_candidates.py.",
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=DEFAULT_OUTPUT_DIR,
+        default=None,
         help="Directory where final packaged images will be written.",
     )
     parser.add_argument(
         "--manifest-output",
         type=Path,
-        default=DEFAULT_MANIFEST,
+        default=None,
         help="Path for the packaged submission manifest JSON.",
     )
     parser.add_argument(
@@ -118,6 +127,7 @@ def package_selection(
 
     return {
         "package_version": "member-c-v1",
+        "style_id": selection.get("style_id", DEFAULT_STYLE_ID),
         "source_selection": selection.get("selection_version", "unknown"),
         "case_count": len(packaged_cases),
         "image_count": image_count,
@@ -127,21 +137,26 @@ def package_selection(
 
 def main() -> int:
     args = parse_args()
-    selection = read_json(args.selection)
+    legacy_style_paths = resolve_style_run_paths(args.style)
+    run_paths = resolve_run_paths(args.run_dir) if args.run_dir else None
+    selection_path = args.selection or (run_paths.selection_path if run_paths else legacy_style_paths.selection_path)
+    output_dir = args.output_dir or (run_paths.final_dir if run_paths else legacy_style_paths.final_dir)
+    manifest_output = args.manifest_output or (run_paths.final_manifest_path if run_paths else legacy_style_paths.final_manifest_path)
+    selection = read_json(selection_path)
 
-    if args.clean and args.output_dir.exists():
-        shutil.rmtree(args.output_dir)
-    args.output_dir.mkdir(parents=True, exist_ok=True)
+    if args.clean and output_dir.exists():
+        shutil.rmtree(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    manifest = package_selection(selection, args.output_dir)
-    write_json(args.manifest_output, manifest)
+    manifest = package_selection(selection, output_dir)
+    write_json(manifest_output, manifest)
 
     print(
         f"Packaged {manifest['image_count']} final image(s) "
-        f"across {manifest['case_count']} case(s)."
+        f"across {manifest['case_count']} case(s) for style={manifest['style_id']}."
     )
-    print(f"Final output directory: {args.output_dir}")
-    print(f"Submission manifest: {args.manifest_output}")
+    print(f"Final output directory: {output_dir}")
+    print(f"Submission manifest: {manifest_output}")
     return 0
 
 

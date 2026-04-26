@@ -1,14 +1,4 @@
-"""Qwen-Image inference helpers for Member B generation.
-
-The module can be used in two ways:
-
-1. imported from the generation worker, where the pipeline is cached in-process
-   and reused across many records
-2. executed as a CLI against a single prompt payload JSON
-
-The implementation is written around the local diffusers-formatted
-Qwen-Image-2512 checkpoint under ``/data/home/sim6g/code/DSAA2012``.
-"""
+"""Qwen-Image inference helpers with optional IP-Adapter fallback handling."""
 
 from __future__ import annotations
 
@@ -69,7 +59,6 @@ def _visible_cuda_device_count() -> int:
 
 
 def _build_max_memory_map(visible_count: int) -> dict[int, str]:
-    # Leave headroom for activations and allocator fragmentation on 24 GB cards.
     return {index: "22GiB" for index in range(visible_count)}
 
 
@@ -112,12 +101,16 @@ def _build_pipeline(payload: dict[str, Any]) -> Any:
 
 def _pipeline_cache_key(payload: dict[str, Any]) -> str:
     visible_devices = os.environ.get("CUDA_VISIBLE_DEVICES", "")
+    ip_config = payload.get("ip_adapter", {})
     return "|".join(
         [
             str(payload.get("model_path", "")),
             str(payload.get("dtype", "")),
             str(payload.get("device", "")),
             visible_devices,
+            str(ip_config.get("enabled", False)),
+            str(ip_config.get("model_path", "")),
+            str(ip_config.get("image_encoder_path", "")),
         ]
     )
 
@@ -132,7 +125,114 @@ def get_pipeline(payload: dict[str, Any]) -> Any:
     return pipeline
 
 
-def _build_generation_kwargs(pipe: Any, payload: dict[str, Any]) -> dict[str, Any]:
+def _fallback_or_raise(requested: str, reason: str) -> dict[str, str]:
+    if requested == "require_ip_adapter":
+        raise RuntimeError(reason)
+    return {
+        "requested": requested,
+        "effective": "prompt_only",
+        "message": f"IP-Adapter unavailable; fallback to prompt_only: {reason}",
+    }
+
+
+def _load_reference_image(path_value: str) -> Any:
+    from PIL import Image
+
+    return Image.open(path_value).convert("RGB")
+
+
+def _ensure_ip_adapter_loaded(pipe: Any, payload: dict[str, Any]) -> None:
+    ip_config = payload.get("ip_adapter", {})
+    cache_key = "|".join(
+        [
+            str(ip_config.get("model_path", "")),
+            str(ip_config.get("image_encoder_path", "")),
+            str(ip_config.get("scale", 1.0)),
+        ]
+    )
+    if getattr(pipe, "_style_ip_adapter_cache_key", None) == cache_key:
+        return
+
+    if not hasattr(pipe, "load_ip_adapter"):
+        raise RuntimeError("pipeline runtime does not expose load_ip_adapter")
+
+    load_signature = inspect.signature(pipe.load_ip_adapter).parameters
+    kwargs: dict[str, Any] = {}
+    args: list[Any] = [ip_config.get("model_path", "")]
+
+    image_encoder_path = str(ip_config.get("image_encoder_path", "")).strip()
+    if "image_encoder_folder" in load_signature and image_encoder_path:
+        kwargs["image_encoder_folder"] = image_encoder_path
+    elif "image_encoder_path" in load_signature and image_encoder_path:
+        kwargs["image_encoder_path"] = image_encoder_path
+
+    pipe.load_ip_adapter(*args, **kwargs)
+
+    if hasattr(pipe, "set_ip_adapter_scale"):
+        pipe.set_ip_adapter_scale(float(ip_config.get("scale", 1.0)))
+    pipe._style_ip_adapter_cache_key = cache_key
+
+
+def _resolve_style_backend(pipe: Any, payload: dict[str, Any]) -> dict[str, str]:
+    requested = str(payload.get("style_backend_requested", "prompt_only"))
+    if requested == "prompt_only":
+        return {
+            "requested": requested,
+            "effective": "prompt_only",
+            "message": "Style preset uses prompt_only backend",
+        }
+
+    reference_path = str(payload.get("style_reference_image_path") or "").strip()
+    if not reference_path:
+        return _fallback_or_raise(requested, "missing style_reference_image_path")
+
+    if not Path(reference_path).exists():
+        return _fallback_or_raise(
+            requested, f"reference image not found: {reference_path}"
+        )
+
+    ip_config = payload.get("ip_adapter", {})
+    if not ip_config.get("enabled", False):
+        return _fallback_or_raise(requested, "ip_adapter.enabled is false")
+
+    model_path = str(ip_config.get("model_path", "")).strip()
+    image_encoder_path = str(ip_config.get("image_encoder_path", "")).strip()
+    if not model_path:
+        return _fallback_or_raise(requested, "ip_adapter.model_path is empty")
+    if not Path(model_path).exists():
+        return _fallback_or_raise(requested, f"ip_adapter.model_path not found: {model_path}")
+    if not image_encoder_path:
+        return _fallback_or_raise(requested, "ip_adapter.image_encoder_path is empty")
+    if not Path(image_encoder_path).exists():
+        return _fallback_or_raise(
+            requested,
+            f"ip_adapter.image_encoder_path not found: {image_encoder_path}",
+        )
+
+    try:
+        _ensure_ip_adapter_loaded(pipe, payload)
+    except Exception as exc:  # noqa: BLE001
+        return _fallback_or_raise(requested, f"unable to load IP-Adapter: {exc}")
+
+    call_signature = inspect.signature(pipe.__call__).parameters
+    if "ip_adapter_image" not in call_signature:
+        return _fallback_or_raise(
+            requested,
+            "pipeline call signature does not accept ip_adapter_image",
+        )
+
+    return {
+        "requested": requested,
+        "effective": "ip_adapter",
+        "message": "IP-Adapter backend active",
+    }
+
+
+def _build_generation_kwargs(
+    pipe: Any,
+    payload: dict[str, Any],
+    backend_resolution: dict[str, str],
+) -> dict[str, Any]:
     import torch
 
     parameters = inspect.signature(pipe.__call__).parameters
@@ -158,18 +258,28 @@ def _build_generation_kwargs(pipe: Any, payload: dict[str, Any]) -> dict[str, An
             int(payload["seed"])
         )
 
+    if backend_resolution["effective"] == "ip_adapter":
+        kwargs["ip_adapter_image"] = _load_reference_image(
+            str(payload["style_reference_image_path"])
+        )
+
     return kwargs
 
 
-def generate_from_payload(payload: dict[str, Any]) -> Path:
+def generate_from_payload(payload: dict[str, Any]) -> dict[str, Any]:
     pipe = get_pipeline(payload)
     output_path = Path(payload["output_path"])
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    result = pipe(**_build_generation_kwargs(pipe, payload))
+    backend_resolution = _resolve_style_backend(pipe, payload)
+    result = pipe(**_build_generation_kwargs(pipe, payload, backend_resolution))
     image = result.images[0]
     image.save(output_path)
-    return output_path
+    return {
+        "output_path": output_path.as_posix(),
+        "style_backend_effective": backend_resolution["effective"],
+        "style_backend_message": backend_resolution["message"],
+    }
 
 
 def main() -> int:
@@ -180,6 +290,7 @@ def main() -> int:
 
     if args.mock:
         record = {
+            "style_id": payload.get("style_id", "unknown"),
             "case_id": payload.get("case_id", "unknown"),
             "scene_id": payload.get("scene_id", "unknown"),
             "candidate_id": payload.get("candidate_id", "unknown"),

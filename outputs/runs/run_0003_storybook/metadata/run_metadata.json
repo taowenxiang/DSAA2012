@@ -1,0 +1,36 @@
+{
+  "run_name": "run_0003_storybook",
+  "run_number": 3,
+  "style_id": "storybook",
+  "created_at_utc": "2026-04-26T09:17:50+00:00",
+  "pipeline_args": {
+    "style": "storybook",
+    "refresh_manifest": false,
+    "rerank_backend": "auto",
+    "placeholder_images": false
+  },
+  "style_preset": {
+    "style_id": "storybook",
+    "display_name": "Storybook",
+    "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition",
+    "negative_prompt_append": "",
+    "reference_image_path": null,
+    "backend_preference": "prompt_only"
+  },
+  "paths": {
+    "run_root": "outputs/runs/run_0003_storybook",
+    "parsed_dir": "outputs/runs/run_0003_storybook/intermediate/parsed",
+    "prompts_dir": "outputs/runs/run_0003_storybook/intermediate/prompts",
+    "candidates_dir": "outputs/runs/run_0003_storybook/candidates",
+    "manifest_path": "outputs/runs/run_0003_storybook/intermediate/generation_manifest.json",
+    "selection_path": "outputs/runs/run_0003_storybook/intermediate/selection_results.json",
+    "final_dir": "outputs/runs/run_0003_storybook/final",
+    "final_manifest_path": "outputs/runs/run_0003_storybook/final/submission_manifest.json"
+  },
+  "config_snapshots": [
+    "outputs/runs/run_0003_storybook/metadata/config_snapshot/member_a_prompt_config.json",
+    "outputs/runs/run_0003_storybook/metadata/config_snapshot/member_b_generation_config.json",
+    "outputs/runs/run_0003_storybook/metadata/config_snapshot/member_b_generation_config.local_4gpu.json",
+    "outputs/runs/run_0003_storybook/metadata/config_snapshot/style_presets.json"
+  ]
+}

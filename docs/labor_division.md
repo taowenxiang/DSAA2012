@@ -20,8 +20,8 @@
     * 建立 `configs/default.yaml`：包含模型路径、分辨率、采样器类型、步数、全局 Seed、每格候选数量 $K$、推理设备（GPU/CPU）等参数。
 * **目录结构规范**：
     * `data/`：存放测试输入文本。
-    * `outputs/intermediate/`：存解析出的结构化 JSON 和中间 Prompt。
-    * `outputs/final/`：严格对齐官方提交格式（文件名、分辨率、索引）。
+    * `outputs/runs/run_000x_<style_id>/intermediate/`：存该次实验的解析 JSON、中间 Prompt、manifest 与日志。
+    * `outputs/runs/run_000x_<style_id>/final/`：存该次实验打包后的最终结果。
 
 ### 阶段 1：故事结构解析 (Story Parsing)
 * **脚本**：`scripts/parse_story.py`

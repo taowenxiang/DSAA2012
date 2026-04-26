@@ -1,0 +1,36 @@
+{
+  "run_name": "run_0002_watercolor",
+  "run_number": 2,
+  "style_id": "watercolor",
+  "created_at_utc": "2026-04-26T09:15:03+00:00",
+  "pipeline_args": {
+    "style": "watercolor",
+    "refresh_manifest": false,
+    "rerank_backend": "auto",
+    "placeholder_images": true
+  },
+  "style_preset": {
+    "style_id": "watercolor",
+    "display_name": "Watercolor",
+    "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
+    "negative_prompt_append": "hard digital edges, flat cel shading, photorealism",
+    "reference_image_path": null,
+    "backend_preference": "prompt_only"
+  },
+  "paths": {
+    "run_root": "outputs/runs/run_0002_watercolor",
+    "parsed_dir": "outputs/runs/run_0002_watercolor/intermediate/parsed",
+    "prompts_dir": "outputs/runs/run_0002_watercolor/intermediate/prompts",
+    "candidates_dir": "outputs/runs/run_0002_watercolor/candidates",
+    "manifest_path": "outputs/runs/run_0002_watercolor/intermediate/generation_manifest.json",
+    "selection_path": "outputs/runs/run_0002_watercolor/intermediate/selection_results.json",
+    "final_dir": "outputs/runs/run_0002_watercolor/final",
+    "final_manifest_path": "outputs/runs/run_0002_watercolor/final/submission_manifest.json"
+  },
+  "config_snapshots": [
+    "outputs/runs/run_0002_watercolor/metadata/config_snapshot/member_a_prompt_config.json",
+    "outputs/runs/run_0002_watercolor/metadata/config_snapshot/member_b_generation_config.json",
+    "outputs/runs/run_0002_watercolor/metadata/config_snapshot/member_b_generation_config.local_4gpu.json",
+    "outputs/runs/run_0002_watercolor/metadata/config_snapshot/style_presets.json"
+  ]
+}

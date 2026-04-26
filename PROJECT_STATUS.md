@@ -30,20 +30,21 @@ The root-level directories below are the main working copy:
 
 ### Existing Outputs
 
-- `outputs/intermediate/parsed/`: parsed story JSON for `16` cases
-- `outputs/intermediate/prompts/`: prompt JSON for `16` cases
-- `outputs/intermediate/generation_manifest.json`: full candidate manifest
-- `outputs/intermediate/selection_results.json`: final per-scene selection results
-- `outputs/candidates/`: generated candidate image files
-- `outputs/final/`: packaged final images ready for submission review
-- `outputs/logs/`: batch logs and summaries
+- `outputs/runs/run_000x_<style_id>/intermediate/parsed/`: parsed story JSON for `16` cases
+- `outputs/runs/run_000x_<style_id>/intermediate/prompts/`: style-specific prompt JSON
+- `outputs/runs/run_000x_<style_id>/intermediate/generation_manifest.json`: full run manifest
+- `outputs/runs/run_000x_<style_id>/intermediate/selection_results.json`: final per-scene selection results
+- `outputs/runs/run_000x_<style_id>/final/`: packaged final images ready for submission review
+- `outputs/runs/run_000x_<style_id>/metadata/run_metadata.json`: this run's experiment parameters and config snapshot
+- `outputs/legacy/storybook_seed/`: archived legacy candidate seed data for default storybook runs
 
 ### Member C
 
 - `scripts/rerank_candidates.py` now reads the integrated manifest and candidate image paths.
 - `scripts/package_outputs.py` packages the selected final images.
-- `scripts/run_story_pipeline.py` runs the pipeline from parsing to final packaging.
-- Current selection status: `16` cases and `48` final panel images were selected and packaged successfully.
+- `scripts/run_story_pipeline.py` now creates numbered run folders and records experiment metadata.
+- A style preset system now supports `storybook`, `watercolor`, `anime`, and `paper_cutout`.
+- Current selection status: `run_0001_storybook` and `run_0002_watercolor` both produced `16` cases and `48` packaged final panel images.
 
 ## What Is Still Left
 
@@ -56,18 +57,19 @@ The root-level directories below are the main working copy:
 
 - `requirements.txt` is now present, but version pinning may still be needed on the final machine.
 - The README still contains placeholder team information and an idealized structure.
-- If you want the project to be portable across machines, the model path in `configs/member_b_generation_config*.json` will need to be adjusted from the current local/HPC path.
+- If you want the project to be portable across machines, the model path and optional IP-Adapter paths in `configs/member_b_generation_config*.json` will need to be adjusted from the current local/HPC path.
 
 ### Report and Polish
 
 - Fill in the final team information in `README.md`.
 - Add report screenshots, qualitative examples, and method discussion.
 - Optionally upgrade reranking later with CLIP if the final runtime environment includes the required dependencies.
+- If you want a true reference-image demo, provide real `reference_image_path` values and valid IP-Adapter weights.
 
 ## Recommended Next Steps
 
 1. Keep the root-level `configs/`, `data/`, `docs/`, `outputs/`, and `scripts/` folders as the only working structure.
 2. Confirm the teacher's final submission directory and filename rules.
-3. Adjust `scripts/package_outputs.py` if the official format differs from the current `outputs/final/{case_id}/scene_{scene_id}.png` layout.
+3. Adjust `scripts/package_outputs.py` if the official format differs from the current `outputs/runs/run_000x_<style_id>/final/{case_id}/scene_{scene_id}.png` layout.
 4. Fill in team metadata and polish the report.
 5. Adjust the generation config model path if the project needs to run on another machine.

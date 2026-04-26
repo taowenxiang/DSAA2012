@@ -18,13 +18,14 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from run_utils import resolve_run_paths
+from style_utils import DEFAULT_STYLE_ID, resolve_style_run_paths
 
-DEFAULT_MANIFEST = Path("outputs") / "intermediate" / "generation_manifest.json"
-DEFAULT_OUTPUT = Path("outputs") / "intermediate" / "selection_results.json"
 
 
 @dataclass(frozen=True)
 class CandidateRecord:
+    style_id: str
     case_id: str
     scene_id: int
     candidate_id: int
@@ -45,15 +46,26 @@ class CandidateFeatures:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--style",
+        default=DEFAULT_STYLE_ID,
+        help="Style id used to resolve default manifest and output paths.",
+    )
+    parser.add_argument(
+        "--run-dir",
+        type=Path,
+        default=None,
+        help="Optional numbered run directory. If provided, rerank inputs and outputs are resolved there.",
+    )
+    parser.add_argument(
         "--manifest",
         type=Path,
-        default=DEFAULT_MANIFEST,
+        default=None,
         help="Generation manifest produced by scripts/generate_images.py.",
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=DEFAULT_OUTPUT,
+        default=None,
         help="Path for the selection result JSON.",
     )
     parser.add_argument(
@@ -205,12 +217,14 @@ def extract_features(path: Path, backend: str) -> CandidateFeatures:
     return extract_byte_features(path)
 
 
-def parse_manifest(path: Path) -> list[CandidateRecord]:
+def parse_manifest(path: Path) -> tuple[str, list[CandidateRecord]]:
     manifest = read_json(path)
+    manifest_style_id = str(manifest.get("style_id", DEFAULT_STYLE_ID))
     records: list[CandidateRecord] = []
     for raw in manifest.get("candidates", []):
         records.append(
             CandidateRecord(
+                style_id=str(raw.get("style_id", manifest_style_id)),
                 case_id=str(raw["case_id"]),
                 scene_id=int(raw["scene_id"]),
                 candidate_id=int(raw["candidate_id"]),
@@ -221,7 +235,7 @@ def parse_manifest(path: Path) -> list[CandidateRecord]:
                 status=str(raw.get("status", "unknown")),
             )
         )
-    return records
+    return manifest_style_id, records
 
 
 def group_records(records: list[CandidateRecord]) -> dict[str, dict[int, list[CandidateRecord]]]:
@@ -341,6 +355,10 @@ def select_case(
 def main() -> int:
     args = parse_args()
     backend = choose_backend(args.backend)
+    legacy_style_paths = resolve_style_run_paths(args.style)
+    run_paths = resolve_run_paths(args.run_dir) if args.run_dir else None
+    manifest_path = args.manifest or (run_paths.manifest_path if run_paths else legacy_style_paths.manifest_path)
+    output_path = args.output or (run_paths.selection_path if run_paths else legacy_style_paths.selection_path)
 
     quality_weight = max(0.0, args.quality_weight)
     continuity_weight = max(0.0, args.continuity_weight)
@@ -350,9 +368,9 @@ def main() -> int:
     quality_weight /= weight_sum
     continuity_weight /= weight_sum
 
-    records = parse_manifest(args.manifest)
+    manifest_style_id, records = parse_manifest(manifest_path)
     if not records:
-        raise SystemExit(f"No candidate records found in {args.manifest}")
+        raise SystemExit(f"No candidate records found in {manifest_path}")
 
     grouped = group_records(records)
     cases: list[dict[str, Any]] = []
@@ -369,7 +387,8 @@ def main() -> int:
 
     result = {
         "selection_version": "member-c-v1",
-        "manifest_path": args.manifest.as_posix(),
+        "style_id": manifest_style_id,
+        "manifest_path": manifest_path.as_posix(),
         "backend": backend,
         "weights": {
             "quality": round(quality_weight, 6),
@@ -379,13 +398,14 @@ def main() -> int:
         "panel_count": sum(len(case["selected_panels"]) for case in cases),
         "cases": cases,
     }
-    write_json(args.output, result)
+    write_json(output_path, result)
 
     print(
         f"Selected {result['panel_count']} final panel image(s) "
-        f"across {result['case_count']} case(s) using backend={backend}."
+        f"across {result['case_count']} case(s) using backend={backend} "
+        f"for style={manifest_style_id}."
     )
-    print(f"Selection results: {args.output}")
+    print(f"Selection results: {output_path}")
     return 0
 
 

@@ -1,9 +1,4 @@
-"""Prepare candidate image generation manifests and HPC job bundles.
-
-Member B keeps ownership of candidate generation, but real image synthesis is
-expected to happen on HPC. This script remains the stable interface layer
-between Member A prompt JSON files and downstream candidate selection.
-"""
+"""Prepare candidate image generation manifests and style-aware job bundles."""
 
 from __future__ import annotations
 
@@ -16,17 +11,24 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from run_utils import resolve_run_paths
+from style_utils import DEFAULT_STYLE_ID, format_style_template, resolve_style_run_paths
 
-DEFAULT_PROMPTS_DIR = Path("outputs") / "intermediate" / "prompts"
+
 DEFAULT_CONFIG = Path("configs") / "member_b_generation_config.json"
-DEFAULT_CANDIDATES_DIR = Path("outputs") / "candidates"
-DEFAULT_MANIFEST = Path("outputs") / "intermediate" / "generation_manifest.json"
-DEFAULT_JOB_DIR = Path("outputs") / "intermediate" / "hpc_jobs"
-DEFAULT_STATUS = Path("outputs") / "intermediate" / "generation_status.json"
+
+
+@dataclass(frozen=True)
+class IPAdapterConfig:
+    enabled: bool
+    model_path: str
+    image_encoder_path: str
+    scale: float
 
 
 @dataclass(frozen=True)
 class GenerationConfig:
+    style_id: str
     base_seed: int
     candidates_per_panel: int
     width: int
@@ -52,14 +54,27 @@ class GenerationConfig:
     retries: int
     logs_dir: str
     status_path: str
+    local_status_path: str
+    ip_adapter: IPAdapterConfig
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--style",
+        default=DEFAULT_STYLE_ID,
+        help="Style id used to resolve prompts and output paths.",
+    )
+    parser.add_argument(
+        "--run-dir",
+        type=Path,
+        default=None,
+        help="Optional numbered run directory. If provided, generation outputs are written there.",
+    )
+    parser.add_argument(
         "--prompts",
         type=Path,
-        default=DEFAULT_PROMPTS_DIR,
+        default=None,
         help="Prompt JSON file or directory containing *.prompts.json files.",
     )
     parser.add_argument(
@@ -71,25 +86,25 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--candidates-dir",
         type=Path,
-        default=DEFAULT_CANDIDATES_DIR,
+        default=None,
         help="Root directory for candidate images.",
     )
     parser.add_argument(
         "--manifest",
         type=Path,
-        default=DEFAULT_MANIFEST,
+        default=None,
         help="Path for the generation manifest JSON.",
     )
     parser.add_argument(
         "--job-dir",
         type=Path,
-        default=DEFAULT_JOB_DIR,
+        default=None,
         help="Directory for HPC shard files and batch scripts.",
     )
     parser.add_argument(
         "--status-path",
         type=Path,
-        default=DEFAULT_STATUS,
+        default=None,
         help="Path for shared generation status JSON.",
     )
     parser.add_argument(
@@ -137,14 +152,29 @@ def _string_list(value: Any) -> list[str]:
     return value
 
 
+def _load_ip_adapter_config(raw: dict[str, Any]) -> IPAdapterConfig:
+    return IPAdapterConfig(
+        enabled=bool(raw.get("enabled", False)),
+        model_path=str(raw.get("model_path", "")),
+        image_encoder_path=str(raw.get("image_encoder_path", "")),
+        scale=float(raw.get("scale", 1.0)),
+    )
+
+
+def _resolve_style_path_config(raw: dict[str, Any], style_id: str) -> str:
+    return format_style_template(str(raw), style_id)
+
+
 def load_config(path: Path, args: argparse.Namespace) -> GenerationConfig:
     if not path.exists():
         raise SystemExit(f"Generation config not found: {path}")
 
+    style_id = str(args.style or DEFAULT_STYLE_ID)
     raw = read_json(path)
     adapter = raw.get("adapter", {})
     scheduler = raw.get("scheduler", {})
     config = GenerationConfig(
+        style_id=style_id,
         base_seed=args.base_seed if args.base_seed is not None else int(raw["base_seed"]),
         candidates_per_panel=(
             args.candidates_per_panel
@@ -176,8 +206,24 @@ def load_config(path: Path, args: argparse.Namespace) -> GenerationConfig:
         ),
         shard_strategy=str(raw.get("shard_strategy", "case")),
         retries=int(raw.get("retries", 2)),
-        logs_dir=str(raw.get("logs_dir", "outputs/logs/member_b")),
-        status_path=str(raw.get("status_path", DEFAULT_STATUS.as_posix())),
+        logs_dir=_resolve_style_path_config(
+            raw.get("logs_dir", "outputs/runs/{style_id}/logs/member_b"), style_id
+        ),
+        status_path=_resolve_style_path_config(
+            raw.get(
+                "status_path",
+                "outputs/runs/{style_id}/intermediate/generation_status.json",
+            ),
+            style_id,
+        ),
+        local_status_path=_resolve_style_path_config(
+            raw.get(
+                "local_status_path",
+                "outputs/runs/{style_id}/intermediate/generation_status.local_4gpu.json",
+            ),
+            style_id,
+        ),
+        ip_adapter=_load_ip_adapter_config(raw.get("ip_adapter", {})),
     )
 
     if config.candidates_per_panel <= 0:
@@ -220,10 +266,18 @@ def build_manifest(
     placeholder_images: bool,
 ) -> dict[str, Any]:
     records: list[dict[str, Any]] = []
+    manifest_style_id: str | None = None
 
     for case_index, prompt_path in enumerate(prompt_files):
         prompt_package = read_json(prompt_path)
         case_id = prompt_package["case_id"]
+        style_id = str(prompt_package.get("style_id", config.style_id))
+        if manifest_style_id is None:
+            manifest_style_id = style_id
+        elif manifest_style_id != style_id:
+            raise SystemExit(
+                f"Mixed style ids in prompt packages: {manifest_style_id} vs {style_id}"
+            )
 
         for panel in prompt_package.get("panel_prompts", []):
             scene_id = int(panel["scene_id"])
@@ -245,6 +299,21 @@ def build_manifest(
                         "seed": candidate_seed(
                             config.base_seed, case_index, scene_id, candidate_id
                         ),
+                        "style_id": style_id,
+                        "style_display_name": prompt_package.get("style_display_name", ""),
+                        "style_prompt": panel.get(
+                            "style_prompt", prompt_package.get("style_prompt", "")
+                        ),
+                        "style_backend_preference": prompt_package.get(
+                            "style_backend_preference", "prompt_only"
+                        ),
+                        "style_reference_image_path": prompt_package.get(
+                            "style_reference_image_path"
+                        ),
+                        "style_backend_requested": prompt_package.get(
+                            "style_backend_preference", "prompt_only"
+                        ),
+                        "style_backend_effective": "pending" if not dry_run else "dry_run",
                         "prompt": panel["prompt"],
                         "negative_prompt": panel["negative_prompt"],
                         "output_path": relative_posix(output_path),
@@ -252,9 +321,13 @@ def build_manifest(
                     }
                 )
 
+    if manifest_style_id is None:
+        manifest_style_id = config.style_id
+
     return {
-        "manifest_version": "member-b-v2",
+        "manifest_version": "member-b-v3-style",
         "mode": "dry_run" if dry_run else "hpc_batch",
+        "style_id": manifest_style_id,
         "placeholder_images": placeholder_images,
         "config": {
             "base_seed": config.base_seed,
@@ -274,6 +347,13 @@ def build_manifest(
             "retries": config.retries,
             "logs_dir": config.logs_dir,
             "status_path": config.status_path,
+            "local_status_path": config.local_status_path,
+            "ip_adapter": {
+                "enabled": config.ip_adapter.enabled,
+                "model_path": config.ip_adapter.model_path,
+                "image_encoder_path": config.ip_adapter.image_encoder_path,
+                "scale": config.ip_adapter.scale,
+            },
         },
         "source_prompt_count": len(prompt_files),
         "candidate_count": len(records),
@@ -284,7 +364,7 @@ def build_manifest(
 def draw_placeholder(path: Path, record: dict[str, Any], width: int, height: int) -> None:
     try:
         from PIL import Image, ImageDraw, ImageFont
-    except ImportError as exc:
+    except ImportError:
         _write_minimal_png(path, record, width, height)
         return
 
@@ -295,6 +375,7 @@ def draw_placeholder(path: Path, record: dict[str, Any], width: int, height: int
 
     title_lines = [
         "PLACEHOLDER ONLY",
+        f"style: {record['style_id']}",
         f"case: {record['case_id']}",
         f"scene: {record['scene_id']}",
         f"candidate: {record['candidate_id']}",
@@ -377,8 +458,9 @@ def build_shards(
         case_ids = sorted({str(record["case_id"]) for record in shard_records})
         shard_payloads.append(
             {
+                "style_id": config.style_id,
                 "job_index": index,
-                "job_name": f"member_b_{'_'.join(case_ids)}",
+                "job_name": f"member_b_{config.style_id}_{'_'.join(case_ids)}",
                 "case_ids": case_ids,
                 "record_count": len(shard_records),
                 "status_path": relative_posix(status_path),
@@ -402,7 +484,7 @@ def render_slurm_array_script(
     partition_line = _slurm_line("--partition", config.partition)
     account_line = _slurm_line("--account", config.account)
     return f"""#!/bin/bash
-#SBATCH --job-name=member-b-qwen-image
+#SBATCH --job-name=member-b-{config.style_id}
 #SBATCH --array=0-{shard_count - 1}
 #SBATCH --gres=gpu:{config.gpus_per_task}
 #SBATCH --cpus-per-task={config.cpus_per_task}
@@ -415,6 +497,7 @@ cd "$ROOT_DIR"
 
 SHARD_FILE=$(sed -n "$((SLURM_ARRAY_TASK_ID + 1))p" "{shard_list_path}")
 python scripts/run_hpc_generation.py \\
+  --style "{config.style_id}" \\
   --config "{config_path}" \\
   --shard "$SHARD_FILE" \\
   --status-path "{status_path}"
@@ -456,7 +539,8 @@ def write_hpc_bundle(
     )
 
     status_template = {
-        "status_version": "member-b-status-v1",
+        "status_version": "member-b-status-v2-style",
+        "style_id": config.style_id,
         "model_family": config.model_family,
         "status_path": relative_posix(status_path),
         "records": [],
@@ -475,19 +559,27 @@ def write_hpc_bundle(
 def main() -> int:
     args = parse_args()
     config = load_config(args.config, args)
+    legacy_style_paths = resolve_style_run_paths(config.style_id)
+    run_paths = resolve_run_paths(args.run_dir) if args.run_dir else None
 
-    prompt_files = discover_prompt_files(args.prompts)
+    prompts_path = args.prompts or (run_paths.prompts_dir if run_paths else legacy_style_paths.prompts_dir)
+    candidates_dir = args.candidates_dir or (run_paths.candidates_dir if run_paths else legacy_style_paths.candidates_dir)
+    manifest_path = args.manifest or (run_paths.manifest_path if run_paths else legacy_style_paths.manifest_path)
+    job_dir = args.job_dir or (run_paths.hpc_job_dir if run_paths else legacy_style_paths.hpc_job_dir)
+    status_path = args.status_path or (run_paths.status_path if run_paths else legacy_style_paths.status_path)
+
+    prompt_files = discover_prompt_files(prompts_path)
     if not prompt_files:
-        raise SystemExit(f"No *.prompts.json files found at {args.prompts}")
+        raise SystemExit(f"No *.prompts.json files found at {prompts_path}")
 
     manifest = build_manifest(
         prompt_files=prompt_files,
         config=config,
-        candidates_dir=args.candidates_dir,
+        candidates_dir=candidates_dir,
         dry_run=args.dry_run,
         placeholder_images=args.placeholder_images,
     )
-    write_json(args.manifest, manifest)
+    write_json(manifest_path, manifest)
 
     image_count = 0
     if args.placeholder_images:
@@ -496,20 +588,20 @@ def main() -> int:
     print(
         "Prepared "
         f"{manifest['candidate_count']} candidate record(s) from "
-        f"{manifest['source_prompt_count']} prompt file(s)."
+        f"{manifest['source_prompt_count']} prompt file(s) for style={config.style_id}."
     )
-    print(f"Manifest: {args.manifest}")
+    print(f"Manifest: {manifest_path}")
 
     if args.placeholder_images:
-        print(f"Placeholder images: {image_count} written under {args.candidates_dir}")
+        print(f"Placeholder images: {image_count} written under {candidates_dir}")
 
     if not args.dry_run:
         bundle = write_hpc_bundle(
             manifest=manifest,
             config=config,
-            job_dir=args.job_dir,
+            job_dir=job_dir,
             config_path=args.config,
-            status_path=args.status_path,
+            status_path=status_path,
         )
         print(
             "HPC bundle: "

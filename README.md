@@ -103,6 +103,22 @@ Candidates are automatically scored and selected based on:
 The selected final images are copied into the final output directory together
 with a manifest for checking counts, paths, and image sizes.
 
+### 3.2 Style System
+
+The pipeline now supports style presets through configuration-driven style ids.
+
+- default submission style: `storybook`
+- demo styles: `watercolor`, `anime`, `paper_cutout`
+- every pipeline execution creates a numbered run folder like
+  `outputs/runs/run_0001_storybook/`
+- all prompts, manifests, candidate images, final outputs, and metadata for that
+  experiment are stored inside the run folder
+
+For future extension, the generation payload also carries an optional
+IP-Adapter backend request. If IP-Adapter is unavailable, styles configured as
+`auto_ip_adapter` fall back to `prompt_only`, while `require_ip_adapter` fails
+explicitly.
+
 ---
 
 ## 4. Repository Structure
@@ -138,10 +154,11 @@ project_root/
 │   ├── run_story_pipeline.py
 │   └── validate_member_a.py
 └── outputs/
+    ├── intermediate/
     ├── candidates/
     ├── final/
-    ├── intermediate/
-    └── logs/
+    ├── logs/
+    └── runs/
 ```
 
 ## 5. Quick Start
@@ -158,4 +175,32 @@ This will:
 2. build prompts
 3. validate the parsed/prompt outputs
 4. rerank the existing candidate images
-5. package the final selected images into `outputs/final/`
+5. package the final selected images into a new numbered run directory
+
+Example result:
+
+```text
+outputs/runs/run_0001_storybook/
+```
+
+Key files inside a run:
+
+- `metadata/run_metadata.json`: this run's style, CLI args, and config snapshot
+- `intermediate/parsed/`: parsed story JSON
+- `intermediate/prompts/`: prompt JSON
+- `intermediate/generation_manifest.json`: candidate manifest
+- `intermediate/selection_results.json`: rerank result
+- `final/submission_manifest.json`: final packaged output manifest
+
+Run a different style preset:
+
+```bash
+python3 scripts/run_story_pipeline.py --style watercolor --placeholder-images
+```
+
+Important behavior:
+
+- each new run gets a new `run_000x_<style>` folder and never overwrites an old run
+- `storybook` will reuse the legacy candidate image seed if needed
+- `--placeholder-images` is useful for smoke-testing a style path even before
+  real candidate images are generated for that style
