@@ -1,0 +1,1 @@
+outputs/runs/run_0002_watercolor/intermediate/local_4gpu_jobs/shards/job_000.json

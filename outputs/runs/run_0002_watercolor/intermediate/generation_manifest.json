@@ -1,8 +1,8 @@
 {
   "manifest_version": "member-b-v3-style",
-  "mode": "dry_run",
+  "mode": "hpc_batch",
   "style_id": "watercolor",
-  "placeholder_images": true,
+  "placeholder_images": false,
   "config": {
     "base_seed": 2012,
     "candidates_per_panel": 2,
@@ -17,11 +17,11 @@
     "guidance_scale": 4.5,
     "temperature": 1.0,
     "tensor_parallel_size": 4,
-    "records_per_shard": 6,
+    "records_per_shard": 96,
     "retries": 2,
-    "logs_dir": "outputs/runs/watercolor/logs/member_b",
-    "status_path": "outputs/runs/watercolor/intermediate/generation_status.json",
-    "local_status_path": "outputs/runs/watercolor/intermediate/generation_status.local_4gpu.json",
+    "logs_dir": "outputs/runs/storybook/logs/member_b_local_4gpu",
+    "status_path": "outputs/runs/storybook/intermediate/generation_status.json",
+    "local_status_path": "outputs/runs/storybook/intermediate/generation_status.local_4gpu.json",
     "ip_adapter": {
       "enabled": false,
       "model_path": "",
@@ -42,12 +42,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 1: Lily makes breakfast in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "01",
@@ -59,12 +62,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 1: Lily makes breakfast in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "01",
@@ -76,12 +82,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 2: Lily looks out the window quietly. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "01",
@@ -93,12 +102,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 2: Lily looks out the window quietly. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "01",
@@ -110,12 +122,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 3: Lily sits down to eat with a book beside her. Setting: beside her. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "01",
@@ -127,12 +142,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Lily. Recurring character reference: Lily. Keep the same identity whenever each recurring character appears. Scene 3: Lily sits down to eat with a book beside her. Setting: beside her. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "02",
@@ -144,12 +162,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 1: Ryan walks quickly toward a bus. Setting: toward a bus. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "02",
@@ -161,12 +182,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 1: Ryan walks quickly toward a bus. Setting: toward a bus. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "02",
@@ -178,12 +202,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 2: Ryan pauses at the door and looks ahead. Setting: at the door. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "02",
@@ -195,12 +222,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 2: Ryan pauses at the door and looks ahead. Setting: at the door. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "02",
@@ -212,12 +242,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 3: Ryan gets inside and sits by the window. Setting: by the window. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "02",
@@ -229,12 +262,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ryan. Recurring character reference: Ryan. Keep the same identity whenever each recurring character appears. Scene 3: Ryan gets inside and sits by the window. Setting: by the window. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "04",
@@ -246,12 +282,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 1: Milo sits on the floor with toys. Setting: with toys. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "04",
@@ -263,12 +302,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 1: Milo sits on the floor with toys. Setting: with toys. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "04",
@@ -280,12 +322,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 2: Milo rolls over and laughs. Setting: over. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "04",
@@ -297,12 +342,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 2: Milo rolls over and laughs. Setting: over. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "04",
@@ -314,12 +362,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 3: Milo lies down and rests. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "04",
@@ -331,12 +382,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Milo. Recurring character reference: Milo. Keep the same identity whenever each recurring character appears. Scene 3: Milo lies down and rests. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "05",
@@ -348,12 +402,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 1: Emma stands on a bridge and looks down. Setting: on a bridge. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "05",
@@ -365,12 +422,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 1: Emma stands on a bridge and looks down. Setting: on a bridge. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "05",
@@ -382,12 +442,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 2: The city lights come on at night. Setting: at night. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "05",
@@ -399,12 +462,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 2: The city lights come on at night. Setting: at night. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "05",
@@ -416,12 +482,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 3: Emma smiles at the view. Setting: at the view. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "05",
@@ -433,12 +502,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Emma. Recurring character reference: Emma. Keep the same identity whenever each recurring character appears. Scene 3: Emma smiles at the view. Setting: at the view. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "06",
@@ -450,12 +522,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 1: Jack and Sara sit in a park and talk. Setting: in a park. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "06",
@@ -467,12 +542,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 1: Jack and Sara sit in a park and talk. Setting: in a park. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "06",
@@ -484,12 +562,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 2: Jack and Sara continue talking in a cafe. Setting: in a cafe. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "06",
@@ -501,12 +582,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 2: Jack and Sara continue talking in a cafe. Setting: in a cafe. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "06",
@@ -518,12 +602,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 3: Jack and Sara look at an exhibition together. Setting: at an exhibition. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "06",
@@ -535,12 +622,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Jack and Sara. Recurring character reference: Jack and Sara. Keep the same identity whenever each recurring character appears. Scene 3: Jack and Sara look at an exhibition together. Setting: at an exhibition. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "07",
@@ -552,12 +642,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Nina. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 1: Nina stands in the snow. Setting: in the snow. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "07",
@@ -569,12 +662,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Nina. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 1: Nina stands in the snow. Setting: in the snow. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "07",
@@ -586,12 +682,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 2: Nina meets Leo in a crowd. Setting: in a crowd. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "07",
@@ -603,12 +702,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 2: Nina meets Leo in a crowd. Setting: in a crowd. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "07",
@@ -620,12 +722,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 3: Nina and Leo look at each other quietly. Setting: at each other. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "07",
@@ -637,12 +742,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Nina and Leo. Recurring character reference: Nina and Leo. Keep the same identity whenever each recurring character appears. Scene 3: Nina and Leo look at each other quietly. Setting: at each other. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "08",
@@ -654,12 +762,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 1: Tom runs down a street. Setting: down a street. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "08",
@@ -671,12 +782,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 1: Tom runs down a street. Setting: down a street. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "08",
@@ -688,12 +802,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 2: Tom moves through traffic. Setting: through traffic. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "08",
@@ -705,12 +822,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 2: Tom moves through traffic. Setting: through traffic. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "08",
@@ -722,12 +842,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 3: Tom meets his friend and keeps going. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "08",
@@ -739,12 +862,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Tom. Recurring character reference: Tom. Keep the same identity whenever each recurring character appears. Scene 3: Tom meets his friend and keeps going. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "09",
@@ -756,12 +882,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 1: Ben drives along a road. Setting: along a road. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "09",
@@ -773,12 +902,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 1: Ben drives along a road. Setting: along a road. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "09",
@@ -790,12 +922,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 2: Ben looks at the scenery outside. Setting: at the scenery. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "09",
@@ -807,12 +942,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 2: Ben looks at the scenery outside. Setting: at the scenery. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "09",
@@ -824,12 +962,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 3: Ben stops to take a break. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "09",
@@ -841,12 +982,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Ben. Recurring character reference: Ben. Keep the same identity whenever each recurring character appears. Scene 3: Ben stops to take a break. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "11",
@@ -858,12 +1002,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 1: Olivia writes in a classroom. Setting: in a classroom. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "11",
@@ -875,12 +1022,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 1: Olivia writes in a classroom. Setting: in a classroom. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "11",
@@ -892,12 +1042,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 2: Olivia looks out the window. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "11",
@@ -909,12 +1062,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 2: Olivia looks out the window. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "11",
@@ -926,12 +1082,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 3: Olivia packs her bag and leaves. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "11",
@@ -943,12 +1102,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Olivia. Recurring character reference: Olivia. Keep the same identity whenever each recurring character appears. Scene 3: Olivia packs her bag and leaves. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "14",
@@ -960,12 +1122,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 1: Girl runs in the rain. Setting: in the rain. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "14",
@@ -977,12 +1142,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 1: Girl runs in the rain. Setting: in the rain. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "14",
@@ -994,12 +1162,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 2: Girl stands under a roof for cover. Setting: under a roof for cover. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "14",
@@ -1011,12 +1182,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 2: Girl stands under a roof for cover. Setting: under a roof for cover. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "14",
@@ -1028,12 +1202,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 3: Girl watches the rain slow down. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "14",
@@ -1045,12 +1222,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Girl. Recurring character reference: Girl. Keep the same identity whenever each recurring character appears. Scene 3: Girl watches the rain slow down. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "16",
@@ -1062,12 +1242,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 1: Chef cuts vegetables in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "16",
@@ -1079,12 +1262,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 1: Chef cuts vegetables in the kitchen. Setting: in the kitchen. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "16",
@@ -1096,12 +1282,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 2: Chef checks the taste of the food. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "16",
@@ -1113,12 +1302,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 2: Chef checks the taste of the food. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "16",
@@ -1130,12 +1322,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 3: Chef serves the finished dish. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "16",
@@ -1147,12 +1342,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Chef. Recurring character reference: Chef. Keep the same identity whenever each recurring character appears. Scene 3: Chef serves the finished dish. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "17",
@@ -1164,12 +1362,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 1: Artist paints in front of a canvas. Setting: in front of a canvas. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "17",
@@ -1181,12 +1382,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 1: Artist paints in front of a canvas. Setting: in front of a canvas. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "17",
@@ -1198,12 +1402,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 2: Artist stops and thinks for a moment. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "17",
@@ -1215,12 +1422,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 2: Artist stops and thinks for a moment. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "17",
@@ -1232,12 +1442,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 3: Artist continues painting. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "17",
@@ -1249,12 +1462,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Artist. Recurring character reference: Artist. Keep the same identity whenever each recurring character appears. Scene 3: Artist continues painting. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_03",
@@ -1266,12 +1482,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 1: Dog runs across a field. Setting: across a field. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_03",
@@ -1283,12 +1502,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 1: Dog runs across a field. Setting: across a field. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_03",
@@ -1300,12 +1522,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 2: Dog chases a ball. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_03",
@@ -1317,12 +1542,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 2: Dog chases a ball. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_03",
@@ -1334,12 +1562,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 3: Dog returns happily. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_03",
@@ -1351,12 +1582,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Dog. Recurring character reference: Dog. Keep the same identity whenever each recurring character appears. Scene 3: Dog returns happily. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_06",
@@ -1368,12 +1602,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 1: Bird sits on a branch. Setting: on a branch. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_06",
@@ -1385,12 +1622,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 1: Bird sits on a branch. Setting: on a branch. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_06",
@@ -1402,12 +1642,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 2: Bird looks around. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_06",
@@ -1419,12 +1662,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 2: Bird looks around. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_06",
@@ -1436,12 +1682,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 3: Bird flies away. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_06",
@@ -1453,12 +1702,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Bird. Recurring character reference: Bird. Keep the same identity whenever each recurring character appears. Scene 3: Bird flies away. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_08",
@@ -1470,12 +1722,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 1: Man waits at a station. Setting: at a station. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_08",
@@ -1487,12 +1742,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 1: Man waits at a station. Setting: at a station. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_08",
@@ -1504,12 +1762,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 2: A train arrives. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_08",
@@ -1521,12 +1782,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration in the same story world. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 2: A train arrives. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_08",
@@ -1538,12 +1802,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 3: Man gets on board. Setting: on board. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_08",
@@ -1555,12 +1822,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Man. Recurring character reference: Man. Keep the same identity whenever each recurring character appears. Scene 3: Man gets on board. Setting: on board. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_09",
@@ -1572,12 +1842,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 1: Kid draws on paper. Setting: on paper. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_1/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_09",
@@ -1589,12 +1862,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 1: Kid draws on paper. Setting: on paper. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_1/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_09",
@@ -1606,12 +1882,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 2: Kid adds colors. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_2/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_09",
@@ -1623,12 +1902,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 2: Kid adds colors. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_2/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_09",
@@ -1640,12 +1922,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 3: Kid shows the drawing. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_3/candidate_1.png",
-      "status": "placeholder"
+      "status": "pending"
     },
     {
       "case_id": "extra_09",
@@ -1657,12 +1942,15 @@
       "style_prompt": "delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering",
       "style_backend_preference": "prompt_only",
       "style_reference_image_path": null,
+      "style_lora_path": null,
+      "style_lora_weight_name": null,
+      "style_lora_scale": 1.0,
       "style_backend_requested": "prompt_only",
-      "style_backend_effective": "dry_run",
+      "style_backend_effective": "pending",
       "prompt": "A consistent story panel illustration of Kid. Recurring character reference: Kid. Keep the same identity whenever each recurring character appears. Scene 3: Kid shows the drawing. Setting: same story world. Keep the same character appearance, clothing, color palette, and visual style across all panels. delicate watercolor story illustration, soft pigment bleeding, textured paper feel, painterly edges, warm handcrafted palette, gentle brush layering, cinematic composition, clear subject, high quality.",
       "negative_prompt": "different character, inconsistent clothing, extra characters, distorted face, bad hands, blurry, low quality, text, watermark, logo, hard digital edges, flat cel shading, photorealism",
       "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_3/candidate_2.png",
-      "status": "placeholder"
+      "status": "pending"
     }
   ]
 }

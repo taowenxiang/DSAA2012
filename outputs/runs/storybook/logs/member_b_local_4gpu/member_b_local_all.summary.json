@@ -1,0 +1,782 @@
+{
+  "job_name": "member_b_local_all",
+  "mode": "local_batch",
+  "style_id": "storybook",
+  "model_family": "qwen_image",
+  "adapter_type": "python",
+  "selected_record_count": 96,
+  "success_count": 96,
+  "failed_count": 0,
+  "started_at_epoch": 1777272830,
+  "records": [
+    {
+      "record_key": "watercolor|01|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|01|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|01|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|01|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|01|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|01|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|02|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|02|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|02|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|02|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|02|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|02|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|04|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|04|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|04|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|04|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|04|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|04|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|05|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|05|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|05|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|05|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|05|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|05|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|06|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|06|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|06|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|06|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|06|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|06|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|07|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|07|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|07|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|07|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|07|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|07|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|08|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|08|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|08|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|08|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|08|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|08|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|09|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|09|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|09|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|09|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|09|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|09|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|11|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|11|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|11|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|11|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|11|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|11|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|14|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|14|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|14|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|14|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|14|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|14|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|16|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|16|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|16|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|16|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|16|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|16|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|17|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|17|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|17|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|17|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|17|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|17|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_03|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_03|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_03|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_03|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_03|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_03|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_06|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_06|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_06|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_06|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_06|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_06|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_08|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_08|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_08|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_08|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_08|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_08|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_09|1|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_1/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_09|1|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_1/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_09|2|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_2/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_09|2|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_2/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_09|3|1",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_3/candidate_1.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    },
+    {
+      "record_key": "watercolor|extra_09|3|2",
+      "state": "success",
+      "attempt": 1,
+      "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_3/candidate_2.png",
+      "style_backend_requested": "prompt_only",
+      "style_backend_effective": "prompt_only"
+    }
+  ],
+  "completed_at_epoch": 1777285580
+}
