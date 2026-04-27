@@ -2,7 +2,7 @@
   "selection_version": "member-c-v1",
   "style_id": "watercolor",
   "manifest_path": "outputs/runs/run_0002_watercolor/intermediate/generation_manifest.json",
-  "backend": "bytes",
+  "backend": "pillow",
   "weights": {
     "quality": 0.55,
     "continuity": 0.45
@@ -19,9 +19,9 @@
           "selected_seed": 2113,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_1/candidate_1.png",
           "scores": {
-            "quality": 0.389165,
+            "quality": 0.98695,
             "continuity": 0.0,
-            "total": 0.214041
+            "total": 0.542822
           },
           "alternatives": [
             {
@@ -29,13 +29,16 @@
               "seed": 2113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.389165,
+                "quality": 0.98695,
                 "continuity": 0.0,
-                "total": 0.214041
+                "total": 0.542822
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 132.254,
+                "stddev_brightness": 66.5428,
+                "file_size_bytes": 438462
               }
             },
             {
@@ -43,26 +46,29 @@
               "seed": 2114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.389056,
+                "quality": 0.966497,
                 "continuity": 0.0,
-                "total": 0.213981
+                "total": 0.531573
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.163842
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 139.7046,
+                "stddev_brightness": 67.5556,
+                "file_size_bytes": 419799
               }
             }
           ]
         },
         {
           "scene_id": 2,
-          "selected_candidate_id": 2,
-          "selected_seed": 2214,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 2213,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_1.png",
           "scores": {
-            "quality": 0.417393,
-            "continuity": 0.995156,
-            "total": 0.677386
+            "quality": 0.973181,
+            "continuity": 0.97423,
+            "total": 0.973653
           },
           "alternatives": [
             {
@@ -70,13 +76,16 @@
               "seed": 2213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.388757,
-                "continuity": 0.999775,
-                "total": 0.663715
+                "quality": 0.973181,
+                "continuity": 0.97423,
+                "total": 0.973653
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.160159
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 137.2697,
+                "stddev_brightness": 69.8313,
+                "file_size_bytes": 425557
               }
             },
             {
@@ -84,13 +93,16 @@
               "seed": 2214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.417393,
-                "continuity": 0.995156,
-                "total": 0.677386
+                "quality": 0.994643,
+                "continuity": 0.943776,
+                "total": 0.971753
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.512845
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 125.5487,
+                "stddev_brightness": 72.4436,
+                "file_size_bytes": 397304
               }
             }
           ]
@@ -101,9 +113,9 @@
           "selected_seed": 2313,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.389097,
-            "continuity": 0.995262,
-            "total": 0.661871
+            "quality": 0.952656,
+            "continuity": 0.971935,
+            "total": 0.961331
           },
           "alternatives": [
             {
@@ -111,13 +123,16 @@
               "seed": 2313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389097,
-                "continuity": 0.995262,
-                "total": 0.661871
+                "quality": 0.952656,
+                "continuity": 0.971935,
+                "total": 0.961331
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.164347
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 143.1097,
+                "stddev_brightness": 63.2809,
+                "file_size_bytes": 444113
               }
             },
             {
@@ -125,13 +140,16 @@
               "seed": 2314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/01/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.389095,
-                "continuity": 0.995182,
-                "total": 0.661834
+                "quality": 0.94718,
+                "continuity": 0.92851,
+                "total": 0.938779
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.164317
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 146.7416,
+                "stddev_brightness": 70.8843,
+                "file_size_bytes": 430966
               }
             }
           ]
@@ -139,7 +157,7 @@
       ],
       "selected_sequence": [
         "outputs/runs/run_0002_watercolor/candidates/01/scene_1/candidate_1.png",
-        "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_2.png",
+        "outputs/runs/run_0002_watercolor/candidates/01/scene_2/candidate_1.png",
         "outputs/runs/run_0002_watercolor/candidates/01/scene_3/candidate_1.png"
       ]
     },
@@ -152,9 +170,9 @@
           "selected_seed": 3114,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.417821,
+            "quality": 0.917211,
             "continuity": 0.0,
-            "total": 0.229801
+            "total": 0.504466
           },
           "alternatives": [
             {
@@ -162,13 +180,16 @@
               "seed": 3113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.388403,
+                "quality": 0.912702,
                 "continuity": 0.0,
-                "total": 0.213622
+                "total": 0.501986
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.155805
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 159.3014,
+                "stddev_brightness": 65.1217,
+                "file_size_bytes": 418705
               }
             },
             {
@@ -176,26 +197,29 @@
               "seed": 3114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.417821,
+                "quality": 0.917211,
                 "continuity": 0.0,
-                "total": 0.229801
+                "total": 0.504466
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.518106
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 157.6589,
+                "stddev_brightness": 64.6581,
+                "file_size_bytes": 428237
               }
             }
           ]
         },
         {
           "scene_id": 2,
-          "selected_candidate_id": 1,
-          "selected_seed": 3213,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 3214,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.418022,
-            "continuity": 0.999889,
-            "total": 0.679862
+            "quality": 0.94874,
+            "continuity": 0.854958,
+            "total": 0.906538
           },
           "alternatives": [
             {
@@ -203,13 +227,16 @@
               "seed": 3213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.418022,
-                "continuity": 0.999889,
-                "total": 0.679862
+                "quality": 0.942026,
+                "continuity": 0.858504,
+                "total": 0.904441
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.520584
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 148.619,
+                "stddev_brightness": 64.601,
+                "file_size_bytes": 394707
               }
             },
             {
@@ -217,13 +244,16 @@
               "seed": 3214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.418022,
-                "continuity": 0.999704,
-                "total": 0.679779
+                "quality": 0.94874,
+                "continuity": 0.854958,
+                "total": 0.906538
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.520584
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 146.1733,
+                "stddev_brightness": 69.9948,
+                "file_size_bytes": 381398
               }
             }
           ]
@@ -234,9 +264,9 @@
           "selected_seed": 3313,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.417343,
-            "continuity": 0.99855,
-            "total": 0.678886
+            "quality": 0.957084,
+            "continuity": 0.961829,
+            "total": 0.95922
           },
           "alternatives": [
             {
@@ -244,13 +274,16 @@
               "seed": 3313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.417343,
-                "continuity": 0.99855,
-                "total": 0.678886
+                "quality": 0.957084,
+                "continuity": 0.961829,
+                "total": 0.95922
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.512465
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 143.1336,
+                "stddev_brightness": 78.0957,
+                "file_size_bytes": 402490
               }
             },
             {
@@ -258,13 +291,16 @@
               "seed": 3314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/02/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.388988,
-                "continuity": 0.994555,
-                "total": 0.661493
+                "quality": 0.979871,
+                "continuity": 0.89332,
+                "total": 0.940923
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.16301
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 134.8328,
+                "stddev_brightness": 75.0141,
+                "file_size_bytes": 406994
               }
             }
           ]
@@ -272,7 +308,7 @@
       ],
       "selected_sequence": [
         "outputs/runs/run_0002_watercolor/candidates/02/scene_1/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_1.png",
+        "outputs/runs/run_0002_watercolor/candidates/02/scene_2/candidate_2.png",
         "outputs/runs/run_0002_watercolor/candidates/02/scene_3/candidate_1.png"
       ]
     },
@@ -285,9 +321,9 @@
           "selected_seed": 4113,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_1/candidate_1.png",
           "scores": {
-            "quality": 0.389097,
+            "quality": 0.998001,
             "continuity": 0.0,
-            "total": 0.214003
+            "total": 0.548901
           },
           "alternatives": [
             {
@@ -295,13 +331,16 @@
               "seed": 4113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.389097,
+                "quality": 0.998001,
                 "continuity": 0.0,
-                "total": 0.214003
+                "total": 0.548901
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.164347
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 128.2281,
+                "stddev_brightness": 64.8579,
+                "file_size_bytes": 423673
               }
             },
             {
@@ -309,13 +348,16 @@
               "seed": 4114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.389095,
+                "quality": 0.980794,
                 "continuity": 0.0,
-                "total": 0.214002
+                "total": 0.539437
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.164317
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 134.4966,
+                "stddev_brightness": 66.6604,
+                "file_size_bytes": 422078
               }
             }
           ]
@@ -326,9 +368,9 @@
           "selected_seed": 4214,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.389445,
-            "continuity": 0.999992,
-            "total": 0.664191
+            "quality": 0.864176,
+            "continuity": 0.880008,
+            "total": 0.871301
           },
           "alternatives": [
             {
@@ -336,13 +378,16 @@
               "seed": 4213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.389337,
-                "continuity": 0.999928,
-                "total": 0.664103
+                "quality": 0.865991,
+                "continuity": 0.87567,
+                "total": 0.870347
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.167298
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 171.986,
+                "stddev_brightness": 62.0975,
+                "file_size_bytes": 435244
               }
             },
             {
@@ -350,13 +395,16 @@
               "seed": 4214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.389445,
-                "continuity": 0.999992,
-                "total": 0.664191
+                "quality": 0.864176,
+                "continuity": 0.880008,
+                "total": 0.871301
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.168635
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 171.9266,
+                "stddev_brightness": 61.7811,
+                "file_size_bytes": 416565
               }
             }
           ]
@@ -367,9 +415,9 @@
           "selected_seed": 4314,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_3/candidate_2.png",
           "scores": {
-            "quality": 0.388338,
-            "continuity": 0.99985,
-            "total": 0.663519
+            "quality": 0.970864,
+            "continuity": 0.92089,
+            "total": 0.948376
           },
           "alternatives": [
             {
@@ -377,13 +425,16 @@
               "seed": 4313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.388227,
-                "continuity": 0.999783,
-                "total": 0.663427
+                "quality": 0.940044,
+                "continuity": 0.916971,
+                "total": 0.929661
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.153636
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 149.341,
+                "stddev_brightness": 64.7663,
+                "file_size_bytes": 434134
               }
             },
             {
@@ -391,13 +442,16 @@
               "seed": 4314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/04/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.388338,
-                "continuity": 0.99985,
-                "total": 0.663519
+                "quality": 0.970864,
+                "continuity": 0.92089,
+                "total": 0.948376
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.155009
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 138.1139,
+                "stddev_brightness": 68.589,
+                "file_size_bytes": 444736
               }
             }
           ]
@@ -414,13 +468,13 @@
       "selected_panels": [
         {
           "scene_id": 1,
-          "selected_candidate_id": 1,
-          "selected_seed": 5113,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 5114,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.417343,
+            "quality": 0.911896,
             "continuity": 0.0,
-            "total": 0.229538
+            "total": 0.501543
           },
           "alternatives": [
             {
@@ -428,13 +482,16 @@
               "seed": 5113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.417343,
+                "quality": 0.904172,
                 "continuity": 0.0,
-                "total": 0.229538
+                "total": 0.497295
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.512465
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 162.4088,
+                "stddev_brightness": 66.7176,
+                "file_size_bytes": 425070
               }
             },
             {
@@ -442,13 +499,16 @@
               "seed": 5114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.388988,
+                "quality": 0.911896,
                 "continuity": 0.0,
-                "total": 0.213944
+                "total": 0.501543
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.16301
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 158.688,
+                "stddev_brightness": 63.6015,
+                "file_size_bytes": 438545
               }
             }
           ]
@@ -459,9 +519,9 @@
           "selected_seed": 5213,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_2/candidate_1.png",
           "scores": {
-            "quality": 0.417628,
-            "continuity": 0.999115,
-            "total": 0.679297
+            "quality": 0.940428,
+            "continuity": 0.841519,
+            "total": 0.895919
           },
           "alternatives": [
             {
@@ -469,13 +529,16 @@
               "seed": 5213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.417628,
-                "continuity": 0.999115,
-                "total": 0.679297
+                "quality": 0.940428,
+                "continuity": 0.841519,
+                "total": 0.895919
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.515975
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 105.7989,
+                "stddev_brightness": 71.2878,
+                "file_size_bytes": 423942
               }
             },
             {
@@ -483,13 +546,16 @@
               "seed": 5214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.389165,
-                "continuity": 0.994816,
-                "total": 0.661708
+                "quality": 0.95252,
+                "continuity": 0.803058,
+                "total": 0.885262
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 110.2038,
+                "stddev_brightness": 68.7312,
+                "file_size_bytes": 422959
               }
             }
           ]
@@ -500,9 +566,9 @@
           "selected_seed": 5314,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_3/candidate_2.png",
           "scores": {
-            "quality": 0.418213,
-            "continuity": 0.999414,
-            "total": 0.679753
+            "quality": 0.956039,
+            "continuity": 0.92175,
+            "total": 0.940609
           },
           "alternatives": [
             {
@@ -510,13 +576,16 @@
               "seed": 5313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.416732,
-                "continuity": 0.999679,
-                "total": 0.679058
+                "quality": 0.917149,
+                "continuity": 0.864735,
+                "total": 0.893563
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.504944
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 157.6814,
+                "stddev_brightness": 69.2777,
+                "file_size_bytes": 404793
               }
             },
             {
@@ -524,20 +593,23 @@
               "seed": 5314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/05/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.418213,
-                "continuity": 0.999414,
-                "total": 0.679753
+                "quality": 0.956039,
+                "continuity": 0.92175,
+                "total": 0.940609
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.522932
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 143.5144,
+                "stddev_brightness": 74.3969,
+                "file_size_bytes": 416144
               }
             }
           ]
         }
       ],
       "selected_sequence": [
-        "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_1.png",
+        "outputs/runs/run_0002_watercolor/candidates/05/scene_1/candidate_2.png",
         "outputs/runs/run_0002_watercolor/candidates/05/scene_2/candidate_1.png",
         "outputs/runs/run_0002_watercolor/candidates/05/scene_3/candidate_2.png"
       ]
@@ -551,9 +623,9 @@
           "selected_seed": 6114,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.388338,
+            "quality": 0.992431,
             "continuity": 0.0,
-            "total": 0.213586
+            "total": 0.545837
           },
           "alternatives": [
             {
@@ -561,13 +633,16 @@
               "seed": 6113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.388227,
+                "quality": 0.973463,
                 "continuity": 0.0,
-                "total": 0.213525
+                "total": 0.535405
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.153636
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 137.1669,
+                "stddev_brightness": 69.2621,
+                "file_size_bytes": 430247
               }
             },
             {
@@ -575,13 +650,16 @@
               "seed": 6114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.388338,
+                "quality": 0.992431,
                 "continuity": 0.0,
-                "total": 0.213586
+                "total": 0.545837
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.155009
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 130.2571,
+                "stddev_brightness": 68.3853,
+                "file_size_bytes": 433273
               }
             }
           ]
@@ -592,9 +670,9 @@
           "selected_seed": 6213,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_2/candidate_1.png",
           "scores": {
-            "quality": 0.41828,
-            "continuity": 0.995434,
-            "total": 0.678
+            "quality": 0.998252,
+            "continuity": 0.989796,
+            "total": 0.994447
           },
           "alternatives": [
             {
@@ -602,13 +680,16 @@
               "seed": 6213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.41828,
-                "continuity": 0.995434,
-                "total": 0.678
+                "quality": 0.998252,
+                "continuity": 0.989796,
+                "total": 0.994447
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.523765
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 128.1367,
+                "stddev_brightness": 68.035,
+                "file_size_bytes": 449094
               }
             },
             {
@@ -616,26 +697,29 @@
               "seed": 6214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.387877,
-                "continuity": 0.996364,
-                "total": 0.661696
+                "quality": 0.976751,
+                "continuity": 0.98682,
+                "total": 0.981282
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.149805
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 135.9694,
+                "stddev_brightness": 65.823,
+                "file_size_bytes": 454791
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 2,
-          "selected_seed": 6314,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 6313,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.417173,
-            "continuity": 0.999122,
-            "total": 0.67905
+            "quality": 0.985133,
+            "continuity": 0.961426,
+            "total": 0.974465
           },
           "alternatives": [
             {
@@ -643,13 +727,16 @@
               "seed": 6313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389165,
-                "continuity": 0.995332,
-                "total": 0.66194
+                "quality": 0.985133,
+                "continuity": 0.961426,
+                "total": 0.974465
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 132.9157,
+                "stddev_brightness": 67.7562,
+                "file_size_bytes": 438900
               }
             },
             {
@@ -657,13 +744,16 @@
               "seed": 6314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.417173,
-                "continuity": 0.999122,
-                "total": 0.67905
+                "quality": 0.967119,
+                "continuity": 0.975246,
+                "total": 0.970776
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.510373
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 139.4781,
+                "stddev_brightness": 65.447,
+                "file_size_bytes": 455247
               }
             }
           ]
@@ -672,7 +762,7 @@
       "selected_sequence": [
         "outputs/runs/run_0002_watercolor/candidates/06/scene_1/candidate_2.png",
         "outputs/runs/run_0002_watercolor/candidates/06/scene_2/candidate_1.png",
-        "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_2.png"
+        "outputs/runs/run_0002_watercolor/candidates/06/scene_3/candidate_1.png"
       ]
     },
     {
@@ -684,9 +774,9 @@
           "selected_seed": 7114,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.418213,
+            "quality": 0.879223,
             "continuity": 0.0,
-            "total": 0.230017
+            "total": 0.483573
           },
           "alternatives": [
             {
@@ -694,13 +784,16 @@
               "seed": 7113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.416732,
+                "quality": 0.866287,
                 "continuity": 0.0,
-                "total": 0.229202
+                "total": 0.476458
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.504944
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 171.2294,
+                "stddev_brightness": 61.8126,
+                "file_size_bytes": 423128
               }
             },
             {
@@ -708,26 +801,29 @@
               "seed": 7114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.418213,
+                "quality": 0.879223,
                 "continuity": 0.0,
-                "total": 0.230017
+                "total": 0.483573
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.522932
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 168.6257,
+                "stddev_brightness": 62.7388,
+                "file_size_bytes": 438664
               }
             }
           ]
         },
         {
           "scene_id": 2,
-          "selected_candidate_id": 1,
-          "selected_seed": 7213,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 7214,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.41756,
-            "continuity": 0.999596,
-            "total": 0.679476
+            "quality": 0.994593,
+            "continuity": 0.894827,
+            "total": 0.949698
           },
           "alternatives": [
             {
@@ -735,13 +831,16 @@
               "seed": 7213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.41756,
-                "continuity": 0.999596,
-                "total": 0.679476
+                "quality": 0.976147,
+                "continuity": 0.884778,
+                "total": 0.935031
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.515142
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 133.1873,
+                "stddev_brightness": 62.6815,
+                "file_size_bytes": 481536
               }
             },
             {
@@ -749,26 +848,29 @@
               "seed": 7214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.389378,
-                "continuity": 0.995319,
-                "total": 0.662051
+                "quality": 0.994593,
+                "continuity": 0.894827,
+                "total": 0.949698
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.167802
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 125.5304,
+                "stddev_brightness": 65.3004,
+                "file_size_bytes": 449111
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 1,
-          "selected_seed": 7313,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 7314,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_2.png",
           "scores": {
-            "quality": 0.389306,
-            "continuity": 0.99725,
-            "total": 0.662881
+            "quality": 0.944382,
+            "continuity": 0.927414,
+            "total": 0.936746
           },
           "alternatives": [
             {
@@ -776,13 +878,16 @@
               "seed": 7313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389306,
-                "continuity": 0.99725,
-                "total": 0.662881
+                "quality": 0.93092,
+                "continuity": 0.901714,
+                "total": 0.917777
               },
               "feature_metadata": {
-                "file_size_bytes": 1497,
-                "byte_entropy": 2.166681
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 152.6648,
+                "stddev_brightness": 71.4724,
+                "file_size_bytes": 436642
               }
             },
             {
@@ -790,13 +895,16 @@
               "seed": 7314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.388906,
-                "continuity": 0.995799,
-                "total": 0.662008
+                "quality": 0.944382,
+                "continuity": 0.927414,
+                "total": 0.936746
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.162001
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 147.7607,
+                "stddev_brightness": 70.4437,
+                "file_size_bytes": 454669
               }
             }
           ]
@@ -804,8 +912,8 @@
       ],
       "selected_sequence": [
         "outputs/runs/run_0002_watercolor/candidates/07/scene_1/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_1.png",
-        "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_1.png"
+        "outputs/runs/run_0002_watercolor/candidates/07/scene_2/candidate_2.png",
+        "outputs/runs/run_0002_watercolor/candidates/07/scene_3/candidate_2.png"
       ]
     },
     {
@@ -817,9 +925,9 @@
           "selected_seed": 8114,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.417173,
+            "quality": 0.854193,
             "continuity": 0.0,
-            "total": 0.229445
+            "total": 0.469806
           },
           "alternatives": [
             {
@@ -827,13 +935,16 @@
               "seed": 8113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.389165,
+                "quality": 0.854107,
                 "continuity": 0.0,
-                "total": 0.214041
+                "total": 0.469759
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 162.4147,
+                "stddev_brightness": 55.9922,
+                "file_size_bytes": 431886
               }
             },
             {
@@ -841,13 +952,16 @@
               "seed": 8114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.417173,
+                "quality": 0.854193,
                 "continuity": 0.0,
-                "total": 0.229445
+                "total": 0.469806
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.510373
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 164.4009,
+                "stddev_brightness": 56.8783,
+                "file_size_bytes": 434489
               }
             }
           ]
@@ -858,9 +972,9 @@
           "selected_seed": 8214,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.417483,
-            "continuity": 0.999873,
-            "total": 0.679559
+            "quality": 0.960332,
+            "continuity": 0.943126,
+            "total": 0.95259
           },
           "alternatives": [
             {
@@ -868,13 +982,16 @@
               "seed": 8213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.389554,
-                "continuity": 0.99593,
-                "total": 0.662423
+                "quality": 0.937715,
+                "continuity": 0.970457,
+                "total": 0.952449
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.169971
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 148.3777,
+                "stddev_brightness": 63.2042,
+                "file_size_bytes": 431737
               }
             },
             {
@@ -882,26 +999,29 @@
               "seed": 8214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.417483,
-                "continuity": 0.999873,
-                "total": 0.679559
+                "quality": 0.960332,
+                "continuity": 0.943126,
+                "total": 0.95259
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.514198
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 140.9388,
+                "stddev_brightness": 63.5557,
+                "file_size_bytes": 428592
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 2,
-          "selected_seed": 8314,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 8313,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.417025,
-            "continuity": 0.999967,
-            "total": 0.679349
+            "quality": 0.926438,
+            "continuity": 0.967199,
+            "total": 0.94478
           },
           "alternatives": [
             {
@@ -909,13 +1029,16 @@
               "seed": 8313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389337,
-                "continuity": 0.995768,
-                "total": 0.662231
+                "quality": 0.926438,
+                "continuity": 0.967199,
+                "total": 0.94478
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.167298
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 153.3139,
+                "stddev_brightness": 63.5679,
+                "file_size_bytes": 445020
               }
             },
             {
@@ -923,13 +1046,16 @@
               "seed": 8314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.417025,
-                "continuity": 0.999967,
-                "total": 0.679349
+                "quality": 0.878036,
+                "continuity": 0.940099,
+                "total": 0.905965
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.508551
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 164.1276,
+                "stddev_brightness": 60.5732,
+                "file_size_bytes": 442619
               }
             }
           ]
@@ -938,7 +1064,7 @@
       "selected_sequence": [
         "outputs/runs/run_0002_watercolor/candidates/08/scene_1/candidate_2.png",
         "outputs/runs/run_0002_watercolor/candidates/08/scene_2/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_2.png"
+        "outputs/runs/run_0002_watercolor/candidates/08/scene_3/candidate_1.png"
       ]
     },
     {
@@ -950,9 +1076,9 @@
           "selected_seed": 9113,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_1/candidate_1.png",
           "scores": {
-            "quality": 0.389306,
+            "quality": 0.990829,
             "continuity": 0.0,
-            "total": 0.214118
+            "total": 0.544956
           },
           "alternatives": [
             {
@@ -960,13 +1086,16 @@
               "seed": 9113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.389306,
+                "quality": 0.990829,
                 "continuity": 0.0,
-                "total": 0.214118
+                "total": 0.544956
               },
               "feature_metadata": {
-                "file_size_bytes": 1497,
-                "byte_entropy": 2.166681
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 124.1593,
+                "stddev_brightness": 73.3473,
+                "file_size_bytes": 450823
               }
             },
             {
@@ -974,26 +1103,29 @@
               "seed": 9114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.388906,
+                "quality": 0.949855,
                 "continuity": 0.0,
-                "total": 0.213899
+                "total": 0.52242
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.162001
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 145.7672,
+                "stddev_brightness": 68.9045,
+                "file_size_bytes": 448805
               }
             }
           ]
         },
         {
           "scene_id": 2,
-          "selected_candidate_id": 1,
-          "selected_seed": 9213,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 9214,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.418172,
-            "continuity": 0.997474,
-            "total": 0.678858
+            "quality": 0.939402,
+            "continuity": 0.956779,
+            "total": 0.947222
           },
           "alternatives": [
             {
@@ -1001,13 +1133,16 @@
               "seed": 9213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.418172,
-                "continuity": 0.997474,
-                "total": 0.678858
+                "quality": 0.94854,
+                "continuity": 0.940979,
+                "total": 0.945137
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.522427
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 146.2462,
+                "stddev_brightness": 68.5172,
+                "file_size_bytes": 401230
               }
             },
             {
@@ -1015,26 +1150,29 @@
               "seed": 9214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.418389,
-                "continuity": 0.996563,
-                "total": 0.678567
+                "quality": 0.939402,
+                "continuity": 0.956779,
+                "total": 0.947222
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.525102
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 149.5748,
+                "stddev_brightness": 72.9615,
+                "file_size_bytes": 412161
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 2,
-          "selected_seed": 9314,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 9313,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.389056,
-            "continuity": 0.995013,
-            "total": 0.661737
+            "quality": 0.934551,
+            "continuity": 0.986904,
+            "total": 0.95811
           },
           "alternatives": [
             {
@@ -1042,13 +1180,16 @@
               "seed": 9313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389165,
-                "continuity": 0.994859,
-                "total": 0.661727
+                "quality": 0.934551,
+                "continuity": 0.986904,
+                "total": 0.95811
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 151.342,
+                "stddev_brightness": 66.4523,
+                "file_size_bytes": 430866
               }
             },
             {
@@ -1056,13 +1197,16 @@
               "seed": 9314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.389056,
-                "continuity": 0.995013,
-                "total": 0.661737
+                "quality": 0.956755,
+                "continuity": 0.955123,
+                "total": 0.956021
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.163842
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 143.2537,
+                "stddev_brightness": 64.7607,
+                "file_size_bytes": 425877
               }
             }
           ]
@@ -1070,8 +1214,8 @@
       ],
       "selected_sequence": [
         "outputs/runs/run_0002_watercolor/candidates/09/scene_1/candidate_1.png",
-        "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_1.png",
-        "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_2.png"
+        "outputs/runs/run_0002_watercolor/candidates/09/scene_2/candidate_2.png",
+        "outputs/runs/run_0002_watercolor/candidates/09/scene_3/candidate_1.png"
       ]
     },
     {
@@ -1079,13 +1223,13 @@
       "selected_panels": [
         {
           "scene_id": 1,
-          "selected_candidate_id": 2,
-          "selected_seed": 10114,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 10113,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_1.png",
           "scores": {
-            "quality": 0.417025,
+            "quality": 0.972073,
             "continuity": 0.0,
-            "total": 0.229364
+            "total": 0.53464
           },
           "alternatives": [
             {
@@ -1093,13 +1237,16 @@
               "seed": 10113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.389337,
+                "quality": 0.972073,
                 "continuity": 0.0,
-                "total": 0.214135
+                "total": 0.53464
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.167298
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 137.6734,
+                "stddev_brightness": 67.9914,
+                "file_size_bytes": 401327
               }
             },
             {
@@ -1107,13 +1254,16 @@
               "seed": 10114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.417025,
+                "quality": 0.951752,
                 "continuity": 0.0,
-                "total": 0.229364
+                "total": 0.523464
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.508551
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 145.0761,
+                "stddev_brightness": 69.361,
+                "file_size_bytes": 409152
               }
             }
           ]
@@ -1124,9 +1274,9 @@
           "selected_seed": 10214,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.417375,
-            "continuity": 0.999255,
-            "total": 0.679221
+            "quality": 0.957877,
+            "continuity": 0.962719,
+            "total": 0.960056
           },
           "alternatives": [
             {
@@ -1134,13 +1284,16 @@
               "seed": 10213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.388769,
-                "continuity": 0.995614,
-                "total": 0.661849
+                "quality": 0.98138,
+                "continuity": 0.909066,
+                "total": 0.948838
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.160306
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 134.2832,
+                "stddev_brightness": 75.7701,
+                "file_size_bytes": 408274
               }
             },
             {
@@ -1148,26 +1301,29 @@
               "seed": 10214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.417375,
-                "continuity": 0.999255,
-                "total": 0.679221
+                "quality": 0.957877,
+                "continuity": 0.962719,
+                "total": 0.960056
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.51286
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 142.8448,
+                "stddev_brightness": 73.8366,
+                "file_size_bytes": 421509
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 2,
-          "selected_seed": 10314,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 10313,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.417821,
-            "continuity": 0.999541,
-            "total": 0.679595
+            "quality": 0.934951,
+            "continuity": 0.965651,
+            "total": 0.948766
           },
           "alternatives": [
             {
@@ -1175,13 +1331,16 @@
               "seed": 10313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.388403,
-                "continuity": 0.995747,
-                "total": 0.661708
+                "quality": 0.934951,
+                "continuity": 0.965651,
+                "total": 0.948766
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.155805
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 151.1962,
+                "stddev_brightness": 64.2329,
+                "file_size_bytes": 457021
               }
             },
             {
@@ -1189,22 +1348,25 @@
               "seed": 10314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.417821,
-                "continuity": 0.999541,
-                "total": 0.679595
+                "quality": 0.91259,
+                "continuity": 0.939026,
+                "total": 0.924486
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.518106
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 157.2701,
+                "stddev_brightness": 63.0899,
+                "file_size_bytes": 454644
               }
             }
           ]
         }
       ],
       "selected_sequence": [
-        "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_2.png",
+        "outputs/runs/run_0002_watercolor/candidates/11/scene_1/candidate_1.png",
         "outputs/runs/run_0002_watercolor/candidates/11/scene_2/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_2.png"
+        "outputs/runs/run_0002_watercolor/candidates/11/scene_3/candidate_1.png"
       ]
     },
     {
@@ -1212,13 +1374,13 @@
       "selected_panels": [
         {
           "scene_id": 1,
-          "selected_candidate_id": 1,
-          "selected_seed": 11113,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 11114,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.389165,
+            "quality": 0.900808,
             "continuity": 0.0,
-            "total": 0.214041
+            "total": 0.495444
           },
           "alternatives": [
             {
@@ -1226,13 +1388,16 @@
               "seed": 11113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.389165,
+                "quality": 0.837179,
                 "continuity": 0.0,
-                "total": 0.214041
+                "total": 0.460449
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 159.2341,
+                "stddev_brightness": 51.8868,
+                "file_size_bytes": 432748
               }
             },
             {
@@ -1240,26 +1405,29 @@
               "seed": 11114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.389056,
+                "quality": 0.900808,
                 "continuity": 0.0,
-                "total": 0.213981
+                "total": 0.495444
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.163842
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 148.8536,
+                "stddev_brightness": 57.5081,
+                "file_size_bytes": 446165
               }
             }
           ]
         },
         {
           "scene_id": 2,
-          "selected_candidate_id": 2,
-          "selected_seed": 11214,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 11213,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_1.png",
           "scores": {
-            "quality": 0.417393,
-            "continuity": 0.995156,
-            "total": 0.677386
+            "quality": 0.955408,
+            "continuity": 0.927652,
+            "total": 0.942918
           },
           "alternatives": [
             {
@@ -1267,13 +1435,16 @@
               "seed": 11213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.388757,
-                "continuity": 0.999775,
-                "total": 0.663715
+                "quality": 0.955408,
+                "continuity": 0.927652,
+                "total": 0.942918
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.160159
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 143.7441,
+                "stddev_brightness": 66.9838,
+                "file_size_bytes": 440769
               }
             },
             {
@@ -1281,26 +1452,29 @@
               "seed": 11214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.417393,
-                "continuity": 0.995156,
-                "total": 0.677386
+                "quality": 0.928497,
+                "continuity": 0.82985,
+                "total": 0.884106
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.512845
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 153.5474,
+                "stddev_brightness": 68.5546,
+                "file_size_bytes": 429348
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 1,
-          "selected_seed": 11313,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 11314,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_2.png",
           "scores": {
-            "quality": 0.389097,
-            "continuity": 0.995262,
-            "total": 0.661871
+            "quality": 0.931294,
+            "continuity": 0.93852,
+            "total": 0.934545
           },
           "alternatives": [
             {
@@ -1308,13 +1482,16 @@
               "seed": 11313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389097,
-                "continuity": 0.995262,
-                "total": 0.661871
+                "quality": 0.883101,
+                "continuity": 0.961525,
+                "total": 0.918392
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.164347
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 155.2279,
+                "stddev_brightness": 57.4747,
+                "file_size_bytes": 444294
               }
             },
             {
@@ -1322,22 +1499,25 @@
               "seed": 11314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.389095,
-                "continuity": 0.995182,
-                "total": 0.661834
+                "quality": 0.931294,
+                "continuity": 0.93852,
+                "total": 0.934545
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.164317
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 144.7108,
+                "stddev_brightness": 60.5662,
+                "file_size_bytes": 446861
               }
             }
           ]
         }
       ],
       "selected_sequence": [
-        "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_1.png",
-        "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_1.png"
+        "outputs/runs/run_0002_watercolor/candidates/14/scene_1/candidate_2.png",
+        "outputs/runs/run_0002_watercolor/candidates/14/scene_2/candidate_1.png",
+        "outputs/runs/run_0002_watercolor/candidates/14/scene_3/candidate_2.png"
       ]
     },
     {
@@ -1349,9 +1529,9 @@
           "selected_seed": 12114,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.417821,
+            "quality": 0.947874,
             "continuity": 0.0,
-            "total": 0.229801
+            "total": 0.521331
           },
           "alternatives": [
             {
@@ -1359,13 +1539,16 @@
               "seed": 12113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.388403,
+                "quality": 0.933301,
                 "continuity": 0.0,
-                "total": 0.213622
+                "total": 0.513316
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.155805
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 151.7973,
+                "stddev_brightness": 66.7696,
+                "file_size_bytes": 405591
               }
             },
             {
@@ -1373,26 +1556,29 @@
               "seed": 12114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.417821,
+                "quality": 0.947874,
                 "continuity": 0.0,
-                "total": 0.229801
+                "total": 0.521331
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.518106
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 146.4888,
+                "stddev_brightness": 67.6755,
+                "file_size_bytes": 434268
               }
             }
           ]
         },
         {
           "scene_id": 2,
-          "selected_candidate_id": 1,
-          "selected_seed": 12213,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 12214,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.418022,
-            "continuity": 0.999889,
-            "total": 0.679862
+            "quality": 0.897576,
+            "continuity": 0.977125,
+            "total": 0.933373
           },
           "alternatives": [
             {
@@ -1400,13 +1586,16 @@
               "seed": 12213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.418022,
-                "continuity": 0.999889,
-                "total": 0.679862
+                "quality": 0.890585,
+                "continuity": 0.928817,
+                "total": 0.907789
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.520584
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 160.4848,
+                "stddev_brightness": 60.981,
+                "file_size_bytes": 416458
               }
             },
             {
@@ -1414,26 +1603,29 @@
               "seed": 12214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.418022,
-                "continuity": 0.999704,
-                "total": 0.679779
+                "quality": 0.897576,
+                "continuity": 0.977125,
+                "total": 0.933373
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.520584
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 153.9751,
+                "stddev_brightness": 59.2404,
+                "file_size_bytes": 423085
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 1,
-          "selected_seed": 12313,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 12314,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_2.png",
           "scores": {
-            "quality": 0.417343,
-            "continuity": 0.99855,
-            "total": 0.678886
+            "quality": 0.935093,
+            "continuity": 0.952474,
+            "total": 0.942915
           },
           "alternatives": [
             {
@@ -1441,13 +1633,16 @@
               "seed": 12313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.417343,
-                "continuity": 0.99855,
-                "total": 0.678886
+                "quality": 0.874118,
+                "continuity": 0.946902,
+                "total": 0.906871
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.512465
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 164.4843,
+                "stddev_brightness": 60.103,
+                "file_size_bytes": 422488
               }
             },
             {
@@ -1455,13 +1650,16 @@
               "seed": 12314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.388988,
-                "continuity": 0.994555,
-                "total": 0.661493
+                "quality": 0.935093,
+                "continuity": 0.952474,
+                "total": 0.942915
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.16301
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 151.1447,
+                "stddev_brightness": 66.6043,
+                "file_size_bytes": 412722
               }
             }
           ]
@@ -1469,8 +1667,8 @@
       ],
       "selected_sequence": [
         "outputs/runs/run_0002_watercolor/candidates/16/scene_1/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_1.png",
-        "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_1.png"
+        "outputs/runs/run_0002_watercolor/candidates/16/scene_2/candidate_2.png",
+        "outputs/runs/run_0002_watercolor/candidates/16/scene_3/candidate_2.png"
       ]
     },
     {
@@ -1478,13 +1676,13 @@
       "selected_panels": [
         {
           "scene_id": 1,
-          "selected_candidate_id": 1,
-          "selected_seed": 13113,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 13114,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.389097,
+            "quality": 0.963431,
             "continuity": 0.0,
-            "total": 0.214003
+            "total": 0.529887
           },
           "alternatives": [
             {
@@ -1492,13 +1690,16 @@
               "seed": 13113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.389097,
+                "quality": 0.938697,
                 "continuity": 0.0,
-                "total": 0.214003
+                "total": 0.516284
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.164347
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 149.8317,
+                "stddev_brightness": 69.5686,
+                "file_size_bytes": 432614
               }
             },
             {
@@ -1506,13 +1707,16 @@
               "seed": 13114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.389095,
+                "quality": 0.963431,
                 "continuity": 0.0,
-                "total": 0.214002
+                "total": 0.529887
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.164317
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 140.8214,
+                "stddev_brightness": 68.6018,
+                "file_size_bytes": 433753
               }
             }
           ]
@@ -1523,9 +1727,9 @@
           "selected_seed": 13214,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.389445,
-            "continuity": 0.999992,
-            "total": 0.664191
+            "quality": 0.962034,
+            "continuity": 0.974726,
+            "total": 0.967746
           },
           "alternatives": [
             {
@@ -1533,13 +1737,16 @@
               "seed": 13213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.389337,
-                "continuity": 0.999928,
-                "total": 0.664103
+                "quality": 0.927373,
+                "continuity": 0.950181,
+                "total": 0.937636
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.167298
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 153.9571,
+                "stddev_brightness": 68.5625,
+                "file_size_bytes": 426904
               }
             },
             {
@@ -1547,26 +1754,29 @@
               "seed": 13214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.389445,
-                "continuity": 0.999992,
-                "total": 0.664191
+                "quality": 0.962034,
+                "continuity": 0.974726,
+                "total": 0.967746
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.168635
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 141.3303,
+                "stddev_brightness": 65.078,
+                "file_size_bytes": 448272
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 2,
-          "selected_seed": 13314,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 13313,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.388338,
-            "continuity": 0.99985,
-            "total": 0.663519
+            "quality": 0.977716,
+            "continuity": 0.985312,
+            "total": 0.981134
           },
           "alternatives": [
             {
@@ -1574,13 +1784,16 @@
               "seed": 13313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.388227,
-                "continuity": 0.999783,
-                "total": 0.663427
+                "quality": 0.977716,
+                "continuity": 0.985312,
+                "total": 0.981134
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.153636
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 135.6179,
+                "stddev_brightness": 65.266,
+                "file_size_bytes": 422436
               }
             },
             {
@@ -1588,22 +1801,25 @@
               "seed": 13314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.388338,
-                "continuity": 0.99985,
-                "total": 0.663519
+                "quality": 0.949414,
+                "continuity": 0.941585,
+                "total": 0.945891
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.155009
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 145.9276,
+                "stddev_brightness": 65.099,
+                "file_size_bytes": 433776
               }
             }
           ]
         }
       ],
       "selected_sequence": [
-        "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_1.png",
+        "outputs/runs/run_0002_watercolor/candidates/17/scene_1/candidate_2.png",
         "outputs/runs/run_0002_watercolor/candidates/17/scene_2/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_2.png"
+        "outputs/runs/run_0002_watercolor/candidates/17/scene_3/candidate_1.png"
       ]
     },
     {
@@ -1611,13 +1827,13 @@
       "selected_panels": [
         {
           "scene_id": 1,
-          "selected_candidate_id": 1,
-          "selected_seed": 14113,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 14114,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.417343,
+            "quality": 0.904218,
             "continuity": 0.0,
-            "total": 0.229538
+            "total": 0.49732
           },
           "alternatives": [
             {
@@ -1625,13 +1841,16 @@
               "seed": 14113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.417343,
+                "quality": 0.877252,
                 "continuity": 0.0,
-                "total": 0.229538
+                "total": 0.482489
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.512465
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 165.2128,
+                "stddev_brightness": 60.9244,
+                "file_size_bytes": 430046
               }
             },
             {
@@ -1639,13 +1858,16 @@
               "seed": 14114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.388988,
+                "quality": 0.904218,
                 "continuity": 0.0,
-                "total": 0.213944
+                "total": 0.49732
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.16301
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 162.3921,
+                "stddev_brightness": 67.8875,
+                "file_size_bytes": 433638
               }
             }
           ]
@@ -1656,9 +1878,9 @@
           "selected_seed": 14213,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_2/candidate_1.png",
           "scores": {
-            "quality": 0.417628,
-            "continuity": 0.999115,
-            "total": 0.679297
+            "quality": 0.852892,
+            "continuity": 0.98188,
+            "total": 0.910936
           },
           "alternatives": [
             {
@@ -1666,13 +1888,16 @@
               "seed": 14213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.417628,
-                "continuity": 0.999115,
-                "total": 0.679297
+                "quality": 0.852892,
+                "continuity": 0.98188,
+                "total": 0.910936
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.515975
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 171.6607,
+                "stddev_brightness": 59.8588,
+                "file_size_bytes": 441978
               }
             },
             {
@@ -1680,13 +1905,16 @@
               "seed": 14214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.389165,
-                "continuity": 0.994816,
-                "total": 0.661708
+                "quality": 0.823823,
+                "continuity": 0.988175,
+                "total": 0.897781
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 179.2059,
+                "stddev_brightness": 58.5217,
+                "file_size_bytes": 423847
               }
             }
           ]
@@ -1697,9 +1925,9 @@
           "selected_seed": 14314,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_3/candidate_2.png",
           "scores": {
-            "quality": 0.418213,
-            "continuity": 0.999414,
-            "total": 0.679753
+            "quality": 0.87525,
+            "continuity": 0.984398,
+            "total": 0.924367
           },
           "alternatives": [
             {
@@ -1707,13 +1935,16 @@
               "seed": 14313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.416732,
-                "continuity": 0.999679,
-                "total": 0.679058
+                "quality": 0.874119,
+                "continuity": 0.972263,
+                "total": 0.918284
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.504944
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 161.9966,
+                "stddev_brightness": 59.0105,
+                "file_size_bytes": 426381
               }
             },
             {
@@ -1721,20 +1952,23 @@
               "seed": 14314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.418213,
-                "continuity": 0.999414,
-                "total": 0.679753
+                "quality": 0.87525,
+                "continuity": 0.984398,
+                "total": 0.924367
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.522932
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 167.9644,
+                "stddev_brightness": 61.8126,
+                "file_size_bytes": 434312
               }
             }
           ]
         }
       ],
       "selected_sequence": [
-        "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_1.png",
+        "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_1/candidate_2.png",
         "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_2/candidate_1.png",
         "outputs/runs/run_0002_watercolor/candidates/extra_03/scene_3/candidate_2.png"
       ]
@@ -1744,13 +1978,13 @@
       "selected_panels": [
         {
           "scene_id": 1,
-          "selected_candidate_id": 2,
-          "selected_seed": 15114,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 15113,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_1.png",
           "scores": {
-            "quality": 0.388338,
+            "quality": 0.812927,
             "continuity": 0.0,
-            "total": 0.213586
+            "total": 0.44711
           },
           "alternatives": [
             {
@@ -1758,13 +1992,16 @@
               "seed": 15113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.388227,
+                "quality": 0.812927,
                 "continuity": 0.0,
-                "total": 0.213525
+                "total": 0.44711
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.153636
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 171.409,
+                "stddev_brightness": 53.3539,
+                "file_size_bytes": 409269
               }
             },
             {
@@ -1772,26 +2009,29 @@
               "seed": 15114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.388338,
+                "quality": 0.78835,
                 "continuity": 0.0,
-                "total": 0.213586
+                "total": 0.433593
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.155009
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 181.7525,
+                "stddev_brightness": 53.9646,
+                "file_size_bytes": 398634
               }
             }
           ]
         },
         {
           "scene_id": 2,
-          "selected_candidate_id": 1,
-          "selected_seed": 15213,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 15214,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.41828,
-            "continuity": 0.995434,
-            "total": 0.678
+            "quality": 0.824244,
+            "continuity": 0.934199,
+            "total": 0.873724
           },
           "alternatives": [
             {
@@ -1799,13 +2039,16 @@
               "seed": 15213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.41828,
-                "continuity": 0.995434,
-                "total": 0.678
+                "quality": 0.842265,
+                "continuity": 0.882209,
+                "total": 0.86024
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.523765
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 163.2362,
+                "stddev_brightness": 54.4583,
+                "file_size_bytes": 405301
               }
             },
             {
@@ -1813,26 +2056,29 @@
               "seed": 15214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.387877,
-                "continuity": 0.996364,
-                "total": 0.661696
+                "quality": 0.824244,
+                "continuity": 0.934199,
+                "total": 0.873724
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.149805
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 161.4552,
+                "stddev_brightness": 50.7927,
+                "file_size_bytes": 413580
               }
             }
           ]
         },
         {
           "scene_id": 3,
-          "selected_candidate_id": 2,
-          "selected_seed": 15314,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_2.png",
+          "selected_candidate_id": 1,
+          "selected_seed": 15313,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.417173,
-            "continuity": 0.999122,
-            "total": 0.67905
+            "quality": 0.867275,
+            "continuity": 0.932706,
+            "total": 0.896719
           },
           "alternatives": [
             {
@@ -1840,13 +2086,16 @@
               "seed": 15313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389165,
-                "continuity": 0.995332,
-                "total": 0.66194
+                "quality": 0.867275,
+                "continuity": 0.932706,
+                "total": 0.896719
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 166.9855,
+                "stddev_brightness": 60.1067,
+                "file_size_bytes": 433401
               }
             },
             {
@@ -1854,22 +2103,25 @@
               "seed": 15314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.417173,
-                "continuity": 0.999122,
-                "total": 0.67905
+                "quality": 0.810434,
+                "continuity": 0.915792,
+                "total": 0.857845
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.510373
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 177.6618,
+                "stddev_brightness": 55.7013,
+                "file_size_bytes": 416915
               }
             }
           ]
         }
       ],
       "selected_sequence": [
-        "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_1.png",
-        "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_2.png"
+        "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_1/candidate_1.png",
+        "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_2/candidate_2.png",
+        "outputs/runs/run_0002_watercolor/candidates/extra_06/scene_3/candidate_1.png"
       ]
     },
     {
@@ -1881,9 +2133,9 @@
           "selected_seed": 16114,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.418213,
+            "quality": 0.987241,
             "continuity": 0.0,
-            "total": 0.230017
+            "total": 0.542983
           },
           "alternatives": [
             {
@@ -1891,13 +2143,16 @@
               "seed": 16113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.416732,
+                "quality": 0.980754,
                 "continuity": 0.0,
-                "total": 0.229202
+                "total": 0.539415
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.504944
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 120.4889,
+                "stddev_brightness": 76.4662,
+                "file_size_bytes": 427265
               }
             },
             {
@@ -1905,26 +2160,29 @@
               "seed": 16114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.418213,
+                "quality": 0.987241,
                 "continuity": 0.0,
-                "total": 0.230017
+                "total": 0.542983
               },
               "feature_metadata": {
-                "file_size_bytes": 1495,
-                "byte_entropy": 2.522932
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 132.148,
+                "stddev_brightness": 75.6661,
+                "file_size_bytes": 418893
               }
             }
           ]
         },
         {
           "scene_id": 2,
-          "selected_candidate_id": 1,
-          "selected_seed": 16213,
-          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_1.png",
+          "selected_candidate_id": 2,
+          "selected_seed": 16214,
+          "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.41756,
-            "continuity": 0.999596,
-            "total": 0.679476
+            "quality": 0.96139,
+            "continuity": 0.952825,
+            "total": 0.957536
           },
           "alternatives": [
             {
@@ -1932,13 +2190,16 @@
               "seed": 16213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.41756,
-                "continuity": 0.999596,
-                "total": 0.679476
+                "quality": 0.998612,
+                "continuity": 0.903237,
+                "total": 0.955693
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.515142
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 128.0057,
+                "stddev_brightness": 70.2917,
+                "file_size_bytes": 453542
               }
             },
             {
@@ -1946,13 +2207,16 @@
               "seed": 16214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.389378,
-                "continuity": 0.995319,
-                "total": 0.662051
+                "quality": 0.96139,
+                "continuity": 0.952825,
+                "total": 0.957536
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.167802
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 141.565,
+                "stddev_brightness": 67.1027,
+                "file_size_bytes": 438340
               }
             }
           ]
@@ -1963,9 +2227,9 @@
           "selected_seed": 16313,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_3/candidate_1.png",
           "scores": {
-            "quality": 0.389306,
-            "continuity": 0.99725,
-            "total": 0.662881
+            "quality": 0.965685,
+            "continuity": 0.971309,
+            "total": 0.968216
           },
           "alternatives": [
             {
@@ -1973,13 +2237,16 @@
               "seed": 16313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389306,
-                "continuity": 0.99725,
-                "total": 0.662881
+                "quality": 0.965685,
+                "continuity": 0.971309,
+                "total": 0.968216
               },
               "feature_metadata": {
-                "file_size_bytes": 1497,
-                "byte_entropy": 2.166681
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 140.0006,
+                "stddev_brightness": 73.5934,
+                "file_size_bytes": 441676
               }
             },
             {
@@ -1987,13 +2254,16 @@
               "seed": 16314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.388906,
-                "continuity": 0.995799,
-                "total": 0.662008
+                "quality": 0.937709,
+                "continuity": 0.963567,
+                "total": 0.949345
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.162001
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 150.1917,
+                "stddev_brightness": 71.8838,
+                "file_size_bytes": 429603
               }
             }
           ]
@@ -2001,7 +2271,7 @@
       ],
       "selected_sequence": [
         "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_1/candidate_2.png",
-        "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_1.png",
+        "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_2/candidate_2.png",
         "outputs/runs/run_0002_watercolor/candidates/extra_08/scene_3/candidate_1.png"
       ]
     },
@@ -2014,9 +2284,9 @@
           "selected_seed": 17114,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_1/candidate_2.png",
           "scores": {
-            "quality": 0.417173,
+            "quality": 0.968361,
             "continuity": 0.0,
-            "total": 0.229445
+            "total": 0.532598
           },
           "alternatives": [
             {
@@ -2024,13 +2294,16 @@
               "seed": 17113,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_1/candidate_1.png",
               "scores": {
-                "quality": 0.389165,
+                "quality": 0.946192,
                 "continuity": 0.0,
-                "total": 0.214041
+                "total": 0.520406
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.165179
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 147.1013,
+                "stddev_brightness": 70.3076,
+                "file_size_bytes": 443044
               }
             },
             {
@@ -2038,13 +2311,16 @@
               "seed": 17114,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_1/candidate_2.png",
               "scores": {
-                "quality": 0.417173,
+                "quality": 0.968361,
                 "continuity": 0.0,
-                "total": 0.229445
+                "total": 0.532598
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.510373
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 139.0257,
+                "stddev_brightness": 71.8726,
+                "file_size_bytes": 454501
               }
             }
           ]
@@ -2055,9 +2331,9 @@
           "selected_seed": 17214,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_2/candidate_2.png",
           "scores": {
-            "quality": 0.417483,
-            "continuity": 0.999873,
-            "total": 0.679559
+            "quality": 0.914362,
+            "continuity": 0.94941,
+            "total": 0.930134
           },
           "alternatives": [
             {
@@ -2065,13 +2341,16 @@
               "seed": 17213,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_2/candidate_1.png",
               "scores": {
-                "quality": 0.389554,
-                "continuity": 0.99593,
-                "total": 0.662423
+                "quality": 0.961405,
+                "continuity": 0.873916,
+                "total": 0.922035
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.169971
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 141.0346,
+                "stddev_brightness": 63.7695,
+                "file_size_bytes": 435956
               }
             },
             {
@@ -2079,13 +2358,16 @@
               "seed": 17214,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_2/candidate_2.png",
               "scores": {
-                "quality": 0.417483,
-                "continuity": 0.999873,
-                "total": 0.679559
+                "quality": 0.914362,
+                "continuity": 0.94941,
+                "total": 0.930134
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.514198
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 158.6967,
+                "stddev_brightness": 66.8006,
+                "file_size_bytes": 449086
               }
             }
           ]
@@ -2096,9 +2378,9 @@
           "selected_seed": 17314,
           "selected_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_3/candidate_2.png",
           "scores": {
-            "quality": 0.417025,
-            "continuity": 0.999967,
-            "total": 0.679349
+            "quality": 0.949633,
+            "continuity": 0.97289,
+            "total": 0.960099
           },
           "alternatives": [
             {
@@ -2106,13 +2388,16 @@
               "seed": 17313,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_3/candidate_1.png",
               "scores": {
-                "quality": 0.389337,
-                "continuity": 0.995768,
-                "total": 0.662231
+                "quality": 0.955983,
+                "continuity": 0.947063,
+                "total": 0.951969
               },
               "feature_metadata": {
-                "file_size_bytes": 1496,
-                "byte_entropy": 2.167298
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 143.5347,
+                "stddev_brightness": 68.9915,
+                "file_size_bytes": 430472
               }
             },
             {
@@ -2120,13 +2405,16 @@
               "seed": 17314,
               "output_path": "outputs/runs/run_0002_watercolor/candidates/extra_09/scene_3/candidate_2.png",
               "scores": {
-                "quality": 0.417025,
-                "continuity": 0.999967,
-                "total": 0.679349
+                "quality": 0.949633,
+                "continuity": 0.97289,
+                "total": 0.960099
               },
               "feature_metadata": {
-                "file_size_bytes": 1494,
-                "byte_entropy": 2.508551
+                "width": 512,
+                "height": 512,
+                "mean_brightness": 145.848,
+                "stddev_brightness": 66.8167,
+                "file_size_bytes": 453039
               }
             }
           ]
