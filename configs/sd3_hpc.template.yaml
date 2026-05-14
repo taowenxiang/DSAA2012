@@ -1,0 +1,20 @@
+project:
+  root: "/data/home/$USER/code/DSAA2012/Project"
+  venv: "/data/home/$USER/code/DSAA2012/venvs/sd3story"
+  asset_root: "/data/scratch/$USER/dsaa2012_sd3_assets"
+  hf_home: "/data/scratch/$USER/dsaa2012_sd3_assets/hf_cache"
+
+slurm:
+  partition: "YOUR_GPU_PARTITION"
+  account: "YOUR_ACCOUNT"
+  gpus_per_task: 1
+  cpus_per_task: 8
+  mem_gb: 96
+  time_limit_train: "24:00:00"
+  time_limit_infer: "08:00:00"
+
+paths:
+  diffusers_dir: "diffusers"
+  model_name: "stabilityai/stable-diffusion-3-medium-diffusers"
+  storyboard_lora_output: "artifacts/loras/sd3/storyboard_lora"
+  character_lora_output: "artifacts/loras/sd3/character_lora"

@@ -1,0 +1,23 @@
+paths:
+  outputs_root: "outputs/sd3_story"
+  metrics_dir: "outputs/sd3_story/metrics"
+  panel_split_dir: "outputs/sd3_story/panels_split"
+  human_eval_sheet: "data/sd3_story/human_eval/human_eval_sheet.csv"
+  report_assets_dir: "outputs/sd3_story/report_assets"
+
+clipscore:
+  model_name_or_path: "openai/clip-vit-base-patch32"
+  batch_size: 1
+
+dreamsim:
+  pretrained: true
+  lower_is_better: true
+
+human_eval_dimensions:
+  - "character_consistency_1_5"
+  - "color_consistency_1_5"
+  - "story_coherence_1_5"
+  - "prompt_alignment_1_5"
+  - "visual_naturalness_1_5"
+  - "panel_clarity_1_5"
+  - "overall_preference_1_5"

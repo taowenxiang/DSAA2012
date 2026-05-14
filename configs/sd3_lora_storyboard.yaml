@@ -1,0 +1,26 @@
+model:
+  pretrained_model_name_or_path: "stabilityai/stable-diffusion-3-medium-diffusers"
+
+training:
+  instance_data_dir: "data/sd3_story/train_storyboard"
+  output_dir: "artifacts/loras/sd3/storyboard_lora"
+  instance_prompt: "a sks_storyboard_style three-panel storyboard illustration, clear panel boundaries, consistent character, coherent color palette"
+  resolution: 768
+  train_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0001
+  lr_scheduler: "constant"
+  lr_warmup_steps: 0
+  max_train_steps: 800
+  checkpointing_steps: 200
+  rank: 8
+  seed: 42
+  mixed_precision: "fp16"
+  gradient_checkpointing: true
+  use_8bit_adam: true
+  center_crop: true
+
+ablation:
+  ranks: [4, 8, 16]
+  steps: [100, 800, 1200]
+  lora_scales: [0.4, 0.6, 0.8, 1.0]
