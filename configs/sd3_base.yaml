@@ -1,0 +1,34 @@
+project:
+  name: sd3_story
+  title: "Transformer-LoRA Storyboard"
+
+model:
+  pretrained_model_name_or_path: "stabilityai/stable-diffusion-3-medium-diffusers"
+  torch_dtype: "float16"
+  device: "cuda"
+  local_files_only: false
+
+inference:
+  seed: 42
+  num_candidates: 4
+  num_inference_steps: 28
+  guidance_scale: 7.0
+  width_3scene: 1024
+  height_3scene: 768
+  width_2scene: 1024
+  height_2scene: 512
+  cpu_offload: false
+  trigger_prefix_self_lora: "sks_storyboard_style"
+  trigger_prefix_character_lora: "sks_storyboard_style, sks_storyhero"
+
+paths:
+  prompts_2scene: "data/sd3_story/validation_prompts/prompts_2scene.jsonl"
+  prompts_3scene: "data/sd3_story/validation_prompts/prompts_3scene.jsonl"
+  independent_2scene: "data/sd3_story/validation_prompts/prompts_independent_2scene.jsonl"
+  independent_3scene: "data/sd3_story/validation_prompts/prompts_independent_3scene.jsonl"
+  outputs_root: "outputs/sd3_story"
+  public_lora: "artifacts/loras/sd3/public_lora"
+  storyboard_lora: "artifacts/loras/sd3/storyboard_lora"
+  character_lora: "artifacts/loras/sd3/character_lora"
+
+negative_prompt: "low quality, blurry, distorted face, deformed hands, extra limbs, inconsistent character, different clothing in each panel, inconsistent art style, messy panel layout, unreadable composition, text, watermark, logo"

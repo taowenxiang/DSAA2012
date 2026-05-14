@@ -1,3 +1,20 @@
 __pycache__/
 *.pyc
 .DS_Store
+
+# Large local assets and generated experiment outputs
+artifacts/
+diffusers/
+loras/
+outputs/sd3_story/
+
+# SD3 Story training data can be regenerated from scripts and/or HPC data pulls.
+data/sd3_story/train_storyboard/
+data/sd3_story/train_character/
+data/sd3_story/external_cache/
+data/sd3_story/human_eval/*.csv
+
+# Local environment files
+.env
+.venv/
+venv/

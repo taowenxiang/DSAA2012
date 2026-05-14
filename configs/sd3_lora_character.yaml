@@ -1,0 +1,27 @@
+model:
+  pretrained_model_name_or_path: "stabilityai/stable-diffusion-3-medium-diffusers"
+
+character:
+  trigger: "sks_storyhero"
+  description: "a young girl with short black hair, yellow raincoat, red backpack"
+  seed_data_dir: "data/sd3_story/train_character"
+  num_seed_images: 48
+
+training:
+  instance_data_dir: "data/sd3_story/train_character"
+  output_dir: "artifacts/loras/sd3/character_lora"
+  instance_prompt: "a sks_storyhero character, short black hair, yellow raincoat, red backpack"
+  resolution: 768
+  train_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0001
+  lr_scheduler: "constant"
+  lr_warmup_steps: 0
+  max_train_steps: 600
+  checkpointing_steps: 200
+  rank: 8
+  seed: 42
+  mixed_precision: "fp16"
+  gradient_checkpointing: true
+  use_8bit_adam: true
+  center_crop: true

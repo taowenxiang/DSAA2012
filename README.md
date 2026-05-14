@@ -204,3 +204,40 @@ Important behavior:
 - `storybook` will reuse the legacy candidate image seed if needed
 - `--placeholder-images` is useful for smoke-testing a style path even before
   real candidate images are generated for that style
+
+---
+
+## 6. SD3 Medium Storyboard LoRA Workflow
+
+This repository also includes a parallel SD3 Medium workflow for a heavier
+training-based project direction:
+
+- SD3 Medium one-shot 2-panel / 3-panel storyboard generation
+- self-trained Storyboard LoRA
+- required Character LoRA
+- public LoRA comparison
+- independent generation ablation
+- CLIPScore, DreamSim, human evaluation, and report asset collection
+
+The SD3 workflow is intentionally separate from the existing Qwen independent
+panel pipeline. See:
+
+```text
+docs/sd3_story_hpc_runbook.md
+```
+
+Local no-model preparation checks:
+
+```bash
+python scripts/sd3_build_story_prompts.py --input data/task_a --out-dir data/sd3_story/validation_prompts
+python scripts/sd3_prepare_storyboard_data.py --sources local --out-dir data/sd3_story/train_storyboard --resolution 768 --clean
+python scripts/sd3_check_resolution.py --dir data/sd3_story/train_storyboard --min-short 768 --fail-on-bad
+```
+
+Note: the current SD3 DreamBooth LoRA training path uses a single
+`instance_prompt`. The generated `.txt` captions and `metadata.jsonl` files are
+kept for dataset auditing, report evidence, and future trainer extensions; they
+are not treated as per-image captions by the current training shell scripts.
+
+Model inference and LoRA training are expected to run on HPC after Hugging Face
+access for `stabilityai/stable-diffusion-3-medium-diffusers` is accepted.
