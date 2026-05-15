@@ -29,6 +29,10 @@ FLINTSTONES_GROUP_KEYS = (
     "movie_id",
     "scene_id",
 )
+FLINTSTONES_IMAGE_ID_KEYS = (
+    "flinststonesSV_image_id",
+    "flintstonesSV_image_id",
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -229,6 +233,14 @@ def caption_from_row(row: dict[str, Any]) -> str:
 
 
 def flintstones_group_key(row: dict[str, Any]) -> str | None:
+    for key in FLINTSTONES_IMAGE_ID_KEYS:
+        value = row.get(key)
+        if not value:
+            continue
+        image_id = str(value)
+        episode_id = image_id.split("_shot_", 1)[0]
+        if episode_id != image_id:
+            return f"{key}:episode:{episode_id}"
     for key in FLINTSTONES_GROUP_KEYS:
         if key in row and row[key] is not None:
             return f"{key}:{row[key]}"
