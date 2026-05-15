@@ -13,6 +13,7 @@ data/sd3_story/train_storyboard/
 data/sd3_story/train_character/
 data/sd3_story/external_cache/
 data/sd3_story/human_eval/*.csv
+sd3_story_data_bundle*.zip
 
 # Local environment files
 .env
