@@ -17,6 +17,41 @@ SEED="${SEED:-42}"
 MIXED_PRECISION="${MIXED_PRECISION:-fp16}"
 USE_8BIT_ADAM="${USE_8BIT_ADAM:-1}"
 
+if [ ! -d "$INSTANCE_DIR" ]; then
+  echo "Instance data directory does not exist: $INSTANCE_DIR"
+  exit 1
+fi
+INSTANCE_DIR="$(cd "$INSTANCE_DIR" && pwd)"
+
+TRAIN_INSTANCE_DIR="$INSTANCE_DIR"
+IMAGE_ONLY_INSTANCE_DIR=""
+
+shopt -s nullglob
+image_files=(
+  "$INSTANCE_DIR"/*.png
+  "$INSTANCE_DIR"/*.jpg
+  "$INSTANCE_DIR"/*.jpeg
+  "$INSTANCE_DIR"/*.webp
+  "$INSTANCE_DIR"/*.bmp
+)
+shopt -u nullglob
+
+if [ "${#image_files[@]}" -eq 0 ]; then
+  echo "No training images found in $INSTANCE_DIR"
+  exit 1
+fi
+
+non_image_count="$(find "$INSTANCE_DIR" -maxdepth 1 -type f ! \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.webp' -o -name '*.bmp' \) | wc -l | tr -d ' ')"
+if [ "${non_image_count:-0}" -gt 0 ]; then
+  IMAGE_ONLY_INSTANCE_DIR="$(mktemp -d)"
+  trap 'rm -rf "$IMAGE_ONLY_INSTANCE_DIR"' EXIT
+  for file in "${image_files[@]}"; do
+    ln -s "$file" "$IMAGE_ONLY_INSTANCE_DIR/$(basename "$file")"
+  done
+  TRAIN_INSTANCE_DIR="$IMAGE_ONLY_INSTANCE_DIR"
+  echo "Using image-only training view at $TRAIN_INSTANCE_DIR"
+fi
+
 TRAIN_SCRIPT="$DIFFUSERS_DIR/examples/dreambooth/train_dreambooth_lora_sd3.py"
 if [ ! -f "$TRAIN_SCRIPT" ]; then
   echo "Missing $TRAIN_SCRIPT. Clone diffusers first:"
@@ -39,7 +74,7 @@ fi
 
 accelerate launch "$TRAIN_SCRIPT" \
   --pretrained_model_name_or_path="$MODEL_NAME" \
-  --instance_data_dir="$INSTANCE_DIR" \
+  --instance_data_dir="$TRAIN_INSTANCE_DIR" \
   --output_dir="$OUTPUT_DIR" \
   --instance_prompt="a sks_storyboard_style three-panel storyboard illustration, clear panel boundaries, consistent character, coherent color palette" \
   --resolution="$RESOLUTION" \
