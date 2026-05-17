@@ -5,6 +5,7 @@
   "height": 512,
   "device": "cuda",
   "dtype": "bfloat16",
+  "cpu_offload": true,
   "model_family": "qwen_image",
   "model_path": "artifacts/models/Qwen-Image-2512",
   "num_inference_steps": 28,

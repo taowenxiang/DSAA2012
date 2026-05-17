@@ -1,0 +1,10 @@
+[general]
+enable_bucket = true
+batch_size = 1
+num_repeats = 1
+
+[[datasets]]
+resolution = 512
+caption_extension = ".txt"
+image_directory = "/hpc2hdd/home/dsaa2012_032/code/DSAA2012/data/qwen_story/page_lora_hybrid_train"
+cache_directory = "/hpc2hdd/home/dsaa2012_032/code/DSAA2012/data/qwen_story/page_lora_hybrid_cache"

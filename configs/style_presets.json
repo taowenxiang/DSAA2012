@@ -65,6 +65,17 @@
       "lora_path": "artifacts/loras/qwen-image-2512/shinkai-lora-v1",
       "lora_weight_name": "pytorch_lora_weights.safetensors",
       "lora_scale": 0.9
+    },
+    {
+      "style_id": "storybook_page_lora",
+      "display_name": "Storybook Page LoRA",
+      "style_prompt": "consistent cinematic storybook illustration, natural lighting, coherent color palette, clear composition",
+      "negative_prompt_append": "",
+      "reference_image_path": null,
+      "backend_preference": "prompt_only",
+      "lora_path": "artifacts/loras/qwen-image-2512/qwen-story-page-lora-hybrid-v1",
+      "lora_weight_name": "pytorch_lora_weights.safetensors",
+      "lora_scale": 0.55
     }
   ]
 }

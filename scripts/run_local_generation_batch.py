@@ -84,11 +84,17 @@ def main() -> int:
     config = load_runtime_config(args.config, args.style)
     manifest = read_json(args.manifest or (run_paths.manifest_path if run_paths else legacy_style_paths.manifest_path))
 
-    status_path = args.status_path or Path(config["local_status_path"])
+    if run_paths:
+        logs_dir = run_paths.logs_dir / "member_b_local_4gpu"
+        default_status_path = run_paths.local_status_path
+    else:
+        logs_dir = Path(config["logs_dir"])
+        default_status_path = Path(config["local_status_path"])
+
+    status_path = args.status_path or default_status_path
     status_data = load_status(status_path, config)
     status_index = index_status_records(status_data)
 
-    logs_dir = Path(config["logs_dir"])
     job_log = logs_dir / f"{args.job_name}.log"
     summary_path = logs_dir / f"{args.job_name}.summary.json"
 

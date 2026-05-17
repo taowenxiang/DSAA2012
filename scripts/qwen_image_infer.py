@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import inspect
 import os
+import zlib
 from pathlib import Path
 from typing import Any
 
@@ -69,6 +70,7 @@ def _build_pipeline(payload: dict[str, Any]) -> Any:
     model_path = payload["model_path"]
     dtype = _dtype_name_to_torch(payload.get("dtype", "bfloat16"))
     device = str(payload.get("device", "cuda"))
+    cpu_offload = bool(payload.get("cpu_offload", False))
     visible_cuda_count = _visible_cuda_device_count() if device.startswith("cuda") else 0
 
     common_kwargs: dict[str, Any] = {
@@ -78,7 +80,13 @@ def _build_pipeline(payload: dict[str, Any]) -> Any:
     }
 
     if device.startswith("cuda") and torch.cuda.is_available():
-        if visible_cuda_count > 1:
+        if cpu_offload:
+            pipeline = DiffusionPipeline.from_pretrained(**common_kwargs)
+            if hasattr(pipeline, "enable_model_cpu_offload"):
+                pipeline.enable_model_cpu_offload()
+            else:
+                pipeline = pipeline.to("cuda")
+        elif visible_cuda_count > 1:
             common_kwargs["device_map"] = "balanced"
             common_kwargs["max_memory"] = _build_max_memory_map(visible_cuda_count)
             pipeline = DiffusionPipeline.from_pretrained(**common_kwargs)
@@ -107,13 +115,11 @@ def _pipeline_cache_key(payload: dict[str, Any]) -> str:
             str(payload.get("model_path", "")),
             str(payload.get("dtype", "")),
             str(payload.get("device", "")),
+            str(bool(payload.get("cpu_offload", False))),
             visible_devices,
             str(ip_config.get("enabled", False)),
             str(ip_config.get("model_path", "")),
             str(ip_config.get("image_encoder_path", "")),
-            str(payload.get("style_lora_path", "")),
-            str(payload.get("style_lora_weight_name", "")),
-            str(payload.get("style_lora_scale", 1.0)),
         ]
     )
 
@@ -144,38 +150,106 @@ def _load_reference_image(path_value: str) -> Any:
     return Image.open(path_value).convert("RGB")
 
 
-def _ensure_style_lora_loaded(pipe: Any, payload: dict[str, Any]) -> None:
-    lora_path = str(payload.get("style_lora_path") or "").strip()
-    if not lora_path:
-        return
-    if not Path(lora_path).exists():
-        raise RuntimeError(f"style_lora_path not found: {lora_path}")
+def _payload_lora_specs(payload: dict[str, Any]) -> list[dict[str, Any]]:
+    specs: list[dict[str, Any]] = []
+
+    style_lora_path = str(payload.get("style_lora_path") or "").strip()
+    if style_lora_path:
+        specs.append(
+            {
+                "role": "style",
+                "path": style_lora_path,
+                "weight_name": str(payload.get("style_lora_weight_name") or "").strip(),
+                "scale": float(payload.get("style_lora_scale", 1.0)),
+            }
+        )
+
+    for item in payload.get("extra_loras", []) or []:
+        if not isinstance(item, dict):
+            continue
+        lora_path = str(item.get("path") or "").strip()
+        if not lora_path:
+            continue
+        specs.append(
+            {
+                "role": str(item.get("role") or "extra"),
+                "path": lora_path,
+                "weight_name": str(item.get("weight_name") or "").strip(),
+                "scale": float(item.get("scale", 1.0)),
+            }
+        )
+    return specs
+
+
+def _adapter_name_for_spec(spec: dict[str, Any]) -> str:
+    key = "|".join([spec["path"], spec.get("weight_name", ""), spec.get("role", "")])
+    return f"adapter_{zlib.crc32(key.encode('utf-8')) & 0xFFFFFFFF:08x}"
+
+
+def _ensure_named_lora_loaded(pipe: Any, spec: dict[str, Any]) -> str:
+    if not Path(spec["path"]).exists():
+        raise RuntimeError(f"LoRA path not found: {spec['path']}")
     if not hasattr(pipe, "load_lora_weights"):
         raise RuntimeError("pipeline runtime does not expose load_lora_weights")
 
-    lora_weight_name = str(payload.get("style_lora_weight_name") or "").strip()
-    lora_scale = float(payload.get("style_lora_scale", 1.0))
-    adapter_name = "style_lora"
-    cache_key = "|".join([lora_path, lora_weight_name, str(lora_scale)])
-    if getattr(pipe, "_style_lora_cache_key", None) == cache_key:
-        return
+    cache_key = "|".join([spec["path"], spec.get("weight_name", "")])
+    loaded_cache = getattr(pipe, "_named_lora_cache", {})
+    if cache_key in loaded_cache:
+        return str(loaded_cache[cache_key])
 
+    adapter_name = _adapter_name_for_spec(spec)
     load_signature = inspect.signature(pipe.load_lora_weights).parameters
     kwargs: dict[str, Any] = {}
-    if "weight_name" in load_signature and lora_weight_name:
-        kwargs["weight_name"] = lora_weight_name
+    if "weight_name" in load_signature and spec.get("weight_name"):
+        kwargs["weight_name"] = spec["weight_name"]
     if "adapter_name" in load_signature:
         kwargs["adapter_name"] = adapter_name
     if "local_files_only" in load_signature:
         kwargs["local_files_only"] = True
-    pipe.load_lora_weights(lora_path, **kwargs)
+    pipe.load_lora_weights(spec["path"], **kwargs)
+    loaded_cache[cache_key] = adapter_name
+    pipe._named_lora_cache = loaded_cache
+    return adapter_name
+
+
+def _ensure_payload_loras_loaded(pipe: Any, payload: dict[str, Any]) -> None:
+    specs = _payload_lora_specs(payload)
+    if not specs:
+        if getattr(pipe, "_active_lora_key", None) is not None:
+            if hasattr(pipe, "disable_lora"):
+                pipe.disable_lora()
+            elif hasattr(pipe, "set_adapters"):
+                try:
+                    pipe.set_adapters([], adapter_weights=[])
+                except Exception:  # noqa: BLE001
+                    pass
+            pipe._active_lora_key = None
+        return
+
+    adapter_names: list[str] = []
+    adapter_weights: list[float] = []
+    for spec in specs:
+        adapter_names.append(_ensure_named_lora_loaded(pipe, spec))
+        adapter_weights.append(float(spec.get("scale", 1.0)))
+
+    active_key = tuple(zip(adapter_names, adapter_weights))
+    if getattr(pipe, "_active_lora_key", None) == active_key:
+        return
+
+    if len(adapter_names) > 1 and not hasattr(pipe, "set_adapters"):
+        raise RuntimeError("multiple LoRA adapters require pipeline.set_adapters() support")
 
     if hasattr(pipe, "set_adapters"):
         try:
-            pipe.set_adapters(adapter_name, adapter_weights=[lora_scale])
+            pipe.set_adapters(adapter_names, adapter_weights=adapter_weights)
         except TypeError:
-            pipe.set_adapters(adapter_name, lora_scale)
-    pipe._style_lora_cache_key = cache_key
+            pipe.set_adapters(adapter_names, adapter_weights)
+    elif len(adapter_names) == 1 and hasattr(pipe, "fuse_lora"):
+        pipe.fuse_lora(lora_scale=adapter_weights[0])
+    else:
+        raise RuntimeError("pipeline runtime cannot activate the requested LoRA adapters")
+
+    pipe._active_lora_key = active_key
 
 
 def _ensure_ip_adapter_loaded(pipe: Any, payload: dict[str, Any]) -> None:
@@ -289,7 +363,11 @@ def _build_generation_kwargs(
 
     if "generator" in parameters:
         generator_device = "cpu"
-        if str(payload.get("device", "cuda")).startswith("cuda") and torch.cuda.is_available():
+        if (
+            str(payload.get("device", "cuda")).startswith("cuda")
+            and torch.cuda.is_available()
+            and not bool(payload.get("cpu_offload", False))
+        ):
             generator_device = "cuda"
         kwargs["generator"] = torch.Generator(device=generator_device).manual_seed(
             int(payload["seed"])
@@ -305,7 +383,7 @@ def _build_generation_kwargs(
 
 def generate_from_payload(payload: dict[str, Any]) -> dict[str, Any]:
     pipe = get_pipeline(payload)
-    _ensure_style_lora_loaded(pipe, payload)
+    _ensure_payload_loras_loaded(pipe, payload)
     output_path = Path(payload["output_path"])
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
