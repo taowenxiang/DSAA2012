@@ -1,243 +1,156 @@
-# DSAA2012 Final Project 2
-## Task 1: Story (Multi-Shot / Multi-Panel Image Generation)
+# DSAA2012 Qwen Story Page Pipeline
 
-Current integrated project status is summarized in `PROJECT_STATUS.md`.
-Use the root-level `configs/`, `data/`, `docs/`, `outputs/`, and `scripts/` folders as the main working copy.
+测试结果在仓库根目录answer文件夹里
 
-### Team Information
-- Team Name: [Your Team Name]
-- Course: DSAA2012
-- Project Option: **Task 1 – Story**
-- Members:
-  - Member 1: [Name] ([Student ID])
-  - Member 2: [Name] ([Student ID])
-  - Member 3: [Name] ([Student ID])
+本仓库同步在canvas上上传了（canvas版本里有环境文件夹venvs和lora权重文件）
 
----
+这个仓库当前推荐复现的是新的 **Qwen page-native 生图管线**：  
 
-## 1. Project Overview
+输入 `data/task_a/*.txt` 中的故事文本，直接生成一整张纵向 story page，而不是先单 panel 生成再拼接。
 
-This project builds an **automatic multi-image story generation pipeline** for **Task 1: Story**.  
-Given a sequence of text descriptions (shots/panels), our system generates a corresponding sequence of images such that:
+当前主线固定为：
 
-- each image matches its panel description,
-- recurring characters, objects, backgrounds, and visual style remain consistent,
-- the story progresses naturally across panels.
+- 只处理 `2-scene` 和 `3-scene`
+- 固定 `vertical` 多格版式
+- 生成单位是整页
+- 使用 `Qwen-Image-2512 + hybrid page LoRA`
+- 选择单位是 page-level rerank
 
-According to the project specification, the system must be:
+## 1. 先准备好这些
 
-- **fixed**,
-- **automatic**,
-- **reproducible**,
-
-and must **not** use:
-
-- manual per-case editing,
-- hard-coded outputs for specific test cases,
-- agent-based systems,
-- external API usage. :contentReference[oaicite:1]{index=1}
-
----
-
-## 2. Task Definition
-
-### Input
-A multi-panel text description for a story case.
-
-### Output
-A sequence of generated images that:
-
-1. satisfy **per-panel correctness**,
-2. preserve **cross-panel consistency**,
-3. maintain **narrative continuity**,
-4. preserve **style consistency**,
-5. achieve strong **visual quality**. :contentReference[oaicite:2]{index=2}
-
----
-
-## 3. Our Method
-
-We focus on **pipeline design** rather than full model training.  
-Our method uses a local open-source image generation model and builds a structured automatic system around it.
-
-### 3.1 Pipeline Overview
-
-Our pipeline consists of five main stages:
-
-#### Stage 1: Story Parsing
-We parse the input story into structured information:
-
-- recurring characters
-- recurring objects
-- global scene/background
-- global style
-- panel-specific actions and details
-
-This helps separate:
-- **global consistent information**
-- **panel-varying information**
-
-#### Stage 2: Prompt Construction
-For each panel, we construct a prompt using:
-
-- global character description
-- global scene description
-- style description
-- panel-specific action description
-- continuity hints from previous panels
-
-This ensures the generated images are not independent single-image outputs, but part of the same story.
-
-#### Stage 3: Candidate Generation
-For each panel, the system generates multiple candidate images using a local image generation model.
-
-#### Stage 4: Automatic Reranking and Selection
-Candidates are automatically scored and selected based on:
-
-- panel-level prompt adherence
-- consistency with previous panels
-- style consistency
-- image quality
-
-#### Stage 5: Packaging
-The selected final images are copied into the final output directory together
-with a manifest for checking counts, paths, and image sizes.
-
-### 3.2 Style System
-
-The pipeline now supports style presets through configuration-driven style ids.
-
-- default submission style: `storybook`
-- demo styles: `watercolor`, `anime`, `paper_cutout`
-- every pipeline execution creates a numbered run folder like
-  `outputs/runs/run_0001_storybook/`
-- all prompts, manifests, candidate images, final outputs, and metadata for that
-  experiment are stored inside the run folder
-
-For future extension, the generation payload also carries an optional
-IP-Adapter backend request. If IP-Adapter is unavailable, styles configured as
-`auto_ip_adapter` fall back to `prompt_only`, while `require_ip_adapter` fails
-explicitly.
-
----
-
-## 4. Repository Structure
-
-```text
-project_root/
-├── README.md
-├── PROJECT_STATUS.md
-├── .gitignore
-├── configs/
-│   ├── member_a_prompt_config.json
-│   ├── member_b_generation_config.json
-│   └── member_b_generation_config.local_4gpu.json
-├── data/
-│   ├── task_a/
-│   └── task_b/
-├── docs/
-│   ├── labor_division.md
-│   ├── member_a_notes.md
-│   ├── member_b_notes.md
-│   ├── project_goal.md
-│   ├── project_progress.md
-│   └── project_spec.pdf
-├── scripts/
-│   ├── parse_story.py
-│   ├── build_prompts.py
-│   ├── generate_images.py
-│   ├── run_hpc_generation.py
-│   ├── run_local_generation_batch.py
-│   ├── qwen_image_infer.py
-│   ├── rerank_candidates.py
-│   ├── package_outputs.py
-│   ├── run_story_pipeline.py
-│   └── validate_member_a.py
-└── outputs/
-    ├── intermediate/
-    ├── candidates/
-    ├── final/
-    ├── logs/
-    └── runs/
-```
-
-## 5. Quick Start
-
-Run the integrated post-generation pipeline from the project root:
+1. 使用项目当前的 `venv` 环境
 
 ```bash
-python3 scripts/run_story_pipeline.py
+export VENV_ROOT=$HOME/code/DSAA2012/venvs/sd3story-py310
+source "$VENV_ROOT/bin/activate"
 ```
 
-This will:
+仓库里已经保存了当前可工作的环境快照：
 
-1. parse the Task A stories
-2. build prompts
-3. validate the parsed/prompt outputs
-4. rerank the existing candidate images
-5. package the final selected images into a new numbered run directory
+- [requirements.current.txt](/Users/mount/Desktop/Programming/DSAA2012/requirements.current.txt)：最适合直接复现安装
+- [python-version.txt](/Users/mount/Desktop/Programming/DSAA2012/python-version.txt)：记录 Python 版本
+- [pip-list.json](/Users/mount/Desktop/Programming/DSAA2012/pip-list.json)：方便排查包版本差异
+- [python-path.txt](/Users/mount/Desktop/Programming/DSAA2012/python-path.txt)：记录当时使用的解释器路径
 
-Example result:
-
-```text
-outputs/runs/run_0001_storybook/
-```
-
-Key files inside a run:
-
-- `metadata/run_metadata.json`: this run's style, CLI args, and config snapshot
-- `intermediate/parsed/`: parsed story JSON
-- `intermediate/prompts/`: prompt JSON
-- `intermediate/generation_manifest.json`: candidate manifest
-- `intermediate/selection_results.json`: rerank result
-- `final/submission_manifest.json`: final packaged output manifest
-
-Run a different style preset:
+如果你要在新机器上尽量对齐当前环境，推荐：
 
 ```bash
-python3 scripts/run_story_pipeline.py --style watercolor --placeholder-images
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.current.txt
 ```
 
-Important behavior:
+`environment.yml` 和 `requirements.txt` 还保留在仓库里，但当前主线更建议以这四份导出的环境文件为准。
 
-- each new run gets a new `run_000x_<style>` folder and never overwrites an old run
-- `storybook` will reuse the legacy candidate image seed if needed
-- `--placeholder-images` is useful for smoke-testing a style path even before
-  real candidate images are generated for that style
+2. 准备本地模型和 LoRA
 
----
+- `Qwen-Image-2512` 模型目录，请使用`huggingface-cli download Qwen/Qwen-Image-2512`下载
+- 训练好的lora `qwen-story-page-lora-hybrid-v1` 目录（仓库已有）
 
-## 6. SD3 Medium Storyboard LoRA Workflow
+建议放在下面这两个位置，和脚本默认值一致：
 
-This repository also includes a parallel SD3 Medium workflow for a heavier
-training-based project direction:
+- `artifacts/models/Qwen-Image-2512`
+- `artifacts/loras/qwen-image-2512/qwen-story-page-lora-hybrid-v1`
 
-- SD3 Medium one-shot 2-panel / 3-panel storyboard generation
-- self-trained Storyboard LoRA
-- required Character LoRA
-- public LoRA comparison
-- independent generation ablation
-- CLIPScore, DreamSim, human evaluation, and report asset collection
+3. 确认输入故事存在
 
-The SD3 workflow is intentionally separate from the existing Qwen independent
-panel pipeline. See:
+- 输入目录：`data/task_a`
 
-```text
-docs/sd3_story_hpc_runbook.md
-```
+## 2. 跑管线
 
-Local no-model preparation checks:
+在仓库根目录执行：
 
 ```bash
-python scripts/sd3_build_story_prompts.py --input data/task_a --out-dir data/sd3_story/validation_prompts
-python scripts/sd3_prepare_storyboard_data.py --sources local --out-dir data/sd3_story/train_storyboard --resolution 768 --clean
-python scripts/sd3_check_resolution.py --dir data/sd3_story/train_storyboard --min-short 768 --fail-on-bad
+export PROJ_ROOT=$(pwd)
+export MODEL_ROOT=$PROJ_ROOT/artifacts/models/Qwen-Image-2512
+export PAGE_LORA_ROOT=$PROJ_ROOT/artifacts/loras/qwen-image-2512/qwen-story-page-lora-hybrid-v1
+```
+跑单个txt（以02.txt为例，需要修改两处02以换成其他的txt）
+
+建议使用绝对路径
+```bash
+python scripts/run_qwen_story_page_pipeline.py \
+  --stories /hpc2hdd/home/dsaa2012_032/code/DSAA2012/data/task_a/02.txt \
+  --out-root /hpc2hdd/home/dsaa2012_032/code/DSAA2012/outputs/qwen_story_page_runs/02 \
+  --scene-settings 3 \
+  --layout vertical \
+  --model-path /hpc2hdd/home/dsaa2012_032/code/DSAA2012/artifacts/models/Qwen-Image-2512 \
+  --page-lora-path /hpc2hdd/home/dsaa2012_032/code/DSAA2012/artifacts/loras/qwen-image-2512/qwen-story-page-lora-hybrid-v1 \
+  --page-lora-weight-name pytorch_lora_weights.safetensors \
+  --page-lora-scale 0.55 \
+  --num-candidates 4 \
+  --steps 28 \
+  --guidance 4.5 \
+  --dtype bfloat16 \
+  --device cuda \
+  --cpu-offload \
+  --dreamsim-cache-dir /hpc2hdd/home/dsaa2012_032/code/DSAA2012/artifacts/metrics/dreamsim_ckpts \
+  --torch-hub-dir /hpc2hdd/home/dsaa2012_032/code/DSAA2012/artifacts/metrics/torch_hub \
+  --require-dreamsim \
+  --require-clipscore \
+  --skip-existing
+```
+全部生成（较耗时）
+```bash
+python scripts/run_qwen_story_page_pipeline.py \
+  --stories data/task_a \
+  --out-root outputs/qwen_story_page \
+  --scene-settings 2 3 \
+  --layout vertical \
+  --model-path "$MODEL_ROOT" \
+  --page-lora-path "$PAGE_LORA_ROOT" \
+  --page-lora-weight-name "pytorch_lora_weights.safetensors" \
+  --page-lora-scale 0.55 \
+  --num-candidates 8 \
+  --steps 28 \
+  --guidance 4.5 \
+  --dtype bfloat16 \
+  --device cuda \
+  --cpu-offload
 ```
 
-Note: the current SD3 DreamBooth LoRA training path uses a single
-`instance_prompt`. The generated `.txt` captions and `metadata.jsonl` files are
-kept for dataset auditing, report evidence, and future trainer extensions; they
-are not treated as per-image captions by the current training shell scripts.
+这条命令会自动串起来：
 
-Model inference and LoRA training are expected to run on HPC after Hugging Face
-access for `stabilityai/stable-diffusion-3-medium-diffusers` is accepted.
+1. `scripts/qwen_story_build_page_prompts.py`
+2. `scripts/qwen_story_infer.py`
+3. `scripts/qwen_story_rank_candidates.py`
+4. `scripts/qwen_story_export_top_candidates.py`
+
+## 3. 跑完后应该看到什么
+
+主要输出会在 `outputs/qwen_story_page/`（或`outputs/qwen_story_page_runs/`由你刚刚的输出路径决定）：
+
+```text
+outputs/qwen_story_page/
+├── prompts/
+├── candidates/
+├── ranking/
+└── final/
+```
+
+最重要的是：
+
+- `outputs/qwen_story_page/final/2scene_top1`
+- `outputs/qwen_story_page/final/3scene_top1`
+- `outputs/qwen_story_page/final/2scene_top1_manifest.json`
+- `outputs/qwen_story_page/final/3scene_top1_manifest.json`
+
+快速检查是否成功：
+
+```bash
+find outputs/qwen_story_page/final -name "*.png" | wc -l
+```
+
+如果流程正常，你还会看到：
+
+- `candidates/*_manifest.json`：候选页清单
+- `ranking/*.csv`：page-level 排序结果
+- `ranking/*.summary.json`：排序摘要
+
+## 4. 最常见的失败点
+
+- `--model-path` 或 `--page-lora-path` 写错：先确认目录真实存在。
+- 显存不够：保留 `--cpu-offload`，必要时把 `--num-candidates` 从 `8` 降到 `4`。
+- 只想断点续跑：加上 `--skip-existing`。
+- 只想跑一种 setting：把 `--scene-settings 2 3` 改成 `--scene-settings 2` 或 `--scene-settings 3`。
+
